@@ -1,0 +1,3 @@
+.eggs/
+src/canScan.egg-info/
+src/canscan/__pycache__/
