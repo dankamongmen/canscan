@@ -20,7 +20,12 @@ setup(
     platforms=["any"],
     long_description=read('README.md'),
     long_description_content_type="text/markdown",
+    # see https://pypi.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         'Development Status :: 3 - Alpha',
+        'Environment :: Console',
+        'License :: OSI Approved :: Apache Software License',
+        'Natural Language :: English',
+        'Programming Language :: Python',
     ],
 )
