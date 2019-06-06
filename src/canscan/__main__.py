@@ -13,7 +13,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Probe and listen for CANopen')
     parser.add_argument('device', help='link/can network device')
     parser.add_argument('--scansdo', help='comma-delimited list of nodes to scan',
-                        type=lambda x: x.split(','))
+                        type=lambda x: x.split(','), default=[])
+    parser.add_argument('--oneshot', help='do an active scan, dump results, and exit',
+                        action='store_true', dest='oneshot')
     args = parser.parse_args()
     CanNode = node.Node(args.device)
     scanNodes = []
@@ -41,4 +43,6 @@ if __name__ == '__main__':
     print('Node scan list:', scanNodes)
     CanNode.NetworkSDOSweep()
     CanNode.Discover()
-    signal.pause()
+    if not args.oneshot:
+        print('Waiting for signal/keyboard interrupt...')
+        signal.pause()
