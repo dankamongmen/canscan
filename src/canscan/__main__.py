@@ -6,6 +6,7 @@
 
 from __future__ import print_function
 import node
+import signal
 import argparse
 
 if __name__ == '__main__':
@@ -14,7 +15,7 @@ if __name__ == '__main__':
     parser.add_argument('--scansdo', help='comma-delimited list of nodes to scan',
                         type=lambda x: x.split(','))
     args = parser.parse_args()
-    node.Node(args.device)
+    CanNode = node.Node(args.device)
     scanNodes = []
     scanSet = set(scanNodes)
     if args.scansdo:
@@ -38,3 +39,6 @@ if __name__ == '__main__':
                 scanSet.update(r)
         scanNodes = list(scanSet)
     print('Node scan list:', scanNodes)
+    CanNode.NetworkSDOSweep()
+    CanNode.Discover()
+    signal.pause()
