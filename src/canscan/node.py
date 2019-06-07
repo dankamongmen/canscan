@@ -6,13 +6,23 @@ OD_IDENTITY_VENDORID = 0x1
 class Node(object):
     """CANopen node bound to some device"""
 
-    def __init__(self, dev):
-        self.network = canopen.Network()
-        self.network.connect(bustype='socketcan', channel=dev)
+    def Connectable(self):
+        """Returns true if we've got, or can make, a CAN connection."""
+        if self.dev:
+            return True
+        return False
+
+    def __init__(self, dev=''):
+        """An empty dev param means we won't try to actually connect."""
+        self.dev = dev
+        if self.Connectable():
+            self.network = canopen.Network()
+            self.network.connect(bustype='socketcan', channel=dev)
 
     def __del__(self):
-        print("Disconnecting from CAN...")
-        self.network.disconnect()
+        if self.Connectable():
+            print("Disconnecting from CAN...")
+            self.network.disconnect()
 
     def CheckNodeSDO(self, nodeid):
         """Hit some node (7-bit Node ID) with a quick Vendor Identity SDO."""

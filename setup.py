@@ -20,6 +20,8 @@ setup(
     platforms=["any"],
     long_description=read('README.md'),
     long_description_content_type="text/markdown",
+    test_suite="nose.collector",
+    tests_require=["nose"],
     # see https://pypi.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         'Development Status :: 3 - Alpha',
