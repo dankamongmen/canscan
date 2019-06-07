@@ -1,7 +1,7 @@
 # canScan
 
 CANopen active scanner atop Christian Sandberg's
-(https://github.com/christiansandberg/canopen)[CANopen for Python]. canScan
+[CANopen for Python](https://github.com/christiansandberg/canopen). canScan
 watches for CAN arbitration IDs, CANopen node IDs (as determined through
 NMT/SDO analysis), and CANopen PDOs. canScan can scan the Object Dictionary
 of a specified (or discovered) CANopen node using SDO Receive.
