@@ -1,0 +1,7 @@
+dist: xenial # Required for python 3.7 (2019-06-08), per https://docs.travis-ci.com/user/languages/python/
+language: python
+python:
+  - "3.7"
+  - "2.7"
+
+script: python setup.py test
