@@ -1,0 +1,296 @@
+$ DeviceNet Manager Generated Electronic Data Sheet
+$ EDS-File fuer Laser programmierbar
+
+[File]
+
+	DescText 	= "TR-Electronic LE200";   
+	CreateDate 	= 27-05-2003;                            
+	CreateTime    	= 15:06:05;                         
+	ModDate 	= 07-10-2003;                               
+	ModTime    	= 15:05:00;                            
+	Revision      	= 1.0;                              
+
+[Device]
+	VendCode    = 134;                                $ Vendor Code
+	ProdType    = 8;                                  $ Product Type
+	ProdCode    = 9;                                  $ Product Code
+
+	MajRev      = 2;                                  $ Major Rev
+	MinRev      = 1;                                  $ Minor Rev
+	VendName    = "TR-Electronic";
+	ProdTypeStr = "Encoder";
+	ProdName    = "LE 200";
+	Catalog     = "TR-ELE-BA-GB-0009";
+
+[IO_Info]
+	Default     = 0X0001;
+	PollInfo    = 0X0001, 1, 1;
+
+	Input1      = 
+		4,                              $ 4bytes
+		0,                              $ All bits significant
+		0x0001,                         $ Poll only connection  
+		"Data",                         $ Name String
+		6,                              $ path size
+		"20 04 24 01 30 03",            $ Assy obj inst 
+		"";                             $ Help String
+
+	Output1     = 
+		1,                              $ 1byte
+		0,                              $ All bits significant
+		0x0001,                         $ Poll only connection  
+		"Data",                         $ Name String
+		6,                              $ path size
+		"20 04 24 01 30 03",            $ Assy obj inst 
+		"";                             $ Help String
+
+
+
+[ParamClass]
+	MaxInst=15;
+	Descriptor=0x09;
+	CfgAssembly=42;
+
+[Params]
+	Param1=                                 $ Zaehlrichtung
+		0,                              $ Data Placeholder
+		6,"20 0F 24 01 30 01",          $ Path size and Path
+		0x2,                            $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Count direction",                $ Name
+		"",                             $ Units (not used)
+		"",    				$ Help
+		0,1,0,               		$ min, max, default values
+		1, 1, 1, 0,           		$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;       		$ scaling links and precision
+
+	Param2=                                 $ Clear Preset
+		0,                              $ Data Placeholder
+		6,"20 0F 24 02 30 01",          $ Path size and Path
+		0x2,                            $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Preset clear",             	$ Name
+		"",                             $ Units (not used)
+		"0=Preset and  Justage\n"	$ Help
+		"  are clearedt",
+		0,1,0,               		$ min, max, default values
+		1, 1, 1, 0,          		$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;       		$ scaling links and precision
+
+	Param3=                                 $ Messlaenge pro Schritt
+		0,                              $ Data Placeholder
+		6,"20 0F 24 03 30 01",          $ Path size and Path
+		0x0,                            $ Descriptor
+		9, 4,                           $ Data Type and Size
+		"Scale",	                $ Name
+		"",                             $ Units (not used)
+		"in free resolution\n"       $ Help
+		"in 1/100 mm",
+		1,65535,100,       		$ min, max, default values
+		1, 1, 1, 0,          		$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;       		$ scaling links and precision
+
+
+	Param4=                                 $ Fehlerwert
+		0,                              $ Data Placeholder
+		6,"20 0F 24 04 30 01",          $ Path size and Path
+		0x0,                            $ Descriptor
+		9, 4,                           $ Data Type and Size
+		"(not implementedt)",    $ Name
+		"",                             $ Units (not used)
+		"not implemented,\n"		$ Help
+		"look Parameter-No 13",       	
+		0,1,0,         			$ min, max, default values
+		1, 1, 1, 0,             	$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         	$ scaling links and precision
+
+
+	Param5=                                	$ Wert fuer Preset
+		0,                              $ Data Placeholder
+		6,"20 0F 24 05 30 01",          $ Path size and Path
+		0x0,                            $ Descriptor
+		9, 4,                           $ Data Type and Size
+		"Value for Preset",             $ Name
+		"",                             $ Units (not used)
+		"If Bit 2^0 of OUT-Byte in Poll-\n"     $ Help
+		"telegram set (1),so the  Encoder\n"
+		"is justaged to this value.\n"
+		"For a  valid Presetjustage has\n"
+		"the Bit 2^0 of OUT-Byte in\n"
+		"Polltelegrams for min. 1 \n"
+		"Pollcycle  switched to (0).\n"
+		"Preset-cycles < 0.5 Sec. are not allowed!",
+		0,16000000,0,       		$ min, max, default values
+		1, 1, 1, 0,             	$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         	$ scaling links and precision
+
+	Param6=                                	$ Data-Check
+		0,                              $ Data Placeholder
+		6,"20 0F 24 06 30 01",          $ Path size and Path
+		0x0,                            $ Descriptor
+		2, 2,                           $ Data Type and Size
+		"Data-Check",                   $ Name
+		"",                             $ Units (not used)
+		"After all parameter are programmed\n" 	$ Help
+		"the function Data-Check (write), has\n"
+		"to be called to write all parameter permanent in Encoder,\n"
+		"else the parameters after Power-off/on are lost!\n",
+		0,65535,0,            		$ min, max, default values
+		1, 1, 1, 0,             	$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         	$ scaling links and precision
+
+	Param7=                                	$ Justage
+		0,                              $ Data Placeholder
+		6,"20 0F 24 07 30 01",          $ Path size and Path
+		0x20,                           $ Descriptor (monitor)
+		9, 4,                           $ Data Type and Size
+		"Justage",                      $ Name
+		"",                             $ Units (not used)
+		"After a justage the Data-Check is not neccessary\n",	 $ Help
+		0,16000000,0,     		$ min, max, default values
+		1, 1, 1, 0,             	$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         	$ scaling links and precision
+
+	Param8=                                	$ aktueller Softstand
+		0,                              $ Data Placeholder
+		6,"20 0F 24 08 30 01",          $ Path size and Path 
+		0x10,                           $ Descriptor
+		9, 4,                           $ Data Type and Size
+		"Software-Version",                    $ Name
+		"",                             $ Units (not used)
+		"",                             $ Help
+		0,99999999,99999999,   		$ min, max, default values
+		1, 1, 1, 0,             	$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         	$ scaling links and precision
+
+
+	Param9=                                 $ 
+		0,                              $ Data Placeholder
+		6,"20 0F 24 09 30 01",          $ Path size and Path
+		0x2,                            $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Resolution",                	$ Name
+		"",                             $ Units (not used)
+		"",                             $ Help
+		0,6,1,               		$ min, max, default values
+		1, 1, 1, 0,           		$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;       		$ scaling links and precision
+
+	Param10=                                 $ 
+		0,                              $ Data Placeholder
+		6,"20 0F 24 0A 30 01",          $ Path size and Path
+		0x2,                            $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Function ext.input",                $ Name
+		"",                             $ Units (not used)
+		"",                             $ Help
+		0,3,1,               		$ min, max, default values
+		1, 1, 1, 0,           		$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;       		$ scaling links and precision
+
+	Param11=                                 $ 
+		0,                              $ Data Placeholder
+		6,"20 0F 24 0B 30 01",          $ Path size and Path
+		0x2,                            $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Autom.failure-quit",        $ Name
+		"",                             $ Units (not used)
+		"",                             $ Help
+		0,1,1,               		$ min, max, default values
+		1, 1, 1, 0,           		$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;       		$ scaling links and precision
+
+	Param12=                                 $ 
+		0,                              $ Data Placeholder
+		6,"20 0F 24 0C 30 01",          $ Path size and Path
+		0x2,                            $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Function failure-output",                $ Name
+		"",                             $ Units (not used)
+		"",                             $ Help
+		0,4,1,               		$ min, max, default values
+		1, 1, 1, 0,           		$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;       		$ scaling links and precision
+
+	Param13=                                 $ 
+		0,                              $ Data Placeholder
+		6,"20 0F 24 0D 30 01",          $ Path size and Path
+		0x2,                            $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Output by failure",                $ Name
+		"",                             $ Units (not used)
+		"",                             $ Help
+		0,2,1,               		$ min, max, default values
+		1, 1, 1, 0,           		$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;       		$ scaling links and precision
+
+	Param14=                                 $ 
+		0,                              $ Data Placeholder
+		6,"20 0F 24 0E 30 01",          $ Path size and Path
+		0x2,                            $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Failure-state over CAN-BUS",        $ Name
+		"",                             $ Units (not used)
+		"",                             $ Help
+		0,1,0,               	$ min, max, default values
+		1, 1, 1, 0,           	$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;       	$ scaling links and precision
+
+	Param15=                                	$ intensity in %
+		0,                              $ Data Placeholder
+		6,"20 0F 24 0F 30 01",          $ Path size and Path 
+		0x10,                           $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Intensity",                    $ Name
+		"%",                             $ Units
+		"",                             $ Help
+		0,100,100,   		$ min, max, default values
+		1, 1, 1, 0,             	$ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         	$ scaling links and precision
+
+
+[EnumPar]
+	Param1=
+		"positive", 				$ fuer Wert = 0
+		"negative"; 				$ fuer Wert = 1
+
+	Param2=
+		"Preset clear",                       $ fuer Wert = 0
+		"Preset not clear";                 $ fuer Wert = 1
+
+	Param9=
+		"10 mm", 				$ fuer Wert = 0
+		"1 mm", 				$ fuer Wert = 1
+		"1/10 mm", 				$ fuer Wert = 2
+		"1/100 mm", 				$ fuer Wert = 3
+		"1 Inch", 				$ fuer Wert = 4
+		"1/10 Inch", 				$ fuer Wert = 5
+		"Free resolution";  			$ fuer Wert = 6
+	
+	Param10=
+		"disabled", 				$ fuer Wert = 0
+		"Preset-function", 			$ fuer Wert = 1
+		"Switch-input for Laser-Diode",	$ fuer Wert = 2
+		"Failure quit";			$ fuer Wert = 3
+
+
+	Param11=
+		"not automatic clear",           $ fuer Wert = 0
+		"automatic clear";                 $ fuer Wert = 1
+
+	Param12=
+		"disabled", 				$ fuer Wert = 0
+		"Temperature", 				$ fuer Wert = 1
+		"Intensity",				$ fuer Wert = 2
+		"Hardware",				$ fuer Wert = 3
+		"every failure";				$ fuer Wert = 4
+
+	Param13=
+		"alles 0", 				$ fuer Wert = 0
+		"alles 1", 				$ fuer Wert = 1
+		"last valid value";		$ fuer Wert = 2
+
+	Param14=
+		"no failure-state",                   $ fuer Wert = 0
+		"Failure-state over CAN-BUS";     $ fuer Wert = 1
+

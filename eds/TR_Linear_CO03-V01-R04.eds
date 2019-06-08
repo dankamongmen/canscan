@@ -1,0 +1,676 @@
+;EDS-File for the TR linearencoder
+;
+;TR-electronic GmbH, Eglishalde 6, D-78647 Trossingen
+;phone: +49 7425 228 0, fax: +49 7425 228 33, web: www.tr-electronic.de
+
+
+[FileInfo]
+FileName=TR_Linear_CO03.eds
+FileVersion=1
+FileRevision=4
+EDSVersion=4.0
+Description=EDS for TR linear transducer
+CreationTime=13:59PM
+CreationDate=05-16-2014
+CreatedBy=TR-electronic GmbH - huc
+ModificationTime=04:26PM
+ModificationDate=03-13-2019
+ModifiedBy=TR-electronic GmbH - huc
+
+
+[DeviceInfo]
+VendorName=TR-electronic GmbH
+VendorNumber=0x0000025C
+ProductName=TR-Linear
+ProductNumber=0x00000002
+RevisionNumber=0x00010001
+OrderCode=Linear_CANopen
+BaudRate_10=1
+BaudRate_20=1
+BaudRate_50=1
+BaudRate_125=1
+BaudRate_250=1
+BaudRate_500=1
+BaudRate_800=1
+BaudRate_1000=1
+Granularity=8
+SimpleBootUpSlave=1
+SimpleBootUpMaster=0
+DynamicChannelsSupported=0
+CompactPDO=0
+GroupMessaging=0
+NrOfRXPDO=0
+NrOfTXPDO=2
+LSS_Supported=1
+
+[DummyUsage]
+Dummy0001=0
+Dummy0002=0
+Dummy0003=0
+Dummy0004=0
+Dummy0005=0
+Dummy0006=0
+Dummy0007=0
+
+[Comments]
+Lines=0
+
+[MandatoryObjects]
+SupportedObjects=3
+1=0x1000
+2=0x1001
+3=0x1018
+
+[OptionalObjects]
+SupportedObjects=32
+1=0x1003
+2=0x1005
+3=0x1008
+4=0x1009
+5=0x100A
+6=0x100C
+7=0x100D
+8=0x1010
+9=0x1011
+10=0x1014
+11=0x1017
+12=0x1800
+13=0x1801
+14=0x1A00
+15=0x1A01
+16=0x1F80
+17=0x6000
+18=0x6005
+19=0x6010
+20=0x6020
+21=0x6030
+22=0x6200
+23=0x6500
+24=0x6501
+25=0x6503
+26=0x6504
+27=0x6505
+28=0x6506
+29=0x6507
+30=0x650A
+31=0x650B
+32=0x650C
+
+[ManufacturerObjects]
+SupportedObjects=2
+1=0x2000
+2=0x2100
+
+[1000]
+ParameterName=device type
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0xA0196
+PDOMapping=0
+
+[1001]
+ParameterName=error register
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[1018]
+SubNumber=5
+ParameterName=Identity Object
+ObjectType=9
+
+[1018sub0]
+ParameterName=largest supported Sub-Index
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+
+[1018sub1]
+ParameterName=Vendor ID
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x25C
+PDOMapping=0
+
+[1018sub2]
+ParameterName=Product code
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[1018sub3]
+ParameterName=Revision code
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00010001
+PDOMapping=0
+
+[1018sub4]
+ParameterName=serial number
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[1003]
+SubNumber=2
+ParameterName=pre-defined error field
+ObjectType=8
+
+[1003sub0]
+ParameterName=error counter
+ObjectType=7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1003sub1]
+ParameterName=standard error field
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[1005]
+ParameterName=COB-ID SYNC-message
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x080
+PDOMapping=0
+
+[1008]
+ParameterName= manufakturer device name
+ObjectType=7
+DataType=0x0009
+AccessType=const
+PDOMapping=0 
+
+[1009]
+ParameterName=hardware version
+ObjectType=7
+DataType=0x0009
+AccessType=const
+PDOMapping=0
+
+[100A]
+ParameterName=software version
+ObjectType=7
+DataType=0x0009
+AccessType=const
+PDOMapping=0
+
+[100C]
+ParameterName=Guard Time
+ObjectType=7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[100D]
+ParameterName=Life time factor
+ObjectType=7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1010]
+SubNumber=2
+ParameterName=store parameters
+ObjectType=8
+
+[1010sub0]
+ParameterName= largest supported Sub-Index
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1010sub1]
+ParameterName=save all parameters
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=1
+PDOMapping=0
+
+[1011]
+SubNumber=2
+ParameterName=restore parameters
+ObjectType=8
+
+[1011sub0]
+ParameterName= largest supported Sub-Index
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1011sub1]
+ParameterName=restore all parameters
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=1
+PDOMapping=0
+
+[1014]
+ParameterName=Cob-ID Emergency
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x80
+PDOMapping=0
+
+[1017]
+ParameterName=Producer heartbeat time
+ObjectType=7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1800]
+SubNumber=5
+ParameterName=1st transmit PDO communication parameter
+ObjectType=9
+
+[1800sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1800sub1]
+ParameterName=COB-ID used by PDO 1
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x180
+PDOMapping=0
+
+[1800sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=rw
+DefaultValue=254
+PDOMapping=0
+
+[1800sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1800sub5]
+ParameterName=event timer
+ObjectType=7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1801]
+SubNumber=5
+ParameterName=2nd transmit PDO communication parameter
+ObjectType=9
+
+[1801sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1801sub1]
+ParameterName=COB-ID used by PDO 2
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x280
+PDOMapping=0
+
+[1801sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=rw
+DefaultValue=1
+PDOMapping=0
+
+[1801sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1801sub5]
+ParameterName=event timer
+ObjectType=7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1A00]
+SubNumber=3
+ParameterName=1st transmit PDO mapping parameter
+ObjectType=8
+
+[1A00sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=rw
+DefaultValue=1
+PDOMapping=0
+
+[1A00sub1]
+ParameterName=1st application object
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x60200120
+PDOMapping=0
+
+[1A00sub2]
+ParameterName=2nd application object
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+
+[1A01]
+SubNumber=3
+ParameterName=2nd transmit PDO mapping parameter
+ObjectType=8
+
+[1A01sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=rw
+DefaultValue=1
+PDOMapping=0
+
+[1A01sub1]
+ParameterName=1st application object
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x60200120
+PDOMapping=0
+
+[1A01sub2]
+ParameterName=2nd application object
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+
+[1F80]
+ParameterName=NMT autostart
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x04
+PDOMapping=0
+
+[6000]
+ParameterName=operating parameters
+ObjectType=7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[6005]
+SubNumber=3
+ParameterName=measuring step settings
+ObjectType=8
+
+[6005sub0]
+ParameterName= number supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[6005sub1]
+ParameterName=measuring step 
+ObjectType=7
+DataType=7
+AccessType=rw
+DefaultValue=
+PDOMapping=0
+
+[6005sub2]
+ParameterName=speed step 
+ObjectType=7
+DataType=7
+AccessType=rw
+DefaultValue=
+PDOMapping=0
+
+[6010]
+SubNumber=2
+ParameterName=Preset value for multi-sensor devices
+ObjectType=8
+
+[6010sub0]
+ParameterName= number supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[6010sub1]
+ParameterName=Preset value position 1
+ObjectType=7
+DataType=0x0004
+AccessType=rw
+DefaultValue=3
+PDOMapping=0
+
+[6020]
+SubNumber=2
+ParameterName=Position value for multi-sensor devices
+ObjectType=8
+
+[6020sub0]
+ParameterName= number supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[6020sub1]
+ParameterName=Position value position 1
+ObjectType=7
+DataType=0x0004
+AccessType=ro
+DefaultValue=2
+PDOMapping=1
+
+[6030]
+SubNumber=2
+ParameterName=Speed value
+ObjectType=8
+
+[6030sub0]
+ParameterName= number supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[6030sub1]
+ParameterName=speed value channel 1
+ObjectType=7
+DataType=3
+AccessType=ro
+DefaultValue=
+PDOMapping=1
+
+[6200]
+ParameterName=cyclic timer 
+ObjectType=7
+DataType=6
+LowLimit=0
+HighLimit=0xffff
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[6500]
+ParameterName=operating status 
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6501]
+ParameterName=measuring step 
+ObjectType=7
+DataType=7
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6503]
+ParameterName=alarms
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6504]
+ParameterName=supported alarms  
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6505]
+ParameterName=warnings 
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6506]
+ParameterName=supported warnings 
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6507]
+ParameterName=profil and software version 
+ObjectType=7
+DataType=7
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[650A]
+SubNumber=2
+ParameterName=Module identification
+ObjectType=8
+
+[650Asub0]
+ParameterName=highest sub-index supported
+ObjectType=7
+DataType=5
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[650Asub1]
+ParameterName=manufacturer offset value
+ObjectType=7
+DataType=4
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[650B]
+ParameterName=serial number 
+ObjectType=7
+DataType=7
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[650C]
+SubNumber=2
+ParameterName=Offsetvalue for Multisensor devices
+ObjectType=8
+
+[650Csub0]
+ParameterName= number supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[650Csub1]
+ParameterName=Offset value position 1
+ObjectType=7
+DataType=0x0004
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2000]
+ParameterName=Cob-ID for Boot-Up Message
+ObjectType=7
+DataType=6
+AccessType=rw
+DefaultValue=$NODEID+0x700
+PDOMapping=0
+
+[2100]
+ParameterName=Positionvalue at lost magnet
+ObjectType=7
+DataType=5
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+

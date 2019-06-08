@@ -1,0 +1,185 @@
+$ DeviceNet Manager Generated Electronic Data Sheet
+$ EDS-File for TR Programmable 
+
+[File]
+
+	DescText = "TR-Electronic Laser prog.";   
+	CreateDate = 07-11-2000;                            
+	CreateTime    = 15:06:05;                         
+	ModDate = 06-25-2001;                               
+	ModTime    = 16:05:00;                            
+	Revision      = 1.0;                              
+
+[Device]
+	VendCode    = 134;                                $ Vendor Code
+	ProdType    = 8;                                  $ Product Type
+	ProdCode    = 9;                                  $ Product Code
+
+	MajRev      = 1;                                  $ Major Rev
+	MinRev      = 1;                                  $ Minor Rev
+	VendName    = "TR-Electronic";
+	ProdTypeStr = "Encoder";
+	ProdName    = "Laser, Prs. over DN";
+	Catalog     = "TR-ELE-BA-GB-0005";
+
+[IO_Info]
+	Default     = 0X0001;
+	PollInfo    = 0X0001, 1, 1;
+
+	Input1      = 
+		4,                              $ 4bytes
+		0,                              $ All bits significant
+		0x0001,                         $ Poll only connection  
+		"Data",                         $ Name String
+		6,                              $ path size
+		"20 04 24 01 30 03",            $ Assy obj inst 
+		"";                             $ Help String
+
+	Output1     = 
+		1,                              $ 1byte
+		0,                              $ All bits significant
+		0x0001,                         $ Poll only connection  
+		"Data",                         $ Name String
+		6,                              $ path size
+		"20 04 24 01 30 03",            $ Assy obj inst 
+		"";                             $ Help String
+
+
+
+[ParamClass]
+	MaxInst=8;
+	Descriptor=0x09;
+	CfgAssembly=42;
+
+[Params]
+	Param1=                                 $ Direction
+		0,                              $ Data Placeholder
+		6,"20 0f 24 01 30 01",          $ Path size and Path to Drehrtg
+		0x2,                            $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Direction",                 	$ Name
+		"",                             $ Units (not used)
+		"0=increasing, the distance between\n"    $ Help
+		"laser and object becomes larger",
+		0,1,0,                          $ min, max, default values
+		1, 1, 1, 0,                     $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;                 $ scaling links and precision
+
+	Param2=                                 $ Clear Preset
+		0,                              $ Data Placeholder
+		6,"20 0f 24 02 30 01",          $ Path size and Path to Drehrtg
+		0x2,                            $ Descriptor
+		8, 1,                           $ Data Type and Size
+		"Clear Preset",                 $ Name
+		"",                             $ Units (not used)
+		"0=the calculated zero-point correction\n"    $ Help
+		"  will be deleted.\n"
+		"  Output = real physical position.\n"
+		"1=the calculated zero-point correction\n"
+		"  will not be deleted.\n"
+		"  Output = physical position + zero-point.",
+		0,1,0,               	$ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param3=                                 $ Meassuring length per step
+		0,                              $ Data Placeholder
+		6,"20 0f 24 03 30 01",          $ Path size and Path to Drehrtg
+		0x0,                            $ Descriptor
+		9, 4,                           $ Data Type and Size
+		"Measuring length / step",    	$ Name
+		"",                             $ Units (not used)
+		"Measuring length per step\n"   $ Help
+		"in 1/1000 mm.",
+		1,100000,1000,        	$ min, max, default values
+		1, 1, 1, 0,    	        $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;       	$ scaling links and precision
+
+	Param4=                                 $ Error value
+		0,                              $ Data Placeholder
+		6,"20 0f 24 04 30 01",          $ Path size and Path to Drehrtg
+		0x0,                            $ Descriptor
+		9, 4,                           $ Data Type and Size
+		"Error value",                  $ Name
+		"",                             $ Units (not used)
+		"Determination of the error value\n" 	$ Help
+		"which will be outputed instead of\n"
+		"the actual value at a beam interruption.",
+		0,4294967295,0,         $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param5=                                	$ Value for Preset1
+		0,                              $ Data Placeholder
+		6,"20 0f 24 05 30 01",          $ Path size and Path to Drehrtg
+		0x0,                            $ Descriptor
+		9, 4,                           $ Data Type and Size
+		"Value for Preset1",            $ Name
+		"",                             $ Units (not used)
+		"IF bit 2^0 of the poll-telegram OUT-byte\n"     $ Help
+		"is set to '1', the encoder adjusts itself\n"
+		"to this position-value.\n"
+		"For successful adjustment the bit 2^0 of\n"
+		"the poll-telegram OUT-byte must be\n"
+		"reset to '0' for at least 1 pollcycle.\n"
+		"Preset cycles lower than 0.5 seconds are\n"
+		"not allowed!",
+		0,2147483647,0,                   $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param6=                                	$ Data-Check
+		0,                              $ Data Placeholder
+		6,"20 0f 24 06 30 01",          $ Path size and Path to Drehrtg
+		0x0,                            $ Descriptor
+		2, 2,                           $ Data Type and Size
+		"Data-Check",                   $ Name
+		"",                             $ Units (not used)
+		"After programming the encoder, you must\n" $ Help
+		"call (write) the data-check. This call\n"
+		"will save the parameters to permanent memory.\n"
+		"If you don't call the data-check, the\n"
+		"parameters value will be lost after power off/on!\n",
+		0,65535,0,                      $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param7=                                	$ Adjust absolute value
+		0,                              $ Data Placeholder
+		6,"20 0f 24 07 30 01",          $ Path size and Path to Drehrtg
+		0x20,                           $ Descriptor (monitor)
+		9, 4,                           $ Data Type and Size
+		"Adjust absolut value",       	$ Name
+		"",                             $ Units (not used)
+		"Adjust encoder to desired position value.\n"    $ Help
+		"An adjustment should only be taken after\n"
+		"programming and data-check.\n"
+		"After adjustment no data-check is necessary.\n",
+		0,2147483647,0,      	$ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param8=                                	$ aktueller Softversion
+		0,                              $ Data Placeholder
+		6,"20 0f 24 08 30 01",          $ Path size and Path to Drehrtg
+		0x10,                           $ Descriptor
+		9, 4,                           $ Data Type and Size
+		"Softversion",                	$ Name
+		"",                             $ Units (not used)
+		"",                             $ Help
+		0,99999999,99999999,            $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+
+
+[EnumPar]
+	Param1=
+		"Increasing, if distance to laser becomes larger",$ fuer Wert=0
+		"Decreasing, if distance to laser becomes larger";$ fuer Wert=1
+
+	Param2=
+		"Clear preset",            	$ fuer Wert = 0
+		"Don't clear preset";           $ fuer Wert = 1
+
+

@@ -1,0 +1,433 @@
+$ DeviceNet Manager Generated Electronic Data Sheet
+$ EDS-File for TR Programmable Rotary Encoder 8192/4096
+
+[File]
+
+        DescText = "TR-Electronic Programmable Rotary Encoder";   
+	CreateDate = 10-09-97;                            
+	CreateTime    = 14:45:21;                         
+        ModDate = 06-25-2001;                               
+        ModTime    = 19:45:21;                            
+        Revision      = 1.1e;                              
+
+[Device]
+        VendCode    = 134;                      $ Vendor Code
+        ProdType    = 8;                        $ Product Type
+        ProdCode    = 2;                        $ Product Code
+
+        MajRev      = 1;                        $ Major Rev
+        MinRev      = 1;                        $ Minor Rev
+	VendName    = "TR-Electronic";
+	ProdTypeStr = "Encoder";
+        ProdName    = "Rotary Encoder 8192";
+	Catalog     = "TR-ECE-BA-GB-0014";
+
+[IO_Info]
+	Default     = 0X0001;
+	PollInfo    = 0X0001, 1, 1;
+
+	Input1      = 
+		4,				$ 4bytes
+		0,				$ All bits significant
+		0x0001,			$ Poll only connection	
+		"Data",				$ Name String
+		6,				$ path size
+		"20 04 24 01 30 03",		$ Assy obj inst 
+		"This is a help string.";	$ Help String
+
+	Output1     = 
+		0,				$ 0bytes
+		0,				$ All bits significant
+		0x0001,			$ Poll only connection	
+		"Data",				$ Name String
+		6,				$ path size
+		"20 04 24 01 30 03",		$ Assy obj inst 
+		"This is a help string.";	$ Help String
+
+
+
+[ParamClass]
+	MaxInst=19;
+	Descriptor=0x09;
+	CfgAssembly=42;
+
+[Params]
+        Param1=                                 $ Direction
+		0,				$ Data Placeholder
+		6,"20 0f 24 01 30 01",		$ Path size and Path to Drehrtg
+		0x2,				$ Descriptor
+		8, 1,				$ Data Type and Size
+                "Direction",                    $ Name
+		"",				$ Units (not used)
+                "0=Increase CW\n"               $ Help
+                "when looking from the end of the shaft.",
+		0,1,0,				$ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param2=                                 $ Output Code
+		0,				$ Data Placeholder
+		6,"20 0f 24 02 30 01",		$ Path size and Path to Drehrtg
+		0x2,				$ Descriptor
+		8, 1,				$ Data Type and Size
+		"Output Code",                  $ Name
+		"",				$ Units (not used)
+		"0=Binary\n"                    $ Help
+		"1=Gray.",
+		0,1,0,				$ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+        Param3=                                 $ Total Number of Steps
+		0,				$ Data Placeholder
+		6,"20 0f 24 03 30 01",		$ Path size and Path to Drehrtg
+		0x0,				$ Descriptor
+		9, 4,				$ Data Type and Size
+                "Total Number of Steps",        $ Name
+		"",				$ Units (not used)
+                "Total Number of Steps\n"       $ Help
+                "= Steps/Rev * (Revolutions Numerator / Revolutions Denominator).",
+		16,33554432,33554432,           $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param4=                                 $ Revolutions Numerator
+		0,				$ Data Placeholder
+		6,"20 0f 24 04 30 01",		$ Path size and Path to Drehrtg
+		0x0,				$ Descriptor
+		9, 4,				$ Data Type and Size
+		"Revolutions Numerator",        $ Name
+		"",				$ Units (not used)
+		"Total Number of Revolutions\n" $ Help
+		"= Revolutions Numerator / Revolutions Denominator.",
+		1,256000,4096,			$ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param5=                                 $ Revolutions Denominator
+		0,				$ Data Placeholder
+		6,"20 0f 24 05 30 01",		$ Path size and Path to Drehrtg
+		0x0,				$ Descriptor
+		8, 1,				$ Data Type and Size
+		"Revolutions Denominator",      $ Name
+		"",				$ Units (not used)
+		"Total Number of Revolutions\n" $ Help
+		"= Revolutions Numerator / Revolutions Denominator.",
+		1,99,1,				$ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param6=                                 $ Lower Safety Limit
+		0,				$ Data Placeholder
+		6,"20 0f 24 06 30 01",		$ Path size and Path to Drehrtg
+		0x0,				$ Descriptor
+		9, 4,				$ Data Type and Size
+		"Lower Safety Limit",           $ Name
+		"",				$ Units (not used)
+		"Lower Safety Limit must be:\n" $ Help
+		"  <= lower Operating Limit.",
+		1,33554430,1,                   $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param7=                                 $ Lower Operating Limit
+		0,				$ Data Placeholder
+		6,"20 0f 24 07 30 01",		$ Path size and Path to Drehrtg
+		0x0,				$ Descriptor
+		9, 4,				$ Data Type and Size
+		"Lower Operating Limit",        $ Name
+		"",				$ Units (not used)
+		"Lower Operating Limit must be:\n"    $ Help
+		"  >= Lower Safety Limit\n"
+		"  <  Upper Operating Limit.",
+		1,33554430,1,                   $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param8=                                 $ Upper Operating Limit
+		0,				$ Data Placeholder
+		6,"20 0f 24 08 30 01",		$ Path size and Path to Drehrtg
+		0x0,				$ Descriptor
+		9, 4,				$ Data Type and Size
+		"Upper Operating Limit",        $ Name
+		"",				$ Units (not used)
+		"Upper Operating Limit must be:\n"    $ Help
+		"  >  Lower Operating Limit\n"
+		"  <= Upper Safety Limit.",
+		1,33554430,1,                   $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param9=                                 $ Upper Safety Limit
+		0,				$ Data Placeholder
+		6,"20 0f 24 09 30 01",		$ Path size and Path to Drehrtg
+		0x0,				$ Descriptor
+		9, 4,				$ Data Type and Size
+		"Upper Safety Limit",           $ Name
+		"",				$ Units (not used)
+		"Upper Safety Limit must be:\n" $ Help
+		"  >= Upper Operating Limit.",
+		1,33554430,1,                   $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param10=                                $ Auxiliary Output 1
+		0,				$ Data Placeholder
+		6,"20 0f 24 0a 30 01",		$ Path size and Path to Drehrtg
+		0x2,				$ Descriptor
+		8, 1,				$ Data Type and Size
+		"Auxiliary Output 1",           $ Name
+		"",				$ Units (not used)
+		"",				$ Help
+		0,14,0,                         $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+        Param11=                                $ Auxiliary Output 2
+		0,				$ Data Placeholder
+		6,"20 0f 24 0b 30 01",		$ Path size and Path to Drehrtg
+		0x2,				$ Descriptor
+		8, 1,				$ Data Type and Size
+                "Auxiliary Output 2",           $ Name
+		"",				$ Units (not used)
+		"",				$ Help
+		0,14,0,                         $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+        Param12=                                $ Auxiliary Output 3
+		0,				$ Data Placeholder
+		6,"20 0f 24 0c 30 01",		$ Path size and Path to Drehrtg
+		0x2,				$ Descriptor
+		8, 1,				$ Data Type and Size
+                "Auxiliary Output 3",           $ Name
+		"",				$ Units (not used)
+		"",				$ Help
+		0,14,0,                         $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+        Param13=                                $ Auxiliary Output 4
+		0,				$ Data Placeholder
+		6,"20 0f 24 0d 30 01",		$ Path size and Path to Drehrtg
+		0x2,				$ Descriptor
+		8, 1,				$ Data Type and Size
+                "Auxiliary Output 4",           $ Name
+		"",				$ Units (not used)
+		"",				$ Help
+		0,14,0,                         $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+        Param14=                                $ Auxiliary Output 5
+		0,				$ Data Placeholder
+		6,"20 0f 24 0e 30 01",		$ Path size and Path to Drehrtg
+		0x2,				$ Descriptor
+		8, 1,				$ Data Type and Size
+                "Auxiliary Output 5",           $ Name
+		"",				$ Units (not used)
+		"",				$ Help
+		0,14,0,                         $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+        Param15=                                $ Auxiliary Output 6
+		0,				$ Data Placeholder
+		6,"20 0f 24 0f 30 01",		$ Path size and Path to Drehrtg
+		0x2,				$ Descriptor
+		8, 1,				$ Data Type and Size
+                "Auxiliary Output 6",           $ Name
+		"",				$ Units (not used)
+		"",				$ Help
+		0,14,0,                         $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+        Param16=                                $ Auxiliary Output 7
+		0,				$ Data Placeholder
+		6,"20 0f 24 10 30 01",		$ Path size and Path to Drehrtg
+		0x2,				$ Descriptor
+		8, 1,				$ Data Type and Size
+                "Auxiliary Output 7",           $ Name
+		"",				$ Units (not used)
+		"",				$ Help
+		0,14,0,                         $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param17=				$ Data-Check
+		0,				$ Data Placeholder
+		6,"20 0f 24 11 30 01",		$ Path size and Path to Drehrtg
+		0x0,				$ Descriptor
+		2, 2,				$ Data Type and Size
+		"Data-Check",			$ Name
+		"",				$ Units (not used)
+		"After programming all parameters the function\n"	$ Help
+		"'Data Check' has to be called (write) to\n"
+		"re-calculate and check the sytem.\n"
+		"If all is ok while reading the encoder sends\n"
+		"'0' otherwise the corresponding error bits\n"
+		"are set to '1'.",
+		0,65535,0,			$ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+		0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param18=                                $ Adjust Absolute Value
+		0,				$ Data Placeholder
+		6,"20 0f 24 12 30 01",		$ Path size and Path to Drehrtg
+		0x20,				$ Descriptor
+		9, 4,				$ Data Type and Size
+		"Adjust Absolute Value",        $ Name
+		"",				$ Units (not used)
+		"Adjust encoder to desired position value.\n"	$ Help
+		"An adjustment should only be taken after\n"
+		"'successful' programming and Data Check.\n"
+		"After adjustment no Data Check is necessary.",
+		0,33554431,0,                   $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+	Param19=				$ aktueller Softstand
+		0,				$ Data Placeholder
+		6,"20 0f 24 13 30 01",		$ Path size and Path to Drehrtg
+		0x10,				$ Descriptor
+		9, 4,				$ Data Type and Size
+		"Softversion",			$ Name
+		"",				$ Units (not used)
+		"",				$ Help
+		0,99999999,99999999,               $ min, max, default values
+		1, 1, 1, 0,             $ mult, div, base, offset scaling
+                0, 0, 0, 0, 0 ;         $ scaling links and precision
+
+
+
+[EnumPar]
+	Param1=
+		"Increase in CW Direction",     $ for Word = 0
+		"Decrease in CW Direction";     $ for Word = 1
+
+	Param2=
+		"Binary",                       $ for Word = 0
+                "Gray";                         $ for Word = 1
+
+        Param10=                                $ Auxiliary Output 1
+                "logical '0'",                  $ for Word = 0
+                "0= Encoder Error",             $ for Word = 1
+                "1= Encoder Error",             $ for Word = 2
+                "0= Below Operating Limit",     $ for Word = 3
+                "1= Below Operating Limit",     $ for Word = 4
+                "0= Within Operating Limit",    $ for Word = 5
+                "1= Within Operating Limit",    $ for Word = 6
+                "0= Above Operating Limit",     $ for Word = 7
+                "1= Above Operating Limit",     $ for Word = 8
+                "0= Below Safety Limit",        $ for Word = 9
+                "1= Below Safety Limit",        $ for Word = 10
+                "0= Within Safety Limit",       $ for Word = 11
+                "1= Within Safety Limit",       $ for Word = 12
+                "0= Above Safety Limit",        $ for Word = 13
+                "1= Above Safety Limit";        $ for Word = 14
+
+        Param11=                                $ Auxiliary Output 2
+                "logical '0'",                  $ for Word = 0
+                "0= Encoder Error",             $ for Word = 1
+                "1= Encoder Error",             $ for Word = 2
+                "0= Below Operating Limit",     $ for Word = 3
+                "1= Below Operating Limit",     $ for Word = 4
+                "0= Within Operating Limit",    $ for Word = 5
+                "1= Within Operating Limit",    $ for Word = 6
+                "0= Above Operating Limit",     $ for Word = 7
+                "1= Above Operating Limit",     $ for Word = 8
+                "0= Below Safety Limit",        $ for Word = 9
+                "1= Below Safety Limit",        $ for Word = 10
+                "0= Within Safety Limit",       $ for Word = 11
+                "1= Within Safety Limit",       $ for Word = 12
+                "0= Above Safety Limit",        $ for Word = 13
+                "1= Above Safety Limit";        $ for Word = 14
+
+        Param12=                                $ Auxiliary Output 3
+                "logical '0'",                  $ for Word = 0
+                "0= Encoder Error",             $ for Word = 1
+                "1= Encoder Error",             $ for Word = 2
+                "0= Below Operating Limit",     $ for Word = 3
+                "1= Below Operating Limit",     $ for Word = 4
+                "0= Within Operating Limit",    $ for Word = 5
+                "1= Within Operating Limit",    $ for Word = 6
+                "0= Above Operating Limit",     $ for Word = 7
+                "1= Above Operating Limit",     $ for Word = 8
+                "0= Below Safety Limit",        $ for Word = 9
+                "1= Below Safety Limit",        $ for Word = 10
+                "0= Within Safety Limit",       $ for Word = 11
+                "1= Within Safety Limit",       $ for Word = 12
+                "0= Above Safety Limit",        $ for Word = 13
+                "1= Above Safety Limit";        $ for Word = 14
+
+        Param13=                                $ Auxiliary Output 4
+                "logical '0'",                  $ for Word = 0
+                "0= Encoder Error",             $ for Word = 1
+                "1= Encoder Error",             $ for Word = 2
+                "0= Below Operating Limit",     $ for Word = 3
+                "1= Below Operating Limit",     $ for Word = 4
+                "0= Within Operating Limit",    $ for Word = 5
+                "1= Within Operating Limit",    $ for Word = 6
+                "0= Above Operating Limit",     $ for Word = 7
+                "1= Above Operating Limit",     $ for Word = 8
+                "0= Below Safety Limit",        $ for Word = 9
+                "1= Below Safety Limit",        $ for Word = 10
+                "0= Within Safety Limit",       $ for Word = 11
+                "1= Within Safety Limit",       $ for Word = 12
+                "0= Above Safety Limit",        $ for Word = 13
+                "1= Above Safety Limit";        $ for Word = 14
+
+        Param14=                                $ Auxiliary Output 5
+                "logical '0'",                  $ for Word = 0
+                "0= Encoder Error",             $ for Word = 1
+                "1= Encoder Error",             $ for Word = 2
+                "0= Below Operating Limit",     $ for Word = 3
+                "1= Below Operating Limit",     $ for Word = 4
+                "0= Within Operating Limit",    $ for Word = 5
+                "1= Within Operating Limit",    $ for Word = 6
+                "0= Above Operating Limit",     $ for Word = 7
+                "1= Above Operating Limit",     $ for Word = 8
+                "0= Below Safety Limit",        $ for Word = 9
+                "1= Below Safety Limit",        $ for Word = 10
+                "0= Within Safety Limit",       $ for Word = 11
+                "1= Within Safety Limit",       $ for Word = 12
+                "0= Above Safety Limit",        $ for Word = 13
+                "1= Above Safety Limit";        $ for Word = 14
+
+        Param15=                                $ Auxiliary Output 6
+                "logical '0'",                  $ for Word = 0
+                "0= Encoder Error",             $ for Word = 1
+                "1= Encoder Error",             $ for Word = 2
+                "0= Below Operating Limit",     $ for Word = 3
+                "1= Below Operating Limit",     $ for Word = 4
+                "0= Within Operating Limit",    $ for Word = 5
+                "1= Within Operating Limit",    $ for Word = 6
+                "0= Above Operating Limit",     $ for Word = 7
+                "1= Above Operating Limit",     $ for Word = 8
+                "0= Below Safety Limit",        $ for Word = 9
+                "1= Below Safety Limit",        $ for Word = 10
+                "0= Within Safety Limit",       $ for Word = 11
+                "1= Within Safety Limit",       $ for Word = 12
+                "0= Above Safety Limit",        $ for Word = 13
+                "1= Above Safety Limit";        $ for Word = 14
+
+        Param16=                                $ Auxiliary Output 7
+                "logical '0'",                  $ for Word = 0
+                "0= Encoder Error",             $ for Word = 1
+                "1= Encoder Error",             $ for Word = 2
+                "0= Below Operating Limit",     $ for Word = 3
+                "1= Below Operating Limit",     $ for Word = 4
+                "0= Within Operating Limit",    $ for Word = 5
+                "1= Within Operating Limit",    $ for Word = 6
+                "0= Above Operating Limit",     $ for Word = 7
+                "1= Above Operating Limit",     $ for Word = 8
+                "0= Below Safety Limit",        $ for Word = 9
+                "1= Below Safety Limit",        $ for Word = 10
+                "0= Within Safety Limit",       $ for Word = 11
+                "1= Within Safety Limit",       $ for Word = 12
+                "0= Above Safety Limit",        $ for Word = 13
+                "1= Above Safety Limit";        $ for Word = 14
+
+
+

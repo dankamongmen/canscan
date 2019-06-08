@@ -1,0 +1,20 @@
+[File]
+	DescText = "DIGI-IA Ethernet/IP to DF1 Bridge";
+	CreateDate = 07-27-2002;
+	CreateTime = 08:00:00;
+	Revision = 1.0;
+
+[Device]
+	VendCode = 805;
+	VendName = "www.digi.com";
+	ProdType = 12;
+	ProdTypeStr = "Communications Adaptor";
+	ProdCode= 99;
+	MajRev = 1;
+	MinRev = 0;
+	ProdName = "DIGI-IA";
+	Catalog = "DIGI-IA";
+	Icon = "ENI_Icon.ico";
+
+
+

@@ -1,0 +1,1854 @@
+[FileInfo]
+Filename=LACANMS.eds
+FileVersion=1.1
+FileRevision=2
+Description=EDS for linear absolute encoder
+CreationTime=10:30AM
+CreationDate=11-12-97
+CreatedBy=TR Electronic
+ModificationTime=
+ModificationDate=10-27-03
+ModifiedBy=benz
+
+[DeviceInfo]
+VendorName="TR Electronic"
+VendorNumber=
+ProductName="Linear Encoder Multi Sensor"
+ProductVersion=1
+ProductRevision=1
+BaudRate_20=1
+BaudRate_125=1
+BaudRate_500=1
+BaudRate_1000=1
+SimpleBootUpSlave=1
+ExtendedBootUpSlave=0
+SimpleBootUpMaster=0
+ExtendedBootupMaster=0
+
+[MandatoryObjects]
+SupportedObjects=2
+1=0x1000
+2=0x1001
+
+[1000]
+SubNumber=0
+ParameterName="device type"
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x0A0196
+PDOMapping=0
+
+[1001]
+SubNumber=0
+ParameterName="error register"
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[OptionalObjects]
+SupportedObjects=44
+1=0x1002
+2=0x1003
+3=0x1004
+4=0x1005
+5=0x1008
+6=0x1009
+7=0x100A
+8=0x100B
+9=0x100C
+10=0x100D
+11=0x100E
+12=0x1010
+13=0x1800
+14=0x1802
+
+15=0x1810
+16=0x1811
+17=0x1812
+18=0x1813
+19=0x1814
+20=0x1815
+21=0x1816
+
+22=0x1820
+23=0x1821
+24=0x1822
+25=0x1823
+26=0x1824
+27=0x1825
+28=0x1826
+
+29=0x1A00
+30=0x1A02
+
+31=0x1A10
+32=0x1A11
+33=0x1A12
+34=0x1A13
+35=0x1A14
+36=0x1A15
+37=0x1A16
+
+38=0x1A20
+39=0x1A21
+40=0x1A22
+41=0x1A23
+42=0x1A24
+43=0x1A25
+44=0x1A26
+
+
+
+[1002]
+SubNumber=0
+ParameterName=manufacturer status register
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+
+[1003]
+SubNumber=2
+ParameterName=pre-defined error field
+ObjectType=9
+
+[1003sub0]
+ParameterName=error counter
+ObjectType=7
+DataType=0x0005
+AccessType=rw
+DefaultValue=
+PDOMapping=0
+
+[1003sub1]
+ParameterName=standard error field
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+
+[1004]
+SubNumber=3
+ParameterName=number of PDOs supported
+
+[1004sub0]
+ParameterName=number of receive/transmit PDOs
+ObjectType=
+DataType=0x0007
+AccessType=ro
+DefaultValue=16
+ParameterValue=16
+PDOMapping=0
+
+[1004sub1]
+ParameterName=number of synchronous PDOs
+ObjectType=
+DataType=0x0007
+AccessType=ro
+DefaultValue=8
+ParameterValue=8
+PDOMapping=0
+
+[1004sub2]
+ParameterName=number of asynchronous PDOs
+ObjectType=
+DataType=0x0007
+AccessType=ro
+DefaultValue=8
+ParameterValue=8
+PDOMapping=0
+
+[1005]
+SubNumber=0
+ParameterName=COB-ID SYNC-message
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x080
+PDOMapping=0
+
+
+[1008]
+SubNumber=0
+ParameterName= manufakturer device name
+ObjectType=7
+DataType=0x0009
+AccessType=ro
+PDOMapping=0 
+
+[1009]
+SubNumber=0
+ParameterName=hardware version
+ObjectType=7
+DataType=0x0009
+AccessType=ro
+PDOMapping=0
+
+[100A]
+SubNumber=0
+ParameterName=software version
+ObjectType=7
+DataType=0x0009
+AccessType=const
+PDOMapping=0
+
+[100B]
+SubNumber=0
+ParameterName=Node-ID
+ObjectType=7
+DataType=0x0007
+LowLimit= 1
+HighLimit= 127
+AccessType=ro
+DefaultValue=01
+PDOMapping=0
+
+
+[100C]
+SubNumber=0
+ParameterName=Guard Time
+ObjectType=7
+DataType=0x0006
+LowLimit=
+HighLimit=
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[100D]
+SubNumber=0
+ParameterName=Life time factor
+ObjectType=7
+DataType=0x0005
+LowLimit=
+HighLimit=
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[100E]
+SubNumber=0
+ParameterName=COB-ID guarding protocol
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=700h+node-id
+PDOMapping=0
+
+[1010]
+SubNumber=2
+ParameterName=store parameters
+ObjectType=9
+
+[1010sub0]
+ParameterName= largest supported Sub-Index
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1010sub1]
+SubNumber=0
+ParameterName=save all parameters
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=
+PDOMapping=0
+
+
+[1800]
+SubNumber=4
+ParameterName=1st transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1800sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1800sub1]
+ParameterName=COB-ID used by PDO 1
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x180+NodeID
+PDOMapping=0
+
+[1800sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1800sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+
+[1802]
+SubNumber=4
+ParameterName=2nd transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1802sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1802sub1]
+ParameterName=COB-ID used by PDO 2
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x280+NodeID
+PDOMapping=0
+
+[1802sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1802sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+
+[1810]
+SubNumber=4
+ParameterName=3rd transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1810sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1810sub1]
+ParameterName=COB-ID used by PDO 3
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x180+NodeID+1
+PDOMapping=0
+
+[1810sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1810sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+
+[1811]
+SubNumber=4
+ParameterName=4th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1811sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1811sub1]
+ParameterName=COB-ID used by PDO 4
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x180+NodeID+2
+PDOMapping=0
+
+[1811sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1811sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+
+[1812]
+SubNumber=4
+ParameterName=5th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1812sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1812sub1]
+ParameterName=COB-ID used by PDO 5
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x180+NodeID+3
+PDOMapping=0
+
+[1812sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1812sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+
+[1813]
+SubNumber=4
+ParameterName=6th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1813sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1813sub1]
+ParameterName=COB-ID used by PDO 6
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x180+NodeID+4
+PDOMapping=0
+
+[1813sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1813sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+
+[1814]
+SubNumber=4
+ParameterName=7th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1814sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1814sub1]
+ParameterName=COB-ID used by PDO 7
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x180+NodeID+5
+PDOMapping=0
+
+[1814sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1814sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[1815]
+SubNumber=4
+ParameterName=8th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1815sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1815sub1]
+ParameterName=COB-ID used by PDO 8
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x180+NodeID+6
+PDOMapping=0
+
+[1815sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1815sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[1816]
+SubNumber=4
+ParameterName=9th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1816sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1816sub1]
+ParameterName=COB-ID used by PDO 9
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x180+NodeID+7
+PDOMapping=0
+
+[1816sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1816sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+
+
+[1820]
+SubNumber=4
+ParameterName=10th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1820sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1820sub1]
+ParameterName=COB-ID used by PDO 10
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x280+NodeID+1
+PDOMapping=0
+
+[1820sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue= 1
+PDOMapping=0
+
+[1820sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+
+
+[1821]
+SubNumber=4
+ParameterName=11th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1821sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1821sub1]
+ParameterName=COB-ID used by PDO 11
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x280+NodeID+2
+PDOMapping=0
+
+[1821sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue= 1
+PDOMapping=0
+
+[1821sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+
+[1822]
+SubNumber=4
+ParameterName=12th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1822sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1822sub1]
+ParameterName=COB-ID used by PDO 12
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x280+NodeID+3
+PDOMapping=0
+
+[1822sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1822sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+
+[1823]
+SubNumber=4
+ParameterName=13th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1823sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1823sub1]
+ParameterName=COB-ID used by PDO 13
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x280+NodeID+4
+PDOMapping=0
+
+[1823sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1823sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+
+[1824]
+SubNumber=4
+ParameterName=14th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1824sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1824sub1]
+ParameterName=COB-ID used by PDO 14
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x280+NodeID+5
+PDOMapping=0
+
+[1824sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1824sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+
+[1825]
+SubNumber=4
+ParameterName=15th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1825sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1825sub1]
+ParameterName=COB-ID used by PDO 15
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x280+NodeID+6
+PDOMapping=0
+
+[1825sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1825sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+
+[1826]
+SubNumber=4
+ParameterName=16th transmit PDO communication parameter
+ObjectType=6
+DataType=0x0020
+
+[1826sub0]
+ParameterName=number of supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1826sub1]
+ParameterName=COB-ID used by PDO 16
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x280+NodeID+7
+PDOMapping=0
+
+[1826sub2]
+ParameterName=transmissison type
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1826sub3]
+ParameterName=inhibit time
+ObjectType=7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+
+[1A00]
+SubNumber=3
+ParameterName=1st transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+[1A00sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A00sub1]
+ParameterName=Position value, sensor 1
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200120
+
+[1A00sub2]
+ParameterName=Position value, sensor 2
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200220
+
+
+
+[1A02]
+SubNumber=3
+ParameterName=2nd transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+[1A02sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A02sub1]
+ParameterName=Position value, sensor 1
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200120
+
+[1A02sub2]
+ParameterName=Position value, sensor 2
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200220
+
+
+
+[1A10]
+SubNumber=3
+ParameterName=3rd transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A10sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A10sub1]
+ParameterName=Position value, sensor 3
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200320
+
+[1A10sub2]
+ParameterName=Position value, sensor 4
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200420
+
+
+
+[1A11]
+SubNumber=3
+ParameterName=4th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A11sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A11sub1]
+ParameterName=Position value, sensor 5
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200520
+
+[1A11sub2]
+ParameterName=Position value, sensor 6
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200620
+
+
+[1A12]
+SubNumber=3
+ParameterName=5th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A12sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A12sub1]
+ParameterName=Position value, sensor 7
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200720
+
+[1A12sub2]
+ParameterName=Position value, sensor 8
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200820
+
+
+[1A13]
+SubNumber=3
+ParameterName=6th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A13sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A13sub1]
+ParameterName=Position value, sensor 9
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200920
+
+[1A13sub2]
+ParameterName=Position value, sensor 10
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200a20
+
+
+[1A14]
+SubNumber=3
+ParameterName=7th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A14sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A14sub1]
+ParameterName=Position value, sensor 11
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200b20
+
+[1A14sub2]
+ParameterName=Position value, sensor 12
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200c20
+
+
+[1A15]
+SubNumber=3
+ParameterName=8th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A15sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A15sub1]
+ParameterName=Position value, sensor 13
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200d20
+
+[1A15sub2]
+ParameterName=Position value, sensor 14
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200e20
+
+
+[1A16]
+SubNumber=3
+ParameterName=9th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A16sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A16sub1]
+ParameterName=Position value, sensor 15
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200f20
+
+[1A16sub2]
+ParameterName=Position value, sensor 16
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60201020
+
+
+
+[1A20]
+SubNumber=3
+ParameterName=10th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A20sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A20sub1]
+ParameterName=Position value, sensor 3
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200320
+
+[1A20sub2]
+ParameterName=Position value, sensor 4
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200420
+
+
+
+[1A21]
+SubNumber=3
+ParameterName=11th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A21sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A21sub1]
+ParameterName=Position value, sensor 5
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200520
+
+[1A21sub2]
+ParameterName=Position value, sensor 6
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200620
+
+
+[1A22]
+SubNumber=3
+ParameterName=12th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A22sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A22sub1]
+ParameterName=Position value, sensor 7
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200720
+
+[1A22sub2]
+ParameterName=Position value, sensor 8
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200820
+
+
+[1A23]
+SubNumber=3
+ParameterName=13th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A23sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A23sub1]
+ParameterName=Position value, sensor 9
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200920
+
+[1A23sub2]
+ParameterName=Position value, sensor 10
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200a20
+
+
+[1A24]
+SubNumber=3
+ParameterName=14th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A24sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A24sub1]
+ParameterName=Position value, sensor11
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200b20
+
+[1A24sub2]
+ParameterName=Position value, sensor12
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200c20
+
+
+[1A25]
+SubNumber=3
+ParameterName=15th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A25sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A25sub1]
+ParameterName=Position value, sensor 13
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200d20
+
+[1A25sub2]
+ParameterName=Position value, sensor 14
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200e20
+
+
+[1A26]
+SubNumber=3
+ParameterName=16th transmit PDO mapping parameter
+ObjectType=8
+DataType=0x0021
+
+
+[1A26sub0]
+ParameterName=number of mapped objects 
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+
+[1A26sub1]
+ParameterName=Position value, sensor 15
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60200f20
+
+[1A26sub2]
+ParameterName=Position value, sensor 16
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60201020
+
+
+
+[ManufacturerObjects]
+SupportedObjects=21
+1=0x6000
+2=0x6001
+3=0x6002
+4=0x6003
+5=0x6004
+6=0x6005
+7=0x6010
+8=0x6020
+9=0x6200
+10=0x6500
+11=0x6501
+12=0x6502
+13=0x6503
+14=0x6504
+15=0x6505
+16=0x6506
+17=0x6507
+18=0x6508
+19=0x6509
+20=0x650a
+21=0x650b
+
+
+[6000]
+SubNumber=0
+ParameterName=operating parameters
+ObjectType=7
+DataType=0x0006
+AccessType=rw
+DefaultValue=4
+PDOMapping=0
+
+[6001]
+SubNumber=0
+ParameterName=measuring units per revolution
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[6002]
+SubNumber=0
+ParameterName=total measuring range
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=
+PDOMapping=0
+
+[6003]
+SubNumber=0
+ParameterName=preset value sensor 1
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+DefaultValue=
+PDOMapping=0
+
+[6004]
+SubNumber=0
+ParameterName=position value sensor 1
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0
+PDOMapping=1
+
+[6005]
+SubNumber=2
+ParameterName=measuring step settings
+ObjectType=9
+
+[6005sub0]
+ParameterName= number supported entries
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[6005sub1]
+ParameterName=measuring step 
+ObjectType=7
+DataType=7
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+
+
+
+[6010]
+SubNumber=17
+ParameterName=preset value multi-sensor
+ObjectType=6
+DataType=0x0020
+
+[6010sub0]
+ParameterName=number of available sensors
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=16
+PDOMapping=0
+
+[6010sub1]
+ParameterName=preset value sensor 1
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010sub2]
+ParameterName=preset value sensor 2
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010sub3]
+ParameterName=preset value sensor 3
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010sub4] 			
+ParameterName=preset value sensor 4
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010sub5]
+ParameterName=preset value sensor 5
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010sub6]				
+ParameterName=preset value sensor 6
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010sub7]
+ParameterName=preset value sensor 7
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010sub8]
+ParameterName=preset value sensor 8
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010sub9]
+ParameterName=preset value sensor 9
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010suba]				
+ParameterName=preset value sensor 10
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010subb]
+ParameterName=preset value sensor 11
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010subc]			
+ParameterName=preset value sensor 12
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010subd]
+ParameterName=preset value sensor 13
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010sube]			
+ParameterName=preset value sensor 14
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010subf]
+ParameterName=preset value sensor 15
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[6010sub10]
+ParameterName=preset value sensor 16
+ObjectType=7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+
+
+
+[6020]
+SubNumber=17
+ParameterName=position value multi-sensor
+ObjectType=6
+DataType=0x0020
+
+[6020sub0]
+ParameterName=number of available sensors
+ObjectType=7
+DataType=0x0005
+AccessType=ro
+DefaultValue=16
+PDOMapping=0
+
+[6020sub1]
+ParameterName=position value sensor 1
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020sub2]
+ParameterName=position value sensor 2
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020sub3]
+ParameterName=position value sensor 3
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020sub4] 			
+ParameterName=position value sensor 4
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020sub5]
+ParameterName=position value sensor 5
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020sub6]				
+ParameterName=position value sensor 6
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020sub7]
+ParameterName=position value sensor 7
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020sub8]
+ParameterName=position value sensor 8
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020sub9]
+ParameterName=position value sensor 9
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020suba]				
+ParameterName=position value sensor 10
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020subb]
+ParameterName=position value sensor 11
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020subc]			
+ParameterName=position value sensor 12
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020subd]
+ParameterName=position value sensor 13
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020sube]			
+ParameterName=position value sensor 14
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020subf]
+ParameterName=position value sensor 15
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[6020sub10]
+ParameterName=position value sensor 16
+ObjectType=7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+
+
+[6200]
+SubNumber=0
+ParameterName=cyclic timer 
+ObjectType=7
+DataType=6
+LowLimit=0
+HighLimit=0xffff
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+
+[6500]
+SubNumber=0
+ParameterName=operating status 
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6501]
+SubNumber=0
+ParameterName=measuring step 
+ObjectType=7
+DataType=7
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6502]
+SubNumber=0
+ParameterName=number of revolutions 
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[6503]
+SubNumber=0
+ParameterName=alarms
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[6504]
+SubNumber=0
+ParameterName=supported alarms  
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[6505]
+SubNumber=0
+ParameterName=warnings 
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[6506]
+SubNumber=0
+ParameterName=supported warnings 
+ObjectType=7
+DataType=6
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[6507]
+SubNumber=0
+ParameterName=profil and software version 
+ObjectType=7
+DataType=7
+AccessType=ro
+DefaultValue=0x1000200
+PDOMapping=0
+
+[6508]
+SubNumber=0
+ParameterName=operating time 
+ObjectType=7
+DataType=7
+AccessType=ro
+DefaultValue=0xffffffff
+PDOMapping=0
+
+[6509]
+SubNumber=0
+ParameterName=offset value 
+ObjectType=7
+DataType=4
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[650A]
+SubNumber=1
+ParameterName=Module_identification
+ObjectType=8
+DataType=0x4
+
+[650Asub0]
+ParameterName=manufacturer_offset_value
+ObjectType=8
+DataType=4
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+
+[650b]
+SubNumber=0
+ParameterName=serial number 
+ObjectType=7
+DataType=7
+AccessType=ro
+DefaultValue=0xffffffff
+PDOMapping=0
+
+[StandardDataTypes]
+0x0001=1
+0x0002=1
+0x0003=1
+0x0004=1
+0x0005=1
+0x0006=1
+0x0007=1
+0x0008=0
+0x0009=1
+0x000A=0
+0x000B=0
+0x000C=0
+0x000D=0
+0x000E=0
+0x000F=0
+0x0020=1
+0x0021=1
+
+[DummyUsage]
+
+[Comments]
+Lines=0x2
+Line1= Automatic EDS=object 1000 device type default value
+Line2= Automatic EDS=object 6507 Profil and Softwareversion default value
+
