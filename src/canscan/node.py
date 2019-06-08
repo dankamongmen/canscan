@@ -12,12 +12,12 @@ class Node(object):
             return True
         return False
 
-    def __init__(self, dev=''):
+    def __init__(self, bustype='virtual', dev=''):
         """An empty dev param means we won't try to actually connect."""
         self.dev = dev
         if self.Connectable():
             self.network = canopen.Network()
-            self.network.connect(bustype='socketcan', channel=dev)
+            self.network.connect(bustype=bustype, channel=dev)
 
     def __del__(self):
         if self.Connectable():
