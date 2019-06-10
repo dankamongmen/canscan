@@ -14,29 +14,35 @@ CANOPEN_MAX_ID = 0x7f
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Probe and listen for CANopen')
-    parser.add_argument('device', help='link/can network device')
+    # The device changes depending on the backing python-can driver. For
+    # socketcan, you want the network device name. For canalystii, USB devindex.
+    parser.add_argument('bustype', help='specify bustype (see python-can)')
+    parser.add_argument('device', help='can device identifier (per-bus semantics)')
     parser.add_argument('--id', help='our CANopen ID, 0..0x7f',
                         type=lambda x: int(x, 0), default=DEFAULT_NODEID)
-    parser.add_argument('--scansdo', help='comma-delimited list of nodes to scan',
+    parser.add_argument('--scan', help='comma-delimited list of nodes to scan',
                         type=lambda x: x.split(','), default=[])
+    parser.add_argument('--channel', help='channel, if appropriate', type=int)
+    parser.add_argument('--passive', help='do not transmit any frames',
+                        action='store_true', dest='passive')
     parser.add_argument('--oneshot', help='do an active scan, dump results, and exit',
                         action='store_true', dest='oneshot')
     args = parser.parse_args()
     if args.id < 0 or args.id > CANOPEN_MAX_ID:
         raise SystemExit('Invalid node ID: 0x%x' % args.id)
     CanID = args.id
-    CanNode = node.Node('socketcan', args.device)
+    CanNode = node.Node(dev=args.device, bustype=args.bustype, channel=args.channel)
     scanNodes = []
     scanSet = set(scanNodes)
-    if args.scansdo:
-        for noderange in args.scansdo:
+    if args.scan:
+        for noderange in args.scan:
             try:
-                node = int(noderange)
+                node = int(noderange, 0)
                 if node < 0 or node > 0x7f:
                     raise SystemExit('Invalid node ID: 0x%x' % node)
                 scanSet.add(node)
             except ValueError:
-                rlist = ([int(n) for n in noderange.split('-')])
+                rlist = ([int(n, 0) for n in noderange.split('-')])
                 if len(rlist) != 2:
                     raise SystemExit('Invalid node ID range: %s' % noderange)
                 if rlist[0] < 0 or rlist[1] < 0:
@@ -48,9 +54,15 @@ if __name__ == '__main__':
                 r = set(range(rlist[0], rlist[1] + 1))
                 scanSet.update(r)
         scanNodes = list(scanSet)
-    print('NodeID:', hex(CanID), 'Node scan list:', scanNodes)
+    if args.passive:
+        if args.oneshot:
+            raise SystemExit("--oneshot doesn't make sense with --passive, exiting")
+        if len(scanNodes):
+            raise SystemExit("--scan doesn't make sense with --passive, exiting")
+    print('Bus: ', args.bustype, 'NodeID:', hex(CanID), 'Node scan list:', scanNodes)
     CanNode.NetworkSDOSweep()
-    CanNode.Discover()
+    if not args.passive:
+        CanNode.Discover()
     if not args.oneshot:
         print('Waiting for signal/keyboard interrupt...')
         signal.pause()
