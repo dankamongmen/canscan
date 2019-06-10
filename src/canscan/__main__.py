@@ -5,7 +5,7 @@
 # https://github.com/dankamongmen/canscan
 
 from __future__ import print_function
-import node
+import canopen.node
 import signal
 import argparse
 

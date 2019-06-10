@@ -1,7 +1,7 @@
 import unittest
 import canscan.__main__
 
-class TestExtractRaangeList(unittest.TestCase):
+class TestExtractRangeList(unittest.TestCase):
 
     def test_empty_arg(self):
         nodes = canscan.__main__.ExtractRangeList('')
@@ -17,11 +17,11 @@ class TestExtractRaangeList(unittest.TestCase):
 
     def test_complete_list(self):
         nodes = canscan.__main__.ExtractRangeList('0x0-0xffff')
-        self.assertEqual(nodes, range(0, 0x10000))
+        self.assertEqual(nodes, list(range(0x10000)))
 
     def test_complete_list_union(self):
         nodes = canscan.__main__.ExtractRangeList('0x0-0x7fff,0x8000-0xffff')
-        self.assertEqual(nodes, range(0, 0x10000))
+        self.assertEqual(nodes, list(range(0x10000)))
 
     def test_cut_list(self):
         nodes = canscan.__main__.ExtractRangeList('0x0-0x7fff,0x8001-0xffff')
