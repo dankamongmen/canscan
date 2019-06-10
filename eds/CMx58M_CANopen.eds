@@ -1,0 +1,588 @@
+; ----------------------------------------
+;  Filename:    CMx58M_CANopen.EDS                                               
+;  Project:     CANopen Slave                                              
+;  Date:        24.01.2008                                           
+;  Version:     1.0                                                       
+;  Author:      Holger Schilling	                                            
+;  OS:          Windows 98/XP                                              
+; ----------------------------------------
+;  Copyright:   TR-Electronic	                                             	
+;               Eglishalde 6						              
+;               78647 Trossingen                                       
+;               Germany                                                     
+; ----------------------------------------
+
+[FileInfo]
+FileName=CMx58M_CANopen.eds
+FileVersion=1
+FileRevision=1
+EDSVersion=4.0
+Description=EDS for Absolute Encoder Series CM
+CreationTime=00:00PM
+CreationDate=01-24-2008
+CreatedBy=TR-Electronic
+ModificationDate=09-01-2009
+ModificationTime=10:15PM
+ModifiedBy=Holger Schilling
+
+[DeviceInfo]
+VendorName=TR-Electronic
+VendorNumber=0x025C
+ProductName=CM58M
+ProductNumber=0x01D93D9C
+RevisionNumber=0x00010001
+OrderCode=00000
+BaudRate_10=0
+BaudRate_20=1
+BaudRate_50=0
+BaudRate_125=1
+BaudRate_250=0
+BaudRate_500=1
+BaudRate_800=0
+BaudRate_1000=1
+SimpleBootUpSlave=1
+SimpleBootUpMaster=0
+NrOfRXPDO=0
+NrOfTXPDO=2
+Granularity=0
+LSS_Supported=1
+GroupMessaging=0
+DynamicChannelsSupported=0
+;ProductVersion=1.00
+;ProductRevision=1.00
+;ExtendedBootUpMaster=0
+;ExtendedBootUpSlave=0
+
+[Comments]
+Lines=9
+Line1=--------------------------
+Line2=CMx58M_CANopen
+Line3=--------------------------
+Line4=File-Version 1.1
+Line5=09.01.2009
+Line6=
+Line7=TR-Electronic
+Line8=Eglishalde 6
+Line9=78647 Trossingen
+
+[DummyUsage]
+Dummy0001=0
+Dummy0002=1
+Dummy0003=1
+Dummy0004=1
+Dummy0005=1
+Dummy0006=1
+Dummy0007=1
+
+; --------------------------------------------------------------------------
+;  Area:    mandatory objects                                                     
+; --------------------------------------------------------------------------
+
+[MandatoryObjects]
+SupportedObjects=0x3
+1=0x1000
+2=0x1001
+3=0x1018
+
+[OptionalObjects]
+SupportedObjects=33
+1=0x1002
+2=0x1003
+3=0x1005
+4=0x1008
+5=0x1009
+6=0x100A
+7=0x100C
+8=0x100D
+9=0x100E
+10=0x1010
+11=0x1014
+12=0x1800
+13=0x1801
+14=0x1A00
+15=0x1A01
+;
+16=0x6000
+17=0x6001
+18=0x6002
+19=0x6003
+20=0x6004
+21=0x6200
+22=0x6500
+23=0x6501
+24=0x6502
+25=0x6503
+26=0x6504
+27=0x6505
+28=0x6506
+29=0x6507
+30=0x6508
+31=0x6509
+32=0x650A
+33=0x650B
+
+[1000]
+ParameterName=Device Type
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00020196
+PDOMapping=0
+
+[1001]
+ParameterName=Error Register
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[1002]
+ParameterName=Manufacturer Status Register
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[1003]
+SubNumber=2
+ParameterName=Pre-defined Error Field
+ObjectType=8
+
+[1003sub0]
+ParameterName=Number of Errors
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1003sub1]
+ParameterName=Standard Error Field 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[1005]
+ParameterName=COB-ID SYNC Message
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x80
+PDOMapping=0
+
+[1008]
+ParameterName=Manufacturer Device Name
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=
+PDOMapping=0
+
+[1009]
+ParameterName=Manufacturer Hardware Version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=
+PDOMapping=0
+
+[100A]
+ParameterName=Manufacturer Software Version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=
+PDOMapping=0
+
+[100C]
+ParameterName=Guard Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0x00
+LowLimit=0
+HighLimit=0xFFFF
+PDOMapping=0
+
+[100D]
+ParameterName=Life Time Factor
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[100E]
+ParameterName=COB-ID guarding protocol
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[1010]
+SubNumber=2
+ParameterName=Store Parameters
+Objecttype=0x8
+
+[1010sub0]
+ParameterName=Largest Supported SubIndex
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+DefaultValue=0x01
+
+[1010sub1]
+ParameterName=Save All Parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[1014]
+ParameterName=COB-ID EMCY
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x00000080
+PDOMapping=0
+
+[1018]
+SubNumber=5
+ParameterName=Identy Object
+Objecttype=0x9
+
+[1018sub0]
+ParameterName=number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+DefaultValue=4
+
+[1018sub1]
+ParameterName=Vendor ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x025C
+PDOMapping=0
+
+[1018sub2]
+ParameterName=Product Code
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x01D93D9C
+PDOMapping=0
+
+[1018sub3]
+ParameterName=Revisions-Nr
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00010001
+PDOMapping=0
+
+[1018sub4]
+ParameterName=Serial-Nr
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+; --------------------------------------------------------------------------
+;  Area:    		1st async transmit communication  parameters                                                
+; --------------------------------------------------------------------------
+
+[1800]
+SubNumber=4
+ParameterName=1nd Transmit PDO Parameter
+ObjectType=0x09
+
+[1800sub0]
+ParameterName=Number of Entries
+ObjectType=0x07
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1800sub1]
+ParameterName=COB-ID
+ObjectType=0x07
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x180
+PDOMapping=0
+
+[1800sub2]
+ParameterName=Transmission Type
+ObjectType=0x07
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1800sub3]
+ParameterName=Inhibit Time
+ObjectType=0x07
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+; --------------------------------------------------------------------------
+;  Area:    		2nd sync transmit communication  parameters                                                
+; --------------------------------------------------------------------------
+[1801]
+SubNumber=4
+ParameterName=2nd Transmit PDO Parameter
+ObjectType=0x9
+
+[1801sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1801sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x280
+PDOMapping=0
+
+[1801sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=
+PDOMapping=0
+
+[1801sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+; --------------------------------------------------------------------------
+;  Area:    		1st transmit mapping parameters                                                
+; --------------------------------------------------------------------------
+[1A00]
+SubNumber=2
+ParameterName=Transmit PDO1 Mapping
+ObjectType=9
+
+[1A00sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1A00sub1]
+ParameterName= Positons PDO1 Mapping 
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60040020
+PDOMapping=0
+
+
+; --------------------------------------------------------------------------
+;  Area:    		2nd transmit mapping parameters                                                
+; --------------------------------------------------------------------------
+[1A01]
+SubNumber=2
+ParameterName=Transmit PDO2 Mapping
+ObjectType=9
+
+[1A01sub0]
+ParameterName=Number of mapped Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1A01sub1]
+ParameterName=Positons PDO2 Mapping
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60040020
+PDOMapping=0
+
+; --------------------------------------------------------------------------
+;  Area:    		mandatory objects encoder profile ds-406                                                
+; --------------------------------------------------------------------------
+
+[6000]
+ParameterName=Operating Parameters
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[6001]
+ParameterName=Measuring Units per Revolution
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x800
+PDOMapping=0
+
+[6002]
+ParameterName=Total Measuring Range
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x800000
+PDOMapping=0
+
+[6003]
+ParameterName=Preset Value
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[6004]
+ParameterName=Position Value
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=
+PDOMapping=1
+
+[6200]
+ParameterName=Cyclic timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+
+[6500]
+ParameterName=Operating Status
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6501]
+ParameterName=Single Turn Resolution
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x800
+PDOMapping=0
+
+[6502]
+ParameterName=Number of distinguishable_revolution
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x1000
+PDOMapping=0
+
+[6503]
+ParameterName=Alarms
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6504]
+ParameterName=Supported Alarms
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6505]
+ParameterName=Warnings
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6506]
+ParameterName=Supported Warnings
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[6507]
+ParameterName=Profile and Software_Version
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x110A0200
+PDOMapping=0
+
+[6508]
+ParameterName=Operating Time
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0xFFFFFFFF
+PDOMapping=0
+
+[6509]
+ParameterName=Offset Value
+ObjectType=0x7
+DataType=0x0004
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+[650A]
+SubNumber=1
+ParameterName=Modul Identification
+ObjectType=8
+
+[650Asub0]
+ParameterName=Manufacturer Offset Value
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[650B]
+ParameterName=Serial Number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=
+PDOMapping=0
+
+; --------------------------------------------------------------------------
+;  Area:    		manufacturer objects                                                  
+; --------------------------------------------------------------------------
+
+[ManufacturerObjects]
+SupportedObjects=0
+

@@ -1,0 +1,549 @@
+[FileInfo]
+CreatedBy=LP-Research Inc.
+ModifiedBy=LP-Research Inc.
+Description=32Bit data EDS for Lpms-CU2
+CreationTime=05:34PM
+CreationDate=09-13-2016
+ModificationTime=05:34PM
+ModificationDate=09-13-2016
+FileName=LPMS-CU2_32BitDataSettings.eds
+FileVersion=1
+FileRevision=1
+EDSVersion=4.0
+
+[DeviceInfo]
+VendorName=LP-Research Inc.
+VendorNumber=0x00
+ProductName=LPMS-CU2
+ProductNumber=0x07
+RevisionNumber=1
+OrderCode=LPMS-CU2
+BaudRate_10=0
+BaudRate_20=0
+BaudRate_50=0
+BaudRate_125=1
+BaudRate_250=1
+BaudRate_500=1
+BaudRate_800=0
+BaudRate_1000=1
+SimpleBootUpMaster=0
+SimpleBootUpSlave=1
+Granularity=1
+DynamicChannelsSupported=0
+CompactPDO=0
+GroupMessaging=0
+NrOfRXPDO=0
+NrOfTXPDO=4
+LSS_Supported=0
+
+[DummyUsage]
+Dummy0001=0
+Dummy0002=0
+Dummy0003=0
+Dummy0004=0
+Dummy0005=0
+Dummy0006=0
+Dummy0007=0
+
+[Comments]
+Lines=0
+
+[MandatoryObjects]
+SupportedObjects=3
+1=0x1000
+2=0x1001
+3=0x1018
+
+[1000]
+ParameterName=Device Type
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[1001]
+ParameterName=Error Register
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[1018]
+ParameterName=Identity Object
+ObjectType=0x9
+SubNumber=5
+
+[1018sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=1
+HighLimit=4
+
+[1018sub1]
+ParameterName=Vendor Id
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00
+PDOMapping=0
+
+[1018sub2]
+ParameterName=Product Code
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x07
+PDOMapping=0
+
+[1018sub3]
+ParameterName=Revision number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1018sub4]
+ParameterName=Serial number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[OptionalObjects]
+SupportedObjects=8
+1=0x1800
+2=0x1801
+3=0x1802
+4=0x1803
+5=0x1A00
+6=0x1A01
+7=0x1A02
+8=0x1A03
+
+[1800]
+ParameterName=TxPDO0 Communication
+ObjectType=0x9
+SubNumber=5
+
+[1800sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1800sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x180
+PDOMapping=0
+
+[1800sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[1800sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1800sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1801]
+ParameterName=TxPDO1 Communication
+ObjectType=0x9
+SubNumber=5
+
+[1801sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1801sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x280
+PDOMapping=0
+
+[1801sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[1801sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1801sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1802]
+ParameterName=TxPDO2 Communication
+ObjectType=0x9
+SubNumber=5
+
+[1802sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1802sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x380
+PDOMapping=0
+
+[1802sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[1802sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1802sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1803]
+ParameterName=TxPDO3 Communication
+ObjectType=0x9
+SubNumber=5
+
+[1803sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1803sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x480
+PDOMapping=0
+
+[1803sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[1803sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1803sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1A00]
+ParameterName=TPDO0 Mapping
+ObjectType=0x9
+SubNumber=3
+
+[1A00sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=2
+PDOMapping=0
+
+[1A00sub1]
+ParameterName=1. Mapped Object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x20000020
+PDOMapping=0
+
+[1A00sub2]
+ParameterName=2. Mapped Object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x20010020
+PDOMapping=0
+
+[1A01]
+ParameterName=TPDO1 Mapping
+ObjectType=0x9
+SubNumber=3
+
+[1A01sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=2
+PDOMapping=0
+
+[1A01sub1]
+ParameterName=1. Mapped Object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x20020020
+PDOMapping=0
+
+[1A01sub2]
+ParameterName=2. Mapped Object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x21000020
+PDOMapping=0
+
+[1A02]
+ParameterName=TPDO2 Mapping
+ObjectType=0x9
+SubNumber=3
+
+[1A02sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=2
+PDOMapping=0
+
+[1A02sub1]
+ParameterName=1. Mapped Object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x21010020
+PDOMapping=0
+
+[1A02sub2]
+ParameterName=2. Mapped Object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x21020020
+PDOMapping=0
+
+[1A03]
+ParameterName=TPDO3 Mapping
+ObjectType=0x9
+SubNumber=3
+
+[1A03sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=2
+PDOMapping=0
+
+[1A03sub1]
+ParameterName=1. Mapped Object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x22000020
+PDOMapping=0
+
+[1A03sub2]
+ParameterName=2. Mapped Object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x22010020
+PDOMapping=0
+
+[ManufacturerObjects]
+SupportedObjects=16
+1=0x2000
+2=0x2001
+3=0x2002
+4=0x2100
+5=0x2101
+6=0x2102
+7=0x2200
+8=0x2201
+9=0x2202
+10=0x2300
+11=0x2301
+12=0x2302
+13=0x2400
+14=0x2401
+15=0x2402
+16=0x2403
+
+[2000]
+ParameterName=Gyroscope X
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2001]
+ParameterName=Gyroscope Y
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2002]
+ParameterName=Gyroscope Z
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2100]
+ParameterName=Euler X
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2101]
+ParameterName=Euler Y
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2102]
+ParameterName=Euler Z
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2200]
+ParameterName=Linear Acceleration X
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2201]
+ParameterName=Linear Acceleration Y
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2202]
+ParameterName=Linear Acceleration Z
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2300]
+ParameterName=Magnetometer X
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2301]
+ParameterName=Magnetometer Y
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2302]
+ParameterName=Magnetometer Z
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2400]
+ParameterName=Quaternion W
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2401]
+ParameterName=Quaternion X
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2402]
+ParameterName=Quaternion Y
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[2403]
+ParameterName=Quaternion Z
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1

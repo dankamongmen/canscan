@@ -1,0 +1,11492 @@
+;----------------------------------------------------------
+;---   ///     CANopen EDS for FCAN-01        ///       ---
+;----------------------------------------------------------
+;---                    ABB Oy                          ---
+;---             Hiomotie 13, P.O. Box 184              ---
+;---           FIN-00381 Helsinki, Finland              ---
+;---    Phone : +358 10 22 11 Fax : +358 10 22 22681    ---
+;---             http://www.abb.com/                    ---
+;----------------------------------------------------------
+
+[FileInfo]
+CreatedBy=EDS Generator, ABB Oy
+ModifiedBy=EDS Generator, ABB Oy
+Description=EDS file for ACS850 () with FCAN01 rev 1.0
+CreationTime=12:41PM
+CreationDate=04-14-2010
+ModificationTime=12:41PM
+ModificationDate=04-14-2010
+FileName=FCAN01_1050_ACS850_UIFI2900_filerev1_0.EDS
+FileVersion=1
+FileRevision=0
+EDSVersion=5.0
+
+[DeviceInfo]
+VendorName=ABB Oy
+VendorNumber=0xB7
+ProductName=ACS850 () with FCAN01
+ProductNumber=540
+RevisionNumber=0x1
+OrderCode=64088980
+BaudRate_10=0
+BaudRate_20=0
+BaudRate_50=1
+BaudRate_125=1
+BaudRate_250=1
+BaudRate_500=1
+BaudRate_800=0
+BaudRate_1000=1
+SimpleBootUpMaster=0
+SimpleBootUpSlave=1
+Granularity=1
+DynamicChannelsSupported=0
+CompactPDO=0
+GroupMessaging=0
+NrOfRXPDO=3
+NrOfTXPDO=3
+LSS_Supported=0
+
+[DummyUsage]
+Dummy0001=1
+Dummy0002=1
+Dummy0003=1
+Dummy0004=1
+Dummy0005=1
+Dummy0006=1
+Dummy0007=1
+
+[MandatoryObjects]
+SupportedObjects=0x03
+1=0x1000
+2=0x1001
+3=0x1018
+
+[Comments]
+Lines=9
+Line1=The FCAN-01 module is a CANopen device for
+Line2=ABB Drives.
+Line3=This EDS-file is made for:
+Line4=ACS850 Drive with
+Line5=FW version UIFI2900 and
+Line6=-FCAN-01 FW version $FBAFW.
+Line7=The file is also usable with other drive and
+Line8=and module FW versions.
+Line9=http://www.abb.com/
+
+[1000]
+ParameterName=Device_Type
+ObjectType=0x07
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RO
+DefaultValue=0x10192
+PDOMapping=0
+
+[1001]
+ParameterName=Error_Register
+ObjectType=0x07
+DataType=0x05
+LowLimit=0x00
+HighLimit=0xFF
+AccessType=RO
+DefaultValue=0x00
+PDOMapping=0
+
+[1018]
+SubNumber=5
+ParameterName=Identity Object
+ObjectType=0x9
+
+[1018sub0]
+ParameterName=Number of Entries
+ObjectType=0x07
+DataType=0x05
+LowLimit=0x01
+HighLimit=0x04
+DefaultValue=0x04
+AccessType=RO
+PDOMapping=0
+
+[1018sub1]
+ParameterName=Vendor ID
+ObjectType=0x07
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RO
+PDOMapping=0
+
+[1018sub2]
+ParameterName=Product Code
+ObjectType=0x07
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RO
+PDOMapping=0
+
+[1018sub3]
+ParameterName=Module revision
+ObjectType=0x07
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RO
+PDOMapping=0
+
+[1018sub4]
+ParameterName=Serial number
+ObjectType=0x07
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RO
+PDOMapping=0
+
+[OptionalObjects]
+SupportedObjects=55
+1=0x1003
+2=0x1005
+3=0x1008
+4=0x1009
+5=0x100a
+6=0x100c
+7=0x100d
+8=0x1010
+9=0x1011
+10=0x1014
+11=0x1016
+12=0x1017
+13=0x1400
+14=0x1405
+15=0x1414
+16=0x1600
+17=0x1605
+18=0x1614
+19=0x1800
+20=0x1805
+21=0x1814
+22=0x1a00
+23=0x1a05
+24=0x1a14
+25=0x603F
+26=0x6040
+27=0x6041
+28=0x6042
+29=0x6043 
+30=0x6044
+31=0x6046 
+32=0x6048 
+33=0x6049
+34=0x605d 
+35=0x6060 
+36=0x6061 
+37=0x6064
+38=0x6069 
+39=0x606b
+40=0x606c 
+41=0x6071
+42=0x6072
+43=0x6073
+44=0x6077
+45=0x607A
+46=0x6081
+47=0x6083
+48=0x6084
+49=0x6098
+50=0x6099
+51=0x60ff 
+52=0x6402
+53=0x6502
+54=0x6504
+55=0x6505
+
+[1003]
+SubNumber=6
+ParameterName=Pre Defined Error Field
+ObjectType=0x8
+
+[1003sub0]
+ParameterName=Number Of Errors
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0x0000
+HighLimit=0x0005
+DefaultValue=0x0000
+AccessType=RW
+PDOMapping=0
+
+[1003sub1]
+ParameterName=Standard Error Field
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x00000000
+AccessType=RO
+PDOMapping=0
+
+[1003sub2]
+ParameterName=Standard Error Field
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x00000000
+AccessType=RO
+PDOMapping=0
+
+[1003sub3]
+ParameterName=Standard Error Field
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x00000000
+AccessType=RO
+PDOMapping=0
+
+[1003sub4]
+ParameterName=Standard Error Field
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x00000000
+AccessType=RO
+PDOMapping=0
+
+[1003sub5]
+ParameterName=Standard Error Field
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x00000000
+AccessType=RO
+PDOMapping=0
+
+[1005]
+ParameterName=COB-ID Sync Message
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+DefaultValue=0x80000080
+AccessType=rw
+PDOMapping=0
+
+[1008]
+ParameterName=Manufacturer Device Name
+ObjectType=0x7
+DataType=0x0009
+DefaultValue=FCAN-01
+AccessType=Const
+PDOMapping=0
+
+[1009]
+ParameterName=Manufacturer Hardware Version
+ObjectType=0x7
+DataType=0x0009
+DefaultValue=1.0
+AccessType=Const
+PDOMapping=0
+
+[100A]
+ParameterName=Manufacturer Software Version
+ObjectType=0x7
+DataType=0x0009
+DefaultValue=V.1.01A
+AccessType=Const
+PDOMapping=0
+
+[100C]
+ParameterName=Guard Time
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=rw
+PDOMapping=0
+
+[100D]
+ParameterName=Life Time Factor
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=255
+DefaultValue=0
+AccessType=rw
+PDOMapping=0
+
+[1010]
+SubNumber=5
+ParameterName=Store Parameters
+ObjectType=0x8
+
+[1010sub0]
+ParameterName=Largest Subindex Supported
+ObjectType=0x7
+DataType=0x0005
+LowLimit=1
+HighLimit=127
+DefaultValue=4
+AccessType=RO
+PDOMapping=0
+
+[1010sub1]
+ParameterName=Save All Parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=RW
+PDOMapping=0
+
+[1010sub2]
+ParameterName=Save Communication parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=RW
+PDOMapping=0
+
+[1010sub3]
+ParameterName=Save Application parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=RW
+PDOMapping=0
+
+[1010sub4]
+ParameterName=Save Drive parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=RW
+PDOMapping=0
+
+[1011]
+SubNumber=5
+ParameterName=Restore Dafault Parameters
+ObjectType=0x8
+
+[1011sub0]
+ParameterName=Largest Subindex Supported
+ObjectType=0x7
+DataType=0x0005
+LowLimit=1
+HighLimit=127
+DefaultValue=4
+AccessType=RO
+PDOMapping=0
+
+[1011sub1]
+ParameterName=Restore All Default Parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=RW
+PDOMapping=0
+
+[1011sub2]
+ParameterName=Restore Communication Default Parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=RW
+PDOMapping=0
+
+[1011sub3]
+ParameterName=Restore Application Default Parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=RW
+PDOMapping=0
+
+[1011sub4]
+ParameterName=Restore Drive Default Parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=RW
+PDOMapping=0
+
+[1014]
+ParameterName=COB-ID Emergency Message
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+DefaultValue=$NODEID+0x80
+AccessType=rw
+PDOMapping=0
+
+[1016]
+SubNumber=2
+ParameterName=Consumer Heartbeat Time
+ObjectType=0x8
+
+[1016sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=1
+HighLimit=127
+DefaultValue=1
+AccessType=ro
+PDOMapping=0
+
+[1016sub1]
+ParameterName=Consumer Heartbeat Time
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0x007FFFFF
+DefaultValue=0x00000000
+AccessType=rw
+PDOMapping=0
+
+[1017]
+ParameterName=Producer Heartbeat Time
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=rw
+PDOMapping=0
+
+[1400]
+SubNumber=5
+ParameterName=Receive PDO 1 Parameter
+ObjectType=0x9
+
+[1400sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=2
+HighLimit=5
+DefaultValue=5
+AccessType=RO
+PDOMapping=0
+
+[1400sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+DefaultValue=$NODEID+0x200
+AccessType=RW
+PDOMapping=0
+
+[1400sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=255
+DefaultValue=255
+AccessType=RW
+PDOMapping=0
+
+[1400sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[1400sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+
+
+[1405]
+SubNumber=5
+ParameterName=Receive PDO 6 Parameter
+ObjectType=0x9
+
+[1405sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=2
+HighLimit=5
+DefaultValue=5
+AccessType=RO
+PDOMapping=0
+
+[1405sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+DefaultValue=$NODEID+0x80000300
+AccessType=RW
+PDOMapping=0
+
+[1405sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=255
+DefaultValue=255
+AccessType=RW
+PDOMapping=0
+
+[1405sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[1405sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+
+[1414]
+SubNumber=5
+ParameterName=Receive PDO 21 Parameter
+ObjectType=0x9
+
+[1414sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=2
+HighLimit=5
+DefaultValue=5
+AccessType=RO
+PDOMapping=0
+
+[1414sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+DefaultValue=$NODEID+0x80000400
+AccessType=RW
+PDOMapping=0
+
+[1414sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=255
+DefaultValue=254
+AccessType=RW
+PDOMapping=0
+
+[1414sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[1414sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+
+[1600]
+SubNumber=5
+ParameterName=Receive PDO 1 Mapping
+ObjectType=0x9
+
+[1600sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=4
+DefaultValue=1
+AccessType=RW
+PDOMapping=0
+
+[1600sub1]
+ParameterName=PDO Mapping Entry	1
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x60400010
+AccessType=RW
+PDOMapping=0
+
+[1600sub2]
+ParameterName=PDO Mapping Entry	2
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1600sub3]
+ParameterName=PDO Mapping Entry	3
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1600sub4]
+ParameterName=PDO Mapping Entry	4
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1605]
+SubNumber=5
+ParameterName=Receive PDO 6 Mapping
+ObjectType=0x9
+
+[1605sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=4
+DefaultValue=1
+AccessType=RW
+PDOMapping=0
+
+[1605sub1]		
+ParameterName=PDO Mapping Entry 1
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x60400010
+AccessType=RW
+PDOMapping=0
+
+[1605sub2]		
+ParameterName=PDO Mapping Entry 2
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1605sub3]		
+ParameterName=PDO Mapping Entry 3
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1605sub4]		
+ParameterName=PDO Mapping Entry 4
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1614]
+SubNumber=5
+ParameterName=Receive PDO 21 Mapping
+ObjectType=0x9
+
+[1614sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=4
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[1614sub1]		
+ParameterName=PDO Mapping Entry 1
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1614sub2]		
+ParameterName=PDO Mapping Entry 2
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1614sub3]		
+ParameterName=PDO Mapping Entry 3
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1614sub4]		
+ParameterName=PDO Mapping Entry 4
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+
+[1800]
+SubNumber=5
+ParameterName=Transmit PDO 1 Parameter
+ObjectType=0x9
+
+[1800sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=2
+HighLimit=5
+DefaultValue=5
+AccessType=RO
+PDOMapping=0
+
+[1800sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+DefaultValue=$NODEID+0x180
+AccessType=RW
+PDOMapping=0
+
+[1800sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=255
+DefaultValue=255
+AccessType=RW
+PDOMapping=0
+
+[1800sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[1800sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+
+[1805]
+SubNumber=5
+ParameterName=Transmit PDO 6 Parameter
+ObjectType=0x9
+
+[1805sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=2
+HighLimit=5
+DefaultValue=5
+AccessType=RO
+PDOMapping=0
+
+[1805sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+DefaultValue=$NODEID+0x80000280
+AccessType=RW
+PDOMapping=0
+
+[1805sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=255
+DefaultValue=255
+AccessType=RW
+PDOMapping=0
+
+[1805sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[1805sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[1814]
+SubNumber=5
+ParameterName=Transmit PDO 21 Parameter
+ObjectType=0x9
+
+[1814sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=2
+HighLimit=5
+DefaultValue=5
+AccessType=RO
+PDOMapping=0
+
+[1814sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+DefaultValue=$NODEID+0x80000380
+AccessType=RW
+PDOMapping=0
+
+[1814sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=255
+DefaultValue=254
+AccessType=RW
+PDOMapping=0
+
+[1814sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[1814sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+
+[1A00]
+SubNumber=5
+ParameterName=Transmit PDO 1 Mapping
+ObjectType=0x9
+
+[1A00sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=4
+DefaultValue=1
+AccessType=RW
+PDOMapping=0
+
+[1A00sub1]
+ParameterName=PDO Mapping Entry	1
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x60410010
+AccessType=RW
+PDOMapping=0
+
+[1A00sub2]
+ParameterName=PDO Mapping Entry	2
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1A00sub3]
+ParameterName=PDO Mapping Entry	3
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1A00sub4]
+ParameterName=PDO Mapping Entry	4
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1A05]
+SubNumber=5
+ParameterName=Transmit PDO 6 Mapping
+ObjectType=0x9
+
+[1A05sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=4
+DefaultValue=1
+AccessType=RW
+PDOMapping=0
+
+[1A05sub1]
+ParameterName=PDO Mapping Entry 1
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x60410010
+AccessType=RW
+PDOMapping=0
+
+[1A05sub2]
+ParameterName=PDO Mapping Entry 2
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1A05sub3]
+ParameterName=PDO Mapping Entry 3
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1A05sub4]
+ParameterName=PDO Mapping Entry 4
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1A14]
+SubNumber=5
+ParameterName=Transmit PDO 21 Mapping
+ObjectType=0x9
+
+[1A14sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=0
+HighLimit=4
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[1A14sub1]
+ParameterName=PDO Mapping Entry 1
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1A14sub2]
+ParameterName=PDO Mapping Entry 2
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1A14sub3]
+ParameterName=PDO Mapping Entry 3
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+
+[1A14sub4]
+ParameterName=PDO Mapping Entry 4
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+DefaultValue=0x0
+AccessType=RW
+PDOMapping=0
+;-----------------------------------------------------------------------------
+;- DS402 Profile Objects -
+;-----------------------------------------------------------------------------
+[6502]
+ParameterName=Supported drive modes
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RO
+PDOMapping=0
+
+
+[6504]
+ParameterName=Drive manufacturer
+ObjectType=0x7
+DataType=0x0009
+DefaultValue=
+AccessType=Const
+PDOMapping=0
+
+[6505]
+ParameterName=http drive catalog address
+ObjectType=0x7
+DataType=0x0009
+DefaultValue=
+AccessType=Const
+PDOMapping=0
+
+
+[603F]
+ParameterName=Error Code
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0x0000
+HighLimit=0xFFFF
+DefaultValue=0x0000
+AccessType=RO
+PDOMapping=1
+
+[6040]
+ParameterName=Control Word
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0x0000
+HighLimit=0xFFFF
+DefaultValue=0x0000
+AccessType=RWW
+PDOMapping=1
+
+[6041]
+ParameterName=Status Word
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0x0000
+HighLimit=0xFFFF
+DefaultValue=0x0000
+AccessType=RO
+PDOMapping=1
+
+[6042]
+ParameterName=Vl Target Velocity
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0x8000
+HighLimit=0x7FFF
+DefaultValue=0x0000
+AccessType=RWW
+PDOMapping=1
+
+[6043]
+ParameterName=Vl Velocity Demand
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0x8000
+HighLimit=0x7FFF
+DefaultValue=0x0000
+AccessType=RO
+PDOMapping=1
+
+[6044]
+ParameterName=Vl Control Effort
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0x8000
+HighLimit=0x7FFF
+DefaultValue=0x0000
+AccessType=RO
+PDOMapping=1
+
+[6046]
+SubNumber=3
+ParameterName=Vl Velocity Min Max Amount
+ObjectType=0x8
+
+[6046sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=2
+HighLimit=2
+DefaultValue=2
+AccessType=RO
+PDOMapping=0
+
+[6046sub1]
+ParameterName=Vl Velocity Min Amount
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[6046sub2]
+ParameterName=Vl Velocity Max Amount
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[6048]
+SubNumber=3
+ParameterName=Vl Velocity Acceleration
+ObjectType=0x9
+
+[6048sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=2
+HighLimit=2
+DefaultValue=2
+AccessType=RO
+PDOMapping=0
+
+[6048sub1]
+ParameterName=Delta Speed
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[6048sub2]
+ParameterName=Delta Time
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0x0000
+HighLimit=0xFFFF
+AccessType=RWW
+PDOMapping=1
+
+[6049]
+SubNumber=3
+ParameterName=Vl Velocity Deceleration
+ObjectType=0x9
+
+[6049sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=2
+HighLimit=2
+DefaultValue=2
+AccessType=RO
+PDOMapping=0
+
+[6049sub1]
+ParameterName=Delta Speed
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[6049sub2]
+ParameterName=Delta Time
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0x0000
+HighLimit=0xFFFF
+AccessType=RWW
+PDOMapping=0
+
+[605D]
+ParameterName=Halt option code
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0x0
+HighLimit=0x4
+DefaultValue=1
+AccessType=RW
+PDOMapping=0
+
+[6060]  
+ParameterName=Mode of Operation
+ObjectType=0x7
+DataType=0x0002
+LowLimit=0x80
+HighLimit=0x7F
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[6061]  
+ParameterName=Mode of Operation Display
+ObjectType=0x7
+DataType=0x0002
+LowLimit=0x80
+HighLimit=0x7F
+DefaultValue=0
+AccessType=RO
+PDOMapping=0
+
+[6064]
+ParameterName=Position actual value
+ObjectType=0x7
+DataType=0x0004
+DefaultValue=0
+LowLimit=0x80000000
+HighLimit=0x7FFFFFFF
+AccessType=RO
+PDOMapping=1
+
+[6069]
+ParameterName=Velocity sensor actual value
+ObjectType=0x7
+DataType=0x0004
+DefaultValue=0
+LowLimit=0x80000000
+HighLimit=0x7FFFFFFF
+AccessType=RO
+PDOMapping=1
+
+[6071]
+ParameterName=Target torque
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0x8000
+HighLimit=0x7FFF
+DefaultValue=0x0000
+AccessType=RWW
+PDOMapping=1
+
+[6072]
+ParameterName=Max torque
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0x0000
+HighLimit=0xFFFF
+DefaultValue=0x0000
+AccessType=RWW
+PDOMapping=1
+
+[6073]
+ParameterName=Max current
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0x0000
+HighLimit=0xFFFF
+DefaultValue=0x0000
+AccessType=RWW
+PDOMapping=1
+
+[6077]
+ParameterName=Torque actual value
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0x8000
+HighLimit=0x7FFF
+DefaultValue=0x0000
+AccessType=RO
+PDOMapping=1
+
+[607A]
+ParameterName=Target position
+ObjectType=0x7
+DataType=0x0004
+DefaultValue=0
+LowLimit=0x80000000
+HighLimit=0x7FFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[6081]
+ParameterName=Profile velocity
+ObjectType=0x7
+DataType=0x0007
+DefaultValue=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[6083]
+ParameterName=Profile acceleration
+ObjectType=0x7
+DataType=0x0007
+DefaultValue=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[6084]
+ParameterName=Profile deceleration
+ObjectType=0x7
+DataType=0x0007
+DefaultValue=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[606C]  
+ParameterName=Velocity actual value 
+ObjectType=0x7
+DataType=0x0004
+DefaultValue=0
+LowLimit=0x80000000
+HighLimit=0x7FFFFFFF
+AccessType=RO
+PDOMapping=1
+
+[606B]
+ParameterName=Velocity demand value
+ObjectType=0x7
+DataType=0x0004
+DefaultValue=0
+LowLimit=0x80000000
+HighLimit=0x7FFFFFFF
+AccessType=RO
+PDOMapping=1
+
+[6098]  
+ParameterName=Homing method
+ObjectType=0x7
+DataType=0x0002
+LowLimit=0x80
+HighLimit=0x7F
+DefaultValue=0
+AccessType=RW
+PDOMapping=0
+
+[6099]
+SubNumber=3
+ParameterName=Homing speeds
+ObjectType=0x9
+
+[6099sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+LowLimit=2
+HighLimit=2
+DefaultValue=2
+AccessType=RO
+PDOMapping=0
+
+[6099sub1]
+ParameterName=Speed during search for switch
+ObjectType=0x7
+DataType=0x0007
+DefaultValue=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[6099sub2]
+ParameterName=Speed during search for zero
+ObjectType=0x7
+DataType=0x0007
+DefaultValue=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[60FF]
+ParameterName=Target velocity
+ObjectType=0x7
+DataType=0x0004
+DefaultValue=0
+LowLimit=0x80000000
+HighLimit=0x7FFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[6402]
+ParameterName=Motor type
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0x0000
+HighLimit=0xFFFF
+DefaultValue=0x0000
+AccessType=RO
+PDOMapping=1
+
+
+
+
+[ManufacturerObjects]
+SupportedObjects=64
+1=0x2000 
+2=0x2001 
+3=0x2002 
+4=0x2003 
+5=0x2004 
+6=0x2005 
+7=0x2006
+8=0x2100 
+9=0x4001
+10=0x4002
+11=0x4003
+12=0x4004
+13=0x4006
+14=0x4008
+15=0x4009
+16=0x400A
+17=0x400B
+18=0x400C
+19=0x400D
+20=0x400E
+21=0x400F
+22=0x4010
+23=0x4013
+24=0x4014
+25=0x4015
+26=0x4016
+27=0x4017
+28=0x4018
+29=0x4019
+30=0x401A
+31=0x401B
+32=0x401E
+33=0x401F
+34=0x4020
+35=0x4021
+36=0x4022
+37=0x4023
+38=0x4024
+39=0x4026
+40=0x4028
+41=0x402A
+42=0x402C
+43=0x402D
+44=0x402F
+45=0x4030
+46=0x4031
+47=0x4032
+48=0x4033
+49=0x4034
+50=0x4035
+51=0x4037
+52=0x4038
+53=0x4039
+54=0x403A
+55=0x4040
+56=0x404A
+57=0x405A
+58=0x405B
+59=0x405C
+60=0x405D
+61=0x405E
+62=0x405F
+63=0x4061
+64=0x4063
+
+
+
+;-----------------------------------------------------
+; Drive Parameter Group 00 "DATA SET"
+;-----------------------------------------------------
+
+[2000]
+SubNumber=0x03
+ParameterName=Group 00 PROCESS DATA
+ObjectType=0x009
+
+[2000Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x06
+DefaultValue=0x06
+AccessType=RO
+PDOMapping=0
+
+[2000Sub3]
+ParameterName=REFERENCE 2
+ObjectType=0x007
+DataType=0x003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RWW
+DefaultValue=0
+PDOMapping=1
+
+[2000Sub6]
+ParameterName=ACTUAL VALUE 2
+ObjectType=0x007
+DataType=0x003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[2001]
+ParameterName=T32 CW
+ObjectType=0x7
+DataType=0x0007
+DefaultValue=0
+LowLimit=0x0000000
+HighLimit=0xFFFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[2002]
+ParameterName=T32 Ref1
+ObjectType=0x7
+DataType=0x0004
+DefaultValue=0
+LowLimit=0x80000000
+HighLimit=0x7FFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[2003]
+ParameterName=T32 Ref2
+ObjectType=0x7
+DataType=0x0004
+DefaultValue=0
+LowLimit=0x80000000
+HighLimit=0x7FFFFFFF
+AccessType=RWW
+PDOMapping=1
+
+[2004]
+ParameterName=T32 SW
+ObjectType=0x7
+DataType=0x0007
+DefaultValue=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+AccessType=RO
+PDOMapping=1
+
+[2005]
+ParameterName=T32 Act1
+ObjectType=0x7
+DataType=0x0004
+DefaultValue=0
+LowLimit=0x80000000
+HighLimit=0x7FFFFFFF
+AccessType=RO
+PDOMapping=1
+
+[2006]
+ParameterName=T32 Act2
+ObjectType=0x7
+DataType=0x0004
+DefaultValue=0
+LowLimit=0x80000000
+HighLimit=0x7FFFFFFF
+AccessType=RO
+PDOMapping=1
+
+[2100]
+SubNumber=0x06
+ParameterName=Alarm codes
+ObjectType=0x009
+
+[2100Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x06
+DefaultValue=0x05
+AccessType=RO
+PDOMapping=0
+
+[2100Sub1]
+ParameterName=Alarm code 1
+ObjectType=0x007
+DataType=0x006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[2100Sub2]
+ParameterName=Alarm code 2
+ObjectType=0x007
+DataType=0x006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[2100Sub3]
+ParameterName=Alarm code 3
+ObjectType=0x007
+DataType=0x006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[2100Sub4]
+ParameterName=Alarm code 4
+ObjectType=0x007
+DataType=0x006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[2100Sub5]
+ParameterName=Alarm code 5
+ObjectType=0x007
+DataType=0x006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 1 Actual values
+;-------------------------------------------------------
+[4001]
+SubNumber=0x2b
+ParameterName=Group 1Actual values
+ObjectType=0x009
+
+[4001Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x2b
+DefaultValue=0x2a
+AccessType=RO
+
+[4001Sub1]
+ParameterName=1.1 Motor speed rpm [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3000000
+HighLimit=3000000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub2]
+ParameterName=1.2 Motor speed % [%]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-100000
+HighLimit=100000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub3]
+ParameterName=1.3 Output frequency [Hz]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3000000
+HighLimit=3000000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub4]
+ParameterName=1.4 Motor current [A]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3000000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub5]
+ParameterName=1.5 Motor current % [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub6]
+ParameterName=1.6 Motor torque [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-16000
+HighLimit=16000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub7]
+ParameterName=1.7 Dc-voltage [V]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=200000
+AccessType=RO
+DefaultValue=32633
+PDOMapping=1
+
+[4001Sub8]
+ParameterName=1.8 Encoder1 speed [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub9]
+ParameterName=1.9 Encoder1 pos [rev]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=100000000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001SubA]
+ParameterName=1.10 Encoder2 speed [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001SubB]
+ParameterName=1.11 Encoder2 pos [rev]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=100000000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001SubC]
+ParameterName=1.12 Pos act [rev]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001SubD]
+ParameterName=1.13 Pos 2nd enc [rev]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001SubE]
+ParameterName=1.14 Motor speed est [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3000000
+HighLimit=3000000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001SubF]
+ParameterName=1.15 Temp inverter [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-400
+HighLimit=1600
+AccessType=RO
+DefaultValue=242
+PDOMapping=1
+
+[4001Sub10]
+ParameterName=1.16 Temp brk chopper [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-400
+HighLimit=1600
+AccessType=RO
+DefaultValue=295
+PDOMapping=1
+
+[4001Sub11]
+ParameterName=1.17 Motor temp1 [C]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-100
+HighLimit=2500
+AccessType=RO
+DefaultValue=200
+PDOMapping=1
+
+[4001Sub12]
+ParameterName=1.18 Motor temp2 [C]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-100
+HighLimit=2500
+AccessType=RO
+DefaultValue=200
+PDOMapping=1
+
+[4001Sub13]
+ParameterName=1.19 Used supply volt [V]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RO
+DefaultValue=2304
+PDOMapping=1
+
+[4001Sub14]
+ParameterName=1.20 Brake res load [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub15]
+ParameterName=1.21 Cpu usage [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=70
+PDOMapping=1
+
+[4001Sub16]
+ParameterName=1.22 Power inu out [kW]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub17]
+ParameterName=1.23 Motor power [kW]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub18]
+ParameterName=1.24 kWh inverter [kWh]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub19]
+ParameterName=1.25 kWh supply [kWh]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub1A]
+ParameterName=1.26 On-time counter [h]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub1B]
+ParameterName=1.27 Run-time counter [h]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub1C]
+ParameterName=1.28 Fan on-time [h]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub1D]
+ParameterName=1.29 Torq nom scale [Nm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub1E]
+ParameterName=1.30 Polepairs [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub1F]
+ParameterName=1.31 Mech time const [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=32767000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub20]
+ParameterName=1.32 Temp phase A [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-400
+HighLimit=1600
+AccessType=RO
+DefaultValue=295
+PDOMapping=1
+
+[4001Sub21]
+ParameterName=1.33 Temp phase B [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-400
+HighLimit=1600
+AccessType=RO
+DefaultValue=295
+PDOMapping=1
+
+[4001Sub22]
+ParameterName=1.34 Temp phase C [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-400
+HighLimit=1600
+AccessType=RO
+DefaultValue=295
+PDOMapping=1
+
+[4001Sub23]
+ParameterName=1.35 Saved energy [kWh]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub24]
+ParameterName=1.36 Saved amount [gbp]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub25]
+ParameterName=1.37 Saved CO2 [tonne]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub26]
+ParameterName=1.38 Temp int board [C]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-400
+HighLimit=1600
+AccessType=RO
+DefaultValue=504
+PDOMapping=1
+
+[4001Sub27]
+ParameterName=1.39 Output voltage [V]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub28]
+ParameterName=1.40 Speed filt [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub29]
+ParameterName=1.41 Torque filt [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-16000
+HighLimit=16000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4001Sub2A]
+ParameterName=1.42 Fan start count [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 2 I/O values
+;-------------------------------------------------------
+[4002]
+SubNumber=0x24
+ParameterName=Group 2I/O values
+ObjectType=0x009
+
+[4002Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x28
+DefaultValue=0x27
+AccessType=RO
+
+[4002Sub1]
+ParameterName=2.1 DI status [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=511
+AccessType=RO
+DefaultValue=64
+PDOMapping=1
+
+[4002Sub2]
+ParameterName=2.2 RO status [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=255
+AccessType=RO
+DefaultValue=4
+PDOMapping=1
+
+[4002Sub3]
+ParameterName=2.3 DIO status [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=1023
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub4]
+ParameterName=2.4 AI1 [V]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-11000
+HighLimit=11000
+AccessType=RO
+DefaultValue=-258
+PDOMapping=1
+
+[4002Sub5]
+ParameterName=2.5 AI1 scaled [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RO
+DefaultValue=-38166
+PDOMapping=1
+
+[4002Sub6]
+ParameterName=2.6 AI2 [V]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-11000
+HighLimit=11000
+AccessType=RO
+DefaultValue=-10115
+PDOMapping=1
+
+[4002Sub7]
+ParameterName=2.7 AI2 scaled [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RO
+DefaultValue=-100000
+PDOMapping=1
+
+[4002Sub8]
+ParameterName=2.8 AI3 [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub9]
+ParameterName=2.9 AI3 scaled [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002SubA]
+ParameterName=2.10 AI4 [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002SubB]
+ParameterName=2.11 AI4 scaled [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002SubC]
+ParameterName=2.12 AI5 [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002SubD]
+ParameterName=2.13 AI5 scaled [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002SubE]
+ParameterName=2.14 AI6 [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002SubF]
+ParameterName=2.15 AI6 scaled [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub10]
+ParameterName=2.16 AO1 [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RO
+DefaultValue=3999
+PDOMapping=1
+
+[4002Sub11]
+ParameterName=2.17 AO2 [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RO
+DefaultValue=3999
+PDOMapping=1
+
+[4002Sub12]
+ParameterName=2.18 AO3 [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub13]
+ParameterName=2.19 AO4 [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub14]
+ParameterName=2.20 Freq in [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub15]
+ParameterName=2.21 Freq out [Hz]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RO
+DefaultValue=3000
+PDOMapping=1
+
+[4002Sub16]
+ParameterName=2.22 FBA main cw [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=2193
+PDOMapping=1
+
+[4002Sub18]
+ParameterName=2.24 FBA main sw [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=134225923
+PDOMapping=1
+
+[4002Sub1A]
+ParameterName=2.26 FBA main ref1 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=32764722
+PDOMapping=1
+
+[4002Sub1B]
+ParameterName=2.27 FBA main ref2 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub1E]
+ParameterName=2.30 D2D main cw [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub1F]
+ParameterName=2.31 D2D follower cw [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=129
+PDOMapping=1
+
+[4002Sub20]
+ParameterName=2.32 D2D ref1 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub21]
+ParameterName=2.33 D2D ref2 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub22]
+ParameterName=2.34 Panel ref [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub23]
+ParameterName=2.35 FEN DI status [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=63
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub24]
+ParameterName=2.36 EFB main cw [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub25]
+ParameterName=2.37 EFB main sw [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=134225923
+PDOMapping=1
+
+[4002Sub26]
+ParameterName=2.38 EFB main ref1 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4002Sub27]
+ParameterName=2.39 EFB main ref2 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 3 Control values
+;-------------------------------------------------------
+[4003]
+SubNumber=0x11
+ParameterName=Group 3Control values
+ObjectType=0x009
+
+[4003Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x16
+DefaultValue=0x15
+AccessType=RO
+
+[4003Sub3]
+ParameterName=3.3 SpeedRef unramp [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3000000
+HighLimit=3000000
+AccessType=RO
+DefaultValue=49995
+PDOMapping=1
+
+[4003Sub5]
+ParameterName=3.5 SpeedRef ramped [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3000000
+HighLimit=3000000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003Sub6]
+ParameterName=3.6 SpeedRef used [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3000000
+HighLimit=3000000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003Sub7]
+ParameterName=3.7 Speed error filt [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3000000
+HighLimit=3000000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003Sub8]
+ParameterName=3.8 Acc comp torq [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-16000
+HighLimit=16000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003Sub9]
+ParameterName=3.9 Torq ref sp ctrl [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-16000
+HighLimit=16000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003SubB]
+ParameterName=3.11 Torq ref ramped [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-10000
+HighLimit=10000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003SubC]
+ParameterName=3.12 Torq ref sp lim [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-10000
+HighLimit=10000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003SubD]
+ParameterName=3.13 Torq ref to TC [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-16000
+HighLimit=16000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003SubE]
+ParameterName=3.14 Torq ref used [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-16000
+HighLimit=16000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003SubF]
+ParameterName=3.15 Brake torq mem [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-10000
+HighLimit=10000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003Sub10]
+ParameterName=3.16 Brake command [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003Sub11]
+ParameterName=3.17 Flux actual [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=200
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003Sub12]
+ParameterName=3.18 Speed ref pot [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3000000
+HighLimit=3000000
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4003Sub14]
+ParameterName=3.20 Max speed ref [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3000000
+HighLimit=3000000
+AccessType=RO
+DefaultValue=150000
+PDOMapping=1
+
+[4003Sub15]
+ParameterName=3.21 Min speed ref [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3000000
+HighLimit=3000000
+AccessType=RO
+DefaultValue=-150000
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 4 Appl values
+;-------------------------------------------------------
+[4004]
+SubNumber=0xf
+ParameterName=Group 4Appl values
+ObjectType=0x009
+
+[4004Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xf
+DefaultValue=0xe
+AccessType=RO
+
+[4004Sub1]
+ParameterName=4.1 Process act1 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RO
+DefaultValue=-10000
+PDOMapping=1
+
+[4004Sub2]
+ParameterName=4.2 Process act2 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RO
+DefaultValue=-10000
+PDOMapping=1
+
+[4004Sub3]
+ParameterName=4.3 Process act [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RO
+DefaultValue=-10000
+PDOMapping=1
+
+[4004Sub4]
+ParameterName=4.4 Process PID err [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-327680
+HighLimit=327680
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4004Sub5]
+ParameterName=4.5 Process PID out [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-327680
+HighLimit=327680
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4004Sub6]
+ParameterName=4.6 Process var1 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4004Sub7]
+ParameterName=4.7 Process var2 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4004Sub8]
+ParameterName=4.8 Process var3 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4004Sub9]
+ParameterName=4.9 Counter ontime1 [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4004SubA]
+ParameterName=4.10 Counter ontime2 [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4004SubB]
+ParameterName=4.11 Counter edge1 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4004SubC]
+ParameterName=4.12 Counter edge2 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4004SubD]
+ParameterName=4.13 Counter value1 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4004SubE]
+ParameterName=4.14 Counter value2 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 6 Drive status
+;-------------------------------------------------------
+[4006]
+SubNumber=0xb
+ParameterName=Group 6Drive status
+ObjectType=0x009
+
+[4006Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x12
+DefaultValue=0x11
+AccessType=RO
+
+[4006Sub1]
+ParameterName=6.1 Status word1 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=4099
+PDOMapping=1
+
+[4006Sub2]
+ParameterName=6.2 Status word2 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=21058
+PDOMapping=1
+
+[4006Sub3]
+ParameterName=6.3 Speed ctrl stat [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=2
+PDOMapping=1
+
+[4006Sub5]
+ParameterName=6.5 Limit word1 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4006Sub7]
+ParameterName=6.7 Torq lim status [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4006SubC]
+ParameterName=6.12 Op mode ack [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=11
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4006SubD]
+ParameterName=6.13 Superv status [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=7
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4006SubE]
+ParameterName=6.14 Timed func stat [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=31
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4006SubF]
+ParameterName=6.15 Counter status [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=63
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4006Sub11]
+ParameterName=6.17 Bit inverted sw [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=63
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 8 Alarms & faults
+;-------------------------------------------------------
+[4008]
+SubNumber=0xd
+ParameterName=Group 8Alarms & faults
+ObjectType=0x009
+
+[4008Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x13
+DefaultValue=0x12
+AccessType=RO
+
+[4008Sub1]
+ParameterName=8.1 Active fault [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4008Sub2]
+ParameterName=8.2 Last fault [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=30
+PDOMapping=1
+
+[4008Sub3]
+ParameterName=8.3 Fault time hi [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=8859
+PDOMapping=1
+
+[4008Sub4]
+ParameterName=8.4 Fault time lo [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=61651
+PDOMapping=1
+
+[4008Sub5]
+ParameterName=8.5 Alarm logger1 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RW
+DefaultValue=992
+PDOMapping=1
+
+[4008Sub6]
+ParameterName=8.6 Alarm logger2 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RW
+DefaultValue=32
+PDOMapping=1
+
+[4008Sub7]
+ParameterName=8.7 Alarm logger3 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4008Sub8]
+ParameterName=8.8 Alarm logger4 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RW
+DefaultValue=512
+PDOMapping=1
+
+[4008SubF]
+ParameterName=8.15 Alarm word1 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4008Sub10]
+ParameterName=8.16 Alarm word2 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4008Sub11]
+ParameterName=8.17 Alarm word3 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4008Sub12]
+ParameterName=8.18 Alarm word4 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 9 System info
+;-------------------------------------------------------
+[4009]
+SubNumber=0xe
+ParameterName=Group 9System info
+ObjectType=0x009
+
+[4009Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x17
+DefaultValue=0x16
+AccessType=RO
+
+[4009Sub1]
+ParameterName=9.1 Drive type [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RO
+DefaultValue=3
+PDOMapping=1
+
+[4009Sub2]
+ParameterName=9.2 Drive rating id [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RO
+DefaultValue=101
+PDOMapping=1
+
+[4009Sub3]
+ParameterName=9.3 Firmware ID [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=1430865481
+PDOMapping=1
+
+[4009Sub4]
+ParameterName=9.4 Firmware ver [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=10304
+PDOMapping=1
+
+[4009Sub5]
+ParameterName=9.5 Firmware patch [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4009SubA]
+ParameterName=9.10 Int logic ver [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=4131
+PDOMapping=1
+
+[4009SubB]
+ParameterName=9.11 Slot 1 VIE name [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RO
+DefaultValue=255
+PDOMapping=1
+
+[4009SubC]
+ParameterName=9.12 Slot 1 VIE ver [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4009SubD]
+ParameterName=9.13 Slot 2 VIE name [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RO
+DefaultValue=255
+PDOMapping=1
+
+[4009SubE]
+ParameterName=9.14 Slot 2 VIE ver [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4009Sub14]
+ParameterName=9.20 Option slot1 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=24
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4009Sub15]
+ParameterName=9.21 Option slot2 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=24
+AccessType=RO
+DefaultValue=5
+PDOMapping=1
+
+[4009Sub16]
+ParameterName=9.22 Option slot3 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=23
+AccessType=RO
+DefaultValue=10
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 10 Start/stop/dir
+;-------------------------------------------------------
+[400A]
+SubNumber=0x11
+ParameterName=Group 10Start/stop/dir
+ObjectType=0x009
+
+[400ASub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x15
+DefaultValue=0x14
+AccessType=RO
+
+[400ASub1]
+ParameterName=10.1 Ext1 start func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=8
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[400ASub2]
+ParameterName=10.2 Ext1 start in1 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742337
+PDOMapping=1
+
+[400ASub3]
+ParameterName=10.3 Ext1 start in2 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ASub4]
+ParameterName=10.4 Ext2 start func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=8
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ASub5]
+ParameterName=10.5 Ext2 start in1 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ASub6]
+ParameterName=10.6 Ext2 start in2 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ASub7]
+ParameterName=10.7 Jog1 start [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ASub8]
+ParameterName=10.8 Jog2 start [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ASub9]
+ParameterName=10.9 Jog enable [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ASubA]
+ParameterName=10.10 Fault reset sel [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073873409
+PDOMapping=1
+
+[400ASubB]
+ParameterName=10.11 Run enable [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[400ASubD]
+ParameterName=10.13 Em stop off3 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[400ASubF]
+ParameterName=10.15 Em stop off1 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[400ASub11]
+ParameterName=10.17 Start enable [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[400ASub13]
+ParameterName=10.19 Start inhibit [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ASub14]
+ParameterName=10.20 Start intrl func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 11 Start/stop mode
+;-------------------------------------------------------
+[400B]
+SubNumber=0x8
+ParameterName=Group 11Start/stop mode
+ObjectType=0x009
+
+[400BSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x8
+DefaultValue=0x7
+AccessType=RO
+
+[400BSub1]
+ParameterName=11.1 Start mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=2
+AccessType=RW
+DefaultValue=2
+PDOMapping=1
+
+[400BSub2]
+ParameterName=11.2 Dc-magn time [ms]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=500
+PDOMapping=1
+
+[400BSub3]
+ParameterName=11.3 Stop mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=2
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[400BSub4]
+ParameterName=11.4 Dc hold speed [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=50
+PDOMapping=1
+
+[400BSub5]
+ParameterName=11.5 Dc hold curr ref [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RW
+DefaultValue=30
+PDOMapping=1
+
+[400BSub6]
+ParameterName=11.6 Dc hold [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400BSub7]
+ParameterName=11.7 Autophasing mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 12 Operating mode
+;-------------------------------------------------------
+[400C]
+SubNumber=0x5
+ParameterName=Group 12Operating mode
+ObjectType=0x009
+
+[400CSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x8
+DefaultValue=0x7
+AccessType=RO
+
+[400CSub1]
+ParameterName=12.1 Ext1/Ext2 sel [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400CSub3]
+ParameterName=12.3 Ext1 ctrl mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=5
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[400CSub5]
+ParameterName=12.5 Ext2 ctrl mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=5
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[400CSub7]
+ParameterName=12.7 Local ctrl mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=2
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 13 Analogue inputs
+;-------------------------------------------------------
+[400D]
+SubNumber=0x22
+ParameterName=Group 13Analogue inputs
+ObjectType=0x009
+
+[400DSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x22
+DefaultValue=0x21
+AccessType=RO
+
+[400DSub1]
+ParameterName=13.1 AI1 filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[400DSub2]
+ParameterName=13.2 AI1 max [V]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-11000
+HighLimit=11000
+AccessType=RW
+DefaultValue=10000
+PDOMapping=1
+
+[400DSub3]
+ParameterName=13.3 AI1 min [V]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-11000
+HighLimit=11000
+AccessType=RW
+DefaultValue=-10000
+PDOMapping=1
+
+[400DSub4]
+ParameterName=13.4 AI1 max scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=1500000
+PDOMapping=1
+
+[400DSub5]
+ParameterName=13.5 AI1 min scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=-1500000
+PDOMapping=1
+
+[400DSub6]
+ParameterName=13.6 AI2 filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[400DSub7]
+ParameterName=13.7 AI2 max [V]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-11000
+HighLimit=11000
+AccessType=RW
+DefaultValue=10000
+PDOMapping=1
+
+[400DSub8]
+ParameterName=13.8 AI2 min [V]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-11000
+HighLimit=11000
+AccessType=RW
+DefaultValue=-10000
+PDOMapping=1
+
+[400DSub9]
+ParameterName=13.9 AI2 max scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=100000
+PDOMapping=1
+
+[400DSubA]
+ParameterName=13.10 AI2 min scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=-100000
+PDOMapping=1
+
+[400DSubB]
+ParameterName=13.11 AI3 filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[400DSubC]
+ParameterName=13.12 AI3 max [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RW
+DefaultValue=22000
+PDOMapping=1
+
+[400DSubD]
+ParameterName=13.13 AI3 min [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RW
+DefaultValue=4000
+PDOMapping=1
+
+[400DSubE]
+ParameterName=13.14 AI3 max scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=1500000
+PDOMapping=1
+
+[400DSubF]
+ParameterName=13.15 AI3 min scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400DSub10]
+ParameterName=13.16 AI4 filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[400DSub11]
+ParameterName=13.17 AI4 max [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RW
+DefaultValue=22000
+PDOMapping=1
+
+[400DSub12]
+ParameterName=13.18 AI4 min [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RW
+DefaultValue=4000
+PDOMapping=1
+
+[400DSub13]
+ParameterName=13.19 AI4 max scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=1500000
+PDOMapping=1
+
+[400DSub14]
+ParameterName=13.20 AI4 min scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400DSub15]
+ParameterName=13.21 AI5 filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[400DSub16]
+ParameterName=13.22 AI5 max [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RW
+DefaultValue=22000
+PDOMapping=1
+
+[400DSub17]
+ParameterName=13.23 AI5 min [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RW
+DefaultValue=4000
+PDOMapping=1
+
+[400DSub18]
+ParameterName=13.24 AI5 max scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=1500000
+PDOMapping=1
+
+[400DSub19]
+ParameterName=13.25 AI5 min scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400DSub1A]
+ParameterName=13.26 AI6 filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[400DSub1B]
+ParameterName=13.27 AI6 max [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RW
+DefaultValue=22000
+PDOMapping=1
+
+[400DSub1C]
+ParameterName=13.28 AI6 min [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-22000
+HighLimit=22000
+AccessType=RW
+DefaultValue=4000
+PDOMapping=1
+
+[400DSub1D]
+ParameterName=13.29 AI6 max scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=1500000
+PDOMapping=1
+
+[400DSub1E]
+ParameterName=13.30 AI6 min scale [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400DSub1F]
+ParameterName=13.31 AI tune [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=4
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400DSub20]
+ParameterName=13.32 AI superv func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400DSub21]
+ParameterName=13.33 AI superv cw [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=15
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 14 Digital I/O
+;-------------------------------------------------------
+[400E]
+SubNumber=0x2d
+ParameterName=Group 14Digital I/O
+ObjectType=0x009
+
+[400ESub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x49
+DefaultValue=0x48
+AccessType=RO
+
+[400ESub1]
+ParameterName=14.1 DI invert mask [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=511
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub2]
+ParameterName=14.2 DIO1 conf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub3]
+ParameterName=14.3 DIO1 out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073874434
+PDOMapping=1
+
+[400ESub4]
+ParameterName=14.4 DIO1 Ton [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub5]
+ParameterName=14.5 DIO1 Toff [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub6]
+ParameterName=14.6 DIO2 conf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub7]
+ParameterName=14.7 DIO2 out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073939970
+PDOMapping=1
+
+[400ESub8]
+ParameterName=14.8 DIO2 Ton [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub9]
+ParameterName=14.9 DIO2 Toff [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESubA]
+ParameterName=14.10 DIO3 conf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESubB]
+ParameterName=14.11 DIO3 out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074529793
+PDOMapping=1
+
+[400ESubE]
+ParameterName=14.14 DIO4 conf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESubF]
+ParameterName=14.15 DIO4 out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073874434
+PDOMapping=1
+
+[400ESub12]
+ParameterName=14.18 DIO5 conf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub13]
+ParameterName=14.19 DIO5 out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074005506
+PDOMapping=1
+
+[400ESub16]
+ParameterName=14.22 DIO6 conf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub17]
+ParameterName=14.23 DIO6 out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074398721
+PDOMapping=1
+
+[400ESub1A]
+ParameterName=14.26 DIO7 conf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub1B]
+ParameterName=14.27 DIO7 out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074202113
+PDOMapping=1
+
+[400ESub1E]
+ParameterName=14.30 DIO8 conf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub1F]
+ParameterName=14.31 DIO8 out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074267649
+PDOMapping=1
+
+[400ESub22]
+ParameterName=14.34 DIO9 conf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub23]
+ParameterName=14.35 DIO9 out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073939971
+PDOMapping=1
+
+[400ESub26]
+ParameterName=14.38 DIO10 conf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub27]
+ParameterName=14.39 DIO10 out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073808899
+PDOMapping=1
+
+[400ESub2A]
+ParameterName=14.42 RO1 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073874434
+PDOMapping=1
+
+[400ESub2B]
+ParameterName=14.43 RO1 Ton [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub2C]
+ParameterName=14.44 RO1 Toff [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub2D]
+ParameterName=14.45 RO2 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073939970
+PDOMapping=1
+
+[400ESub30]
+ParameterName=14.48 RO3 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074529793
+PDOMapping=1
+
+[400ESub33]
+ParameterName=14.51 RO4 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073874434
+PDOMapping=1
+
+[400ESub36]
+ParameterName=14.54 RO5 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074005506
+PDOMapping=1
+
+[400ESub39]
+ParameterName=14.57 Freq in max [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=3
+HighLimit=32767
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[400ESub3A]
+ParameterName=14.58 Freq in min [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=3
+HighLimit=32767
+AccessType=RW
+DefaultValue=3
+PDOMapping=1
+
+[400ESub3B]
+ParameterName=14.59 Freq in max scal [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RW
+DefaultValue=1500
+PDOMapping=1
+
+[400ESub3C]
+ParameterName=14.60 Freq in min scal [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub3D]
+ParameterName=14.61 Freq out src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742081
+PDOMapping=1
+
+[400ESub3E]
+ParameterName=14.62 Freq out max src [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=1500
+PDOMapping=1
+
+[400ESub3F]
+ParameterName=14.63 Freq out min src [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400ESub40]
+ParameterName=14.64 Freq out max sca [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=3
+HighLimit=32767
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[400ESub41]
+ParameterName=14.65 Freq out min sca [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=3
+HighLimit=32767
+AccessType=RW
+DefaultValue=3
+PDOMapping=1
+
+[400ESub42]
+ParameterName=14.66 RO6 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074005506
+PDOMapping=1
+
+[400ESub45]
+ParameterName=14.69 RO7 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074005506
+PDOMapping=1
+
+[400ESub48]
+ParameterName=14.72 DIO invert mask [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=1023
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 15 Analogue outputs
+;-------------------------------------------------------
+[400F]
+SubNumber=0x1b
+ParameterName=Group 15Analogue outputs
+ObjectType=0x009
+
+[400FSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x1f
+DefaultValue=0x1e
+AccessType=RO
+
+[400FSub1]
+ParameterName=15.1 AO1 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742085
+PDOMapping=1
+
+[400FSub2]
+ParameterName=15.2 AO1 filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[400FSub3]
+ParameterName=15.3 AO1 out max [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RW
+DefaultValue=20000
+PDOMapping=1
+
+[400FSub4]
+ParameterName=15.4 AO1 out min [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RW
+DefaultValue=4000
+PDOMapping=1
+
+[400FSub5]
+ParameterName=15.5 AO1 src max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=100000
+PDOMapping=1
+
+[400FSub6]
+ParameterName=15.6 AO1 src min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400FSub7]
+ParameterName=15.7 AO2 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742082
+PDOMapping=1
+
+[400FSub8]
+ParameterName=15.8 AO2 filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[400FSub9]
+ParameterName=15.9 AO2 out max [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RW
+DefaultValue=20000
+PDOMapping=1
+
+[400FSubA]
+ParameterName=15.10 AO2 out min [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RW
+DefaultValue=4000
+PDOMapping=1
+
+[400FSubB]
+ParameterName=15.11 AO2 src max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=100000
+PDOMapping=1
+
+[400FSubC]
+ParameterName=15.12 AO2 src min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400FSubD]
+ParameterName=15.13 AO3 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742083
+PDOMapping=1
+
+[400FSubE]
+ParameterName=15.14 AO3 filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[400FSubF]
+ParameterName=15.15 AO3 out max [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RW
+DefaultValue=22000
+PDOMapping=1
+
+[400FSub10]
+ParameterName=15.16 AO3 out min [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RW
+DefaultValue=4000
+PDOMapping=1
+
+[400FSub11]
+ParameterName=15.17 AO3 src max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=50000
+PDOMapping=1
+
+[400FSub12]
+ParameterName=15.18 AO3 src min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400FSub13]
+ParameterName=15.19 AO4 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742083
+PDOMapping=1
+
+[400FSub14]
+ParameterName=15.20 AO4 filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[400FSub15]
+ParameterName=15.21 AO4 out max [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RW
+DefaultValue=22000
+PDOMapping=1
+
+[400FSub16]
+ParameterName=15.22 AO4 out min [mA]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=22700
+AccessType=RW
+DefaultValue=4000
+PDOMapping=1
+
+[400FSub17]
+ParameterName=15.23 AO4 src max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=50000
+PDOMapping=1
+
+[400FSub18]
+ParameterName=15.24 AO4 src min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400FSub19]
+ParameterName=15.25 AO ctrl word [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=63
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[400FSub1E]
+ParameterName=15.30 AO calibration [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=4
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 16 System
+;-------------------------------------------------------
+[4010]
+SubNumber=0x12
+ParameterName=Group 16System
+ObjectType=0x009
+
+[4010Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x19
+DefaultValue=0x18
+AccessType=RO
+
+[4010Sub1]
+ParameterName=16.1 Local lock [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010Sub2]
+ParameterName=16.2 Parameter lock [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4010Sub3]
+ParameterName=16.3 Pass code [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010Sub4]
+ParameterName=16.4 Param restore [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010Sub7]
+ParameterName=16.7 Param save [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010Sub9]
+ParameterName=16.9 User set sel [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=1
+HighLimit=10
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4010SubA]
+ParameterName=16.10 User set log [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4010SubB]
+ParameterName=16.11 User IO sel lo [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010SubC]
+ParameterName=16.12 User IO sel hi [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010SubE]
+ParameterName=16.14 Reset ChgParLog [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010SubF]
+ParameterName=16.15 Menu set sel [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=32
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010Sub10]
+ParameterName=16.16 Menu set active [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=32
+AccessType=RO
+DefaultValue=2
+PDOMapping=1
+
+[4010Sub11]
+ParameterName=16.17 Power unit [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010Sub12]
+ParameterName=16.18 Fan ctrl mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010Sub14]
+ParameterName=16.20 Drive boot [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4010Sub17]
+ParameterName=16.23 Fan powerup tmr [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=10
+HighLimit=7200
+AccessType=RW
+DefaultValue=10
+PDOMapping=1
+
+[4010Sub18]
+ParameterName=16.24 Fan off timer [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=10
+HighLimit=7200
+AccessType=RW
+DefaultValue=10
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 19 Speed calculation
+;-------------------------------------------------------
+[4013]
+SubNumber=0xd
+ParameterName=Group 19Speed calculation
+ObjectType=0x009
+
+[4013Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x11
+DefaultValue=0x10
+AccessType=RO
+
+[4013Sub1]
+ParameterName=19.1 Speed scaling [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=1500
+PDOMapping=1
+
+[4013Sub2]
+ParameterName=19.2 Speed fb sel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4013Sub3]
+ParameterName=19.3 MotorSpeed  filt [ms]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=10000000
+AccessType=RW
+DefaultValue=8000
+PDOMapping=1
+
+[4013Sub6]
+ParameterName=19.6 Zero speed limit [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3000000
+AccessType=RW
+DefaultValue=3000
+PDOMapping=1
+
+[4013Sub7]
+ParameterName=19.7 Zero speed delay [ms]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4013Sub8]
+ParameterName=19.8 Above speed lim [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4013Sub9]
+ParameterName=19.9 Speed TripMargin [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=100000
+AccessType=RW
+DefaultValue=5000
+PDOMapping=1
+
+[4013SubA]
+ParameterName=19.10 Speed window [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[4013SubD]
+ParameterName=19.13 Speed fbk fault [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4013SubE]
+ParameterName=19.14 Speed superv est [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3000000
+AccessType=RW
+DefaultValue=45000
+PDOMapping=1
+
+[4013SubF]
+ParameterName=19.15 Speed superv enc [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3000000
+AccessType=RW
+DefaultValue=1500
+PDOMapping=1
+
+[4013Sub10]
+ParameterName=19.16 Speed fb filt t [ms]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=10000000
+AccessType=RW
+DefaultValue=15000
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 20 Limits
+;-------------------------------------------------------
+[4014]
+SubNumber=0xd
+ParameterName=Group 20Limits
+ObjectType=0x009
+
+[4014Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xe
+DefaultValue=0xd
+AccessType=RO
+
+[4014Sub1]
+ParameterName=20.1 Maximum speed [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=1500
+PDOMapping=1
+
+[4014Sub2]
+ParameterName=20.2 Minimum speed [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=-1500
+PDOMapping=1
+
+[4014Sub3]
+ParameterName=20.3 Pos speed ena [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4014Sub4]
+ParameterName=20.4 Neg speed ena [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4014Sub5]
+ParameterName=20.5 Maximum current [A]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4014Sub6]
+ParameterName=20.6 Torq lim sel [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4014Sub7]
+ParameterName=20.7 Maximum torque1 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=16000
+AccessType=RW
+DefaultValue=3000
+PDOMapping=1
+
+[4014Sub8]
+ParameterName=20.8 Minimum torque1 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-16000
+HighLimit=0
+AccessType=RW
+DefaultValue=-3000
+PDOMapping=1
+
+[4014Sub9]
+ParameterName=20.9 Maximum torque2 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073746951
+PDOMapping=1
+
+[4014SubA]
+ParameterName=20.10 Minimum torque2 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073746952
+PDOMapping=1
+
+[4014SubC]
+ParameterName=20.12 P motoring lim [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=16000
+AccessType=RW
+DefaultValue=3000
+PDOMapping=1
+
+[4014SubD]
+ParameterName=20.13 P generating lim [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=16000
+AccessType=RW
+DefaultValue=3000
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 21 Speed ref
+;-------------------------------------------------------
+[4015]
+SubNumber=0xc
+ParameterName=Group 21Speed ref
+ObjectType=0x009
+
+[4015Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xd
+DefaultValue=0xc
+AccessType=RO
+
+[4015Sub1]
+ParameterName=21.1 Speed ref1 sel [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742341
+PDOMapping=1
+
+[4015Sub2]
+ParameterName=21.2 Speed ref2 sel [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4015Sub3]
+ParameterName=21.3 Speed ref1 func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4015Sub4]
+ParameterName=21.4 Speed ref1/2 sel [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4015Sub5]
+ParameterName=21.5 Speed share [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-8000
+HighLimit=8000
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[4015Sub7]
+ParameterName=21.7 Speed ref jog1 [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4015Sub8]
+ParameterName=21.8 Speed ref jog2 [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4015Sub9]
+ParameterName=21.9 SpeedRef min abs [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4015SubA]
+ParameterName=21.10 Mot pot func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4015SubB]
+ParameterName=21.11 Mot pot up [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074004481
+PDOMapping=1
+
+[4015SubC]
+ParameterName=21.12 Mot pot down [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074070017
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 22 Speed ref ramp
+;-------------------------------------------------------
+[4016]
+SubNumber=0xd
+ParameterName=Group 22Speed ref ramp
+ObjectType=0x009
+
+[4016Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xd
+DefaultValue=0xc
+AccessType=RO
+
+[4016Sub1]
+ParameterName=22.1 Acc/Dec sel [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4016Sub2]
+ParameterName=22.2 Acc time1 [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1800000
+AccessType=RW
+DefaultValue=20000
+PDOMapping=1
+
+[4016Sub3]
+ParameterName=22.3 Dec time1 [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1800000
+AccessType=RW
+DefaultValue=20000
+PDOMapping=1
+
+[4016Sub4]
+ParameterName=22.4 Acc time2 [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1800000
+AccessType=RW
+DefaultValue=60000
+PDOMapping=1
+
+[4016Sub5]
+ParameterName=22.5 Dec time2 [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1800000
+AccessType=RW
+DefaultValue=60000
+PDOMapping=1
+
+[4016Sub6]
+ParameterName=22.6 Shape time acc1 [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1000000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[4016Sub7]
+ParameterName=22.7 Shape time acc2 [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1000000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[4016Sub8]
+ParameterName=22.8 Shape time dec1 [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1000000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[4016Sub9]
+ParameterName=22.9 Shape time dec2 [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1000000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[4016SubA]
+ParameterName=22.10 Acc time jogging [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1800000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4016SubB]
+ParameterName=22.11 Dec time jogging [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1800000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4016SubC]
+ParameterName=22.12 Em stop time [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1800000
+AccessType=RW
+DefaultValue=3000
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 23 Speed ctrl
+;-------------------------------------------------------
+[4017]
+SubNumber=0x16
+ParameterName=Group 23Speed ctrl
+ObjectType=0x009
+
+[4017Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x17
+DefaultValue=0x16
+AccessType=RO
+
+[4017Sub1]
+ParameterName=23.1 Proport gain [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=20000
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[4017Sub2]
+ParameterName=23.2 Integration time [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=600000
+AccessType=RW
+DefaultValue=500
+PDOMapping=1
+
+[4017Sub3]
+ParameterName=23.3 Derivation time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017Sub4]
+ParameterName=23.4 Deriv filt time [ms]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=80
+PDOMapping=1
+
+[4017Sub5]
+ParameterName=23.5 Acc comp DerTime [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=60000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017Sub6]
+ParameterName=23.6 Acc comp Ftime [ms]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=80
+PDOMapping=1
+
+[4017Sub7]
+ParameterName=23.7 Speed err Ftime [ms]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017Sub8]
+ParameterName=23.8 Speed additive [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017Sub9]
+ParameterName=23.9 Max torq sp ctrl [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-16000
+HighLimit=16000
+AccessType=RW
+DefaultValue=3000
+PDOMapping=1
+
+[4017SubA]
+ParameterName=23.10 Min torq sp ctrl [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-16000
+HighLimit=16000
+AccessType=RW
+DefaultValue=-3000
+PDOMapping=1
+
+[4017SubB]
+ParameterName=23.11 SpeedErr winFunc [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017SubC]
+ParameterName=23.12 SpeedErr win hi [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017SubD]
+ParameterName=23.13 SpeedErr win lo [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017SubE]
+ParameterName=23.14 Drooping rate [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017SubF]
+ParameterName=23.15 PI adapt max sp [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017Sub10]
+ParameterName=23.16 PI adapt min sp [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017Sub11]
+ParameterName=23.17 Pcoef at min sp [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[4017Sub12]
+ParameterName=23.18 Icoef at min sp [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[4017Sub14]
+ParameterName=23.20 PI tune mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=4
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4017Sub15]
+ParameterName=23.21 Tune bandwidth [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=10000
+PDOMapping=1
+
+[4017Sub16]
+ParameterName=23.22 Tune damping [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2000
+AccessType=RW
+DefaultValue=5
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 24 Torque ref
+;-------------------------------------------------------
+[4018]
+SubNumber=0x8
+ParameterName=Group 24Torque ref
+ObjectType=0x009
+
+[4018Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x8
+DefaultValue=0x7
+AccessType=RO
+
+[4018Sub1]
+ParameterName=24.1 Torq ref1 sel [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742343
+PDOMapping=1
+
+[4018Sub2]
+ParameterName=24.2 Torq ref add sel [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4018Sub3]
+ParameterName=24.3 Maximum torq ref [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=3000
+PDOMapping=1
+
+[4018Sub4]
+ParameterName=24.4 Minimum torq ref [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-10000
+HighLimit=0
+AccessType=RW
+DefaultValue=-3000
+PDOMapping=1
+
+[4018Sub5]
+ParameterName=24.5 Load share [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-8000
+HighLimit=8000
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[4018Sub6]
+ParameterName=24.6 Torq ramp up [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=60000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4018Sub7]
+ParameterName=24.7 Torq ramp down [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=60000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 25 Critical speed
+;-------------------------------------------------------
+[4019]
+SubNumber=0x8
+ParameterName=Group 25Critical speed
+ObjectType=0x009
+
+[4019Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x8
+DefaultValue=0x7
+AccessType=RO
+
+[4019Sub1]
+ParameterName=25.1 Crit speed sel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4019Sub2]
+ParameterName=25.2 Crit speed1 lo [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4019Sub3]
+ParameterName=25.3 Crit speed1 hi [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4019Sub4]
+ParameterName=25.4 Crit speed2 lo [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4019Sub5]
+ParameterName=25.5 Crit speed2 hi [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4019Sub6]
+ParameterName=25.6 Crit speed3 lo [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4019Sub7]
+ParameterName=25.7 Crit speed3 hi [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 26 Constant speeds
+;-------------------------------------------------------
+[401A]
+SubNumber=0xc
+ParameterName=Group 26Constant speeds
+ObjectType=0x009
+
+[401ASub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xd
+DefaultValue=0xc
+AccessType=RO
+
+[401ASub1]
+ParameterName=26.1 Const speed func [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=3
+PDOMapping=1
+
+[401ASub2]
+ParameterName=26.2 Const speed sel1 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401ASub3]
+ParameterName=26.3 Const speed sel2 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401ASub4]
+ParameterName=26.4 Const speed sel3 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401ASub6]
+ParameterName=26.6 Const speed1 [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401ASub7]
+ParameterName=26.7 Const speed2 [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401ASub8]
+ParameterName=26.8 Const speed3 [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401ASub9]
+ParameterName=26.9 Const speed4 [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401ASubA]
+ParameterName=26.10 Const speed5 [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401ASubB]
+ParameterName=26.11 Const speed6 [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401ASubC]
+ParameterName=26.12 Const speed7 [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 27 Process PID
+;-------------------------------------------------------
+[401B]
+SubNumber=0x1c
+ParameterName=Group 27Process PID
+ObjectType=0x009
+
+[401BSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x1f
+DefaultValue=0x1e
+AccessType=RO
+
+[401BSub1]
+ParameterName=27.1 PID setpoint sel [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742341
+PDOMapping=1
+
+[401BSub2]
+ParameterName=27.2 PID fbk func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=8
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub3]
+ParameterName=27.3 PID fbk1 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742343
+PDOMapping=1
+
+[401BSub4]
+ParameterName=27.4 PID fbk2 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742343
+PDOMapping=1
+
+[401BSub5]
+ParameterName=27.5 PID fbk1 max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RW
+DefaultValue=10000
+PDOMapping=1
+
+[401BSub6]
+ParameterName=27.6 PID fbk1 min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RW
+DefaultValue=-10000
+PDOMapping=1
+
+[401BSub7]
+ParameterName=27.7 PID fbk2 max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RW
+DefaultValue=10000
+PDOMapping=1
+
+[401BSub8]
+ParameterName=27.8 PID fbk2 min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RW
+DefaultValue=-10000
+PDOMapping=1
+
+[401BSub9]
+ParameterName=27.9 PID fbk gain [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[401BSubA]
+ParameterName=27.10 PID fbk ftime [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=40
+PDOMapping=1
+
+[401BSubC]
+ParameterName=27.12 PID gain [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[401BSubD]
+ParameterName=27.13 PID integ time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32000
+AccessType=RW
+DefaultValue=6000
+PDOMapping=1
+
+[401BSubE]
+ParameterName=27.14 PID deriv time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSubF]
+ParameterName=27.15 PID deriv filter [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[401BSub10]
+ParameterName=27.16 PID error inv [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub11]
+ParameterName=27.17 PID mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub12]
+ParameterName=27.18 PID maximum [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-327680
+HighLimit=327680
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[401BSub13]
+ParameterName=27.19 PID minimum [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-327680
+HighLimit=327680
+AccessType=RW
+DefaultValue=-1000
+PDOMapping=1
+
+[401BSub14]
+ParameterName=27.20 PID bal ena [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub15]
+ParameterName=27.21 PID bal ref [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-327680
+HighLimit=327680
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub16]
+ParameterName=27.22 Sleep mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub17]
+ParameterName=27.23 Sleep level [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-327680
+HighLimit=327680
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub18]
+ParameterName=27.24 Sleep delay [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3600
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub19]
+ParameterName=27.25 Wake up level [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=327680
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub1A]
+ParameterName=27.26 Wake up delay [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3600
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub1B]
+ParameterName=27.27 Sleep ena [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401BSub1E]
+ParameterName=27.30 PID enable [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073939969
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 30 Fault functions
+;-------------------------------------------------------
+[401E]
+SubNumber=0xf
+ParameterName=Group 30Fault functions
+ObjectType=0x009
+
+[401ESub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xf
+DefaultValue=0xe
+AccessType=RO
+
+[401ESub1]
+ParameterName=30.1 External fault [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[401ESub2]
+ParameterName=30.2 Speed ref safe [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-30000
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401ESub3]
+ParameterName=30.3 Panel ctrl loss [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[401ESub4]
+ParameterName=30.4 Mot phase loss [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[401ESub5]
+ParameterName=30.5 Earth fault [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=2
+PDOMapping=1
+
+[401ESub6]
+ParameterName=30.6 Suppl phs loss [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[401ESub7]
+ParameterName=30.7 Sto diagnostic [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=4
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[401ESub8]
+ParameterName=30.8 Wiring or earth [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[401ESub9]
+ParameterName=30.9 Stall function [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=7
+PDOMapping=1
+
+[401ESubA]
+ParameterName=30.10 Stall curr lim [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=16000
+AccessType=RW
+DefaultValue=2000
+PDOMapping=1
+
+[401ESubB]
+ParameterName=30.11 Stall freq hi [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=5
+HighLimit=10000
+AccessType=RW
+DefaultValue=150
+PDOMapping=1
+
+[401ESubC]
+ParameterName=30.12 Stall time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3600
+AccessType=RW
+DefaultValue=20
+PDOMapping=1
+
+[401ESubD]
+ParameterName=30.13 Suppl phs flt lv [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=10
+HighLimit=17
+AccessType=RW
+DefaultValue=13
+PDOMapping=1
+
+[401ESubE]
+ParameterName=30.14 Cooling diag [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=2
+AccessType=RW
+DefaultValue=2
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 31 Motor therm prot
+;-------------------------------------------------------
+[401F]
+SubNumber=0xf
+ParameterName=Group 31Motor therm prot
+ObjectType=0x009
+
+[401FSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xf
+DefaultValue=0xe
+AccessType=RO
+
+[401FSub1]
+ParameterName=31.1 Mot temp1 prot [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401FSub2]
+ParameterName=31.2 Mot temp1 src [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=12
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401FSub3]
+ParameterName=31.3 Mot temp1 almLim [C]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=90
+PDOMapping=1
+
+[401FSub4]
+ParameterName=31.4 Mot temp1 fltLim [C]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=110
+PDOMapping=1
+
+[401FSub5]
+ParameterName=31.5 Mot temp2 prot [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401FSub6]
+ParameterName=31.6 Mot temp2 src [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=12
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[401FSub7]
+ParameterName=31.7 Mot temp2 almLim [C]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=90
+PDOMapping=1
+
+[401FSub8]
+ParameterName=31.8 Mot temp2 fltLim [C]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=110
+PDOMapping=1
+
+[401FSub9]
+ParameterName=31.9 Mot ambient temp [C]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-60
+HighLimit=100
+AccessType=RW
+DefaultValue=20
+PDOMapping=1
+
+[401FSubA]
+ParameterName=31.10 Mot load curve [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=50
+HighLimit=150
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[401FSubB]
+ParameterName=31.11 Zero speed load [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=50
+HighLimit=150
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[401FSubC]
+ParameterName=31.12 Break point [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=32767
+AccessType=RW
+DefaultValue=4500
+PDOMapping=1
+
+[401FSubD]
+ParameterName=31.13 Mot nom tempRise [C]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=300
+AccessType=RW
+DefaultValue=80
+PDOMapping=1
+
+[401FSubE]
+ParameterName=31.14 Mot therm time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=100
+HighLimit=10000
+AccessType=RW
+DefaultValue=256
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 32 Automatic reset
+;-------------------------------------------------------
+[4020]
+SubNumber=0x5
+ParameterName=Group 32Automatic reset
+ObjectType=0x009
+
+[4020Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x5
+DefaultValue=0x4
+AccessType=RO
+
+[4020Sub1]
+ParameterName=32.1 Autoreset sel [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=63
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4020Sub2]
+ParameterName=32.2 Number of trials [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4020Sub3]
+ParameterName=32.3 Trial time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=10
+HighLimit=6000
+AccessType=RW
+DefaultValue=300
+PDOMapping=1
+
+[4020Sub4]
+ParameterName=32.4 Delay time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1200
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 33 Supervision
+;-------------------------------------------------------
+[4021]
+SubNumber=0x13
+ParameterName=Group 33Supervision
+ObjectType=0x009
+
+[4021Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x17
+DefaultValue=0x16
+AccessType=RO
+
+[4021Sub1]
+ParameterName=33.1 Superv1 func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=4
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4021Sub2]
+ParameterName=33.2 Superv1 act [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742081
+PDOMapping=1
+
+[4021Sub3]
+ParameterName=33.3 Superv1 hi [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4021Sub4]
+ParameterName=33.4 Superv1 lo [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4021Sub5]
+ParameterName=33.5 Superv2 func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=4
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4021Sub6]
+ParameterName=33.6 Superv2 act [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742084
+PDOMapping=1
+
+[4021Sub7]
+ParameterName=33.7 Superv2 hi [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4021Sub8]
+ParameterName=33.8 Superv2 lo [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4021Sub9]
+ParameterName=33.9 Superv3 func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=4
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4021SubA]
+ParameterName=33.10 Superv3 act [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742086
+PDOMapping=1
+
+[4021SubB]
+ParameterName=33.11 Superv3 hi [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4021SubC]
+ParameterName=33.12 Superv3 lo [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4021Sub11]
+ParameterName=33.17 Bit0 invert src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742337
+PDOMapping=1
+
+[4021Sub12]
+ParameterName=33.18 Bit1 invert src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073807873
+PDOMapping=1
+
+[4021Sub13]
+ParameterName=33.19 Bit2 invert src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073873409
+PDOMapping=1
+
+[4021Sub14]
+ParameterName=33.20 Bit3 invert src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073938945
+PDOMapping=1
+
+[4021Sub15]
+ParameterName=33.21 Bit4 invert src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074004481
+PDOMapping=1
+
+[4021Sub16]
+ParameterName=33.22 Bit5 invert src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074070017
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 34 User load curve
+;-------------------------------------------------------
+[4022]
+SubNumber=0x15
+ParameterName=Group 34User load curve
+ObjectType=0x009
+
+[4022Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x15
+DefaultValue=0x14
+AccessType=RO
+
+[4022Sub1]
+ParameterName=34.1 Overload func [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=63
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4022Sub2]
+ParameterName=34.2 Underload func [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=15
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4022Sub3]
+ParameterName=34.3 Load freq1 [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=500
+AccessType=RW
+DefaultValue=5
+PDOMapping=1
+
+[4022Sub4]
+ParameterName=34.4 Load freq2 [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=500
+AccessType=RW
+DefaultValue=25
+PDOMapping=1
+
+[4022Sub5]
+ParameterName=34.5 Load freq3 [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=500
+AccessType=RW
+DefaultValue=43
+PDOMapping=1
+
+[4022Sub6]
+ParameterName=34.6 Load freq4 [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=500
+AccessType=RW
+DefaultValue=50
+PDOMapping=1
+
+[4022Sub7]
+ParameterName=34.7 Load freq5 [Hz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=500
+AccessType=RW
+DefaultValue=500
+PDOMapping=1
+
+[4022Sub8]
+ParameterName=34.8 Load low lim1 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1600
+AccessType=RW
+DefaultValue=10
+PDOMapping=1
+
+[4022Sub9]
+ParameterName=34.9 Load low lim2 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1600
+AccessType=RW
+DefaultValue=15
+PDOMapping=1
+
+[4022SubA]
+ParameterName=34.10 Load low lim3 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1600
+AccessType=RW
+DefaultValue=25
+PDOMapping=1
+
+[4022SubB]
+ParameterName=34.11 Load low lim4 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1600
+AccessType=RW
+DefaultValue=30
+PDOMapping=1
+
+[4022SubC]
+ParameterName=34.12 Load low lim5 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1600
+AccessType=RW
+DefaultValue=30
+PDOMapping=1
+
+[4022SubD]
+ParameterName=34.13 Load high lim1 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1600
+AccessType=RW
+DefaultValue=300
+PDOMapping=1
+
+[4022SubE]
+ParameterName=34.14 Load high lim2 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1600
+AccessType=RW
+DefaultValue=300
+PDOMapping=1
+
+[4022SubF]
+ParameterName=34.15 Load high lim3 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1600
+AccessType=RW
+DefaultValue=300
+PDOMapping=1
+
+[4022Sub10]
+ParameterName=34.16 Load high lim4 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1600
+AccessType=RW
+DefaultValue=300
+PDOMapping=1
+
+[4022Sub11]
+ParameterName=34.17 Load high lim5 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1600
+AccessType=RW
+DefaultValue=300
+PDOMapping=1
+
+[4022Sub12]
+ParameterName=34.18 Load integ time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[4022Sub13]
+ParameterName=34.19 Load cool time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=20
+PDOMapping=1
+
+[4022Sub14]
+ParameterName=34.20 Underload time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=10
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 35 Process variable
+;-------------------------------------------------------
+[4023]
+SubNumber=0x16
+ParameterName=Group 35Process variable
+ObjectType=0x009
+
+[4023Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x16
+DefaultValue=0x15
+AccessType=RO
+
+[4023Sub1]
+ParameterName=35.1 Signal1 param [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742082
+PDOMapping=1
+
+[4023Sub2]
+ParameterName=35.2 Signal1 max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=300000
+PDOMapping=1
+
+[4023Sub3]
+ParameterName=35.3 Signal1 min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=-300000
+PDOMapping=1
+
+[4023Sub4]
+ParameterName=35.4 Proc var1 dispf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=3
+PDOMapping=1
+
+[4023Sub5]
+ParameterName=35.5 Proc var1 unit [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=98
+AccessType=RW
+DefaultValue=4
+PDOMapping=1
+
+[4023Sub6]
+ParameterName=35.6 Proc var1 max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=300000
+PDOMapping=1
+
+[4023Sub7]
+ParameterName=35.7 Proc var1 min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=-300000
+PDOMapping=1
+
+[4023Sub8]
+ParameterName=35.8 Signal2 param [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742085
+PDOMapping=1
+
+[4023Sub9]
+ParameterName=35.9 Signal2 max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=300000
+PDOMapping=1
+
+[4023SubA]
+ParameterName=35.10 Signal2 min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=-300000
+PDOMapping=1
+
+[4023SubB]
+ParameterName=35.11 Proc var2 dispf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=3
+PDOMapping=1
+
+[4023SubC]
+ParameterName=35.12 Proc var2 unit [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=98
+AccessType=RW
+DefaultValue=4
+PDOMapping=1
+
+[4023SubD]
+ParameterName=35.13 Proc var2 max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=300000
+PDOMapping=1
+
+[4023SubE]
+ParameterName=35.14 Proc var2 min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=-300000
+PDOMapping=1
+
+[4023SubF]
+ParameterName=35.15 Signal3 param [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742086
+PDOMapping=1
+
+[4023Sub10]
+ParameterName=35.16 Signal3 max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=300000
+PDOMapping=1
+
+[4023Sub11]
+ParameterName=35.17 Signal3 min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=-300000
+PDOMapping=1
+
+[4023Sub12]
+ParameterName=35.18 Proc var3 dispf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=3
+PDOMapping=1
+
+[4023Sub13]
+ParameterName=35.19 Proc var3 unit [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=98
+AccessType=RW
+DefaultValue=4
+PDOMapping=1
+
+[4023Sub14]
+ParameterName=35.20 Proc var3 max [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=300000
+PDOMapping=1
+
+[4023Sub15]
+ParameterName=35.21 Proc var3 min [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-32768000
+HighLimit=32768000
+AccessType=RW
+DefaultValue=-300000
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 36 Timed functions
+;-------------------------------------------------------
+[4024]
+SubNumber=0x19
+ParameterName=Group 36Timed functions
+ObjectType=0x009
+
+[4024Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x19
+DefaultValue=0x18
+AccessType=RO
+
+[4024Sub1]
+ParameterName=36.1 Timers enable [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub2]
+ParameterName=36.2 Timers mode [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=15
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub3]
+ParameterName=36.3 Start time1 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=86400
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub4]
+ParameterName=36.4 Stop time1 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=86400
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub5]
+ParameterName=36.5 Start day1 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4024Sub6]
+ParameterName=36.6 Stop day1 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4024Sub7]
+ParameterName=36.7 Start time2 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=86400
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub8]
+ParameterName=36.8 Stop time2 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=86400
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub9]
+ParameterName=36.9 Start day2 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4024SubA]
+ParameterName=36.10 Stop day2 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4024SubB]
+ParameterName=36.11 Start time3 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=86400
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024SubC]
+ParameterName=36.12 Stop time3 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=86400
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024SubD]
+ParameterName=36.13 Start day3 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4024SubE]
+ParameterName=36.14 Stop day3 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4024SubF]
+ParameterName=36.15 Start time4 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=86400
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub10]
+ParameterName=36.16 Stop time4 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=86400
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub11]
+ParameterName=36.17 Start day4 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4024Sub12]
+ParameterName=36.18 Stop day4 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4024Sub13]
+ParameterName=36.19 Boost signal [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub14]
+ParameterName=36.20 Boost time [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=86400
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub15]
+ParameterName=36.21 Timed func1 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=31
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub16]
+ParameterName=36.22 Timed func2 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=31
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub17]
+ParameterName=36.23 Timed func3 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=31
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4024Sub18]
+ParameterName=36.24 Timed func4 [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=31
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 38 Flux ref
+;-------------------------------------------------------
+[4026]
+SubNumber=0xe
+ParameterName=Group 38Flux ref
+ObjectType=0x009
+
+[4026Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x11
+DefaultValue=0x10
+AccessType=RO
+
+[4026Sub1]
+ParameterName=38.1 Flux ref [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=200
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[4026Sub3]
+ParameterName=38.3 U/f curve func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4026Sub4]
+ParameterName=38.4 U/f curve freq1 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=500
+AccessType=RW
+DefaultValue=10
+PDOMapping=1
+
+[4026Sub5]
+ParameterName=38.5 U/f curve freq2 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=500
+AccessType=RW
+DefaultValue=30
+PDOMapping=1
+
+[4026Sub6]
+ParameterName=38.6 U/f curve freq3 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=500
+AccessType=RW
+DefaultValue=50
+PDOMapping=1
+
+[4026Sub7]
+ParameterName=38.7 U/f curve freq4 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=500
+AccessType=RW
+DefaultValue=70
+PDOMapping=1
+
+[4026Sub8]
+ParameterName=38.8 U/f curve freq5 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=500
+AccessType=RW
+DefaultValue=90
+PDOMapping=1
+
+[4026Sub9]
+ParameterName=38.9 U/f curve volt1 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=200
+AccessType=RW
+DefaultValue=20
+PDOMapping=1
+
+[4026SubA]
+ParameterName=38.10 U/f curve volt2 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=200
+AccessType=RW
+DefaultValue=40
+PDOMapping=1
+
+[4026SubB]
+ParameterName=38.11 U/f curve volt3 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=200
+AccessType=RW
+DefaultValue=60
+PDOMapping=1
+
+[4026SubC]
+ParameterName=38.12 U/f curve volt4 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=200
+AccessType=RW
+DefaultValue=80
+PDOMapping=1
+
+[4026SubD]
+ParameterName=38.13 U/f curve volt5 [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=200
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[4026Sub10]
+ParameterName=38.16 Flux ref pointer [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073751553
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 40 Motor control
+;-------------------------------------------------------
+[4028]
+SubNumber=0xd
+ParameterName=Group 40Motor control
+ObjectType=0x009
+
+[4028Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x11
+DefaultValue=0x10
+AccessType=RO
+
+[4028Sub1]
+ParameterName=40.1 Motor noise [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=2
+PDOMapping=1
+
+[4028Sub2]
+ParameterName=40.2 Sf ref [kHz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=10
+HighLimit=80
+AccessType=RW
+DefaultValue=30
+PDOMapping=1
+
+[4028Sub3]
+ParameterName=40.3 Slip gain [%]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=200
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[4028Sub4]
+ParameterName=40.4 Voltage reserve [%]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-4
+HighLimit=50
+AccessType=RW
+DefaultValue=-4
+PDOMapping=1
+
+[4028Sub6]
+ParameterName=40.6 Force open loop [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4028Sub7]
+ParameterName=40.7 IR-compensation [%]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=5000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4028Sub8]
+ParameterName=40.8 Ex request [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4028SubA]
+ParameterName=40.10 Flux braking [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4028SubB]
+ParameterName=40.11 Mmodel t adapt [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4028SubE]
+ParameterName=40.14 Rotor time const [%]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=20
+HighLimit=500
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[4028SubF]
+ParameterName=40.15 Hex field weaken [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4028Sub10]
+ParameterName=40.16 Hex fld weak lim [%]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=100
+HighLimit=1000
+AccessType=RW
+DefaultValue=120
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 42 Mech brake ctrl
+;-------------------------------------------------------
+[402A]
+SubNumber=0xf
+ParameterName=Group 42Mech brake ctrl
+ObjectType=0x009
+
+[402ASub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xf
+DefaultValue=0xe
+AccessType=RO
+
+[402ASub1]
+ParameterName=42.1 Brake ctrl [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASub2]
+ParameterName=42.2 Brake acknowl [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASub3]
+ParameterName=42.3 Open delay [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=500
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASub4]
+ParameterName=42.4 Close delay [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=6000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASub5]
+ParameterName=42.5 Close speed [rpm]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[402ASub6]
+ParameterName=42.6 Close cmd delay [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASub7]
+ParameterName=42.7 Reopen delay [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASub8]
+ParameterName=42.8 Brake open torq [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-10000
+HighLimit=10000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASub9]
+ParameterName=42.9 Open torq src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073752584
+PDOMapping=1
+
+[402ASubA]
+ParameterName=42.10 Brake close req [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASubB]
+ParameterName=42.11 Brake hold open [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASubC]
+ParameterName=42.12 Brake fault func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASubD]
+ParameterName=42.13 Close flt delay [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402ASubE]
+ParameterName=42.14 Extend run time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 44 Maintenance
+;-------------------------------------------------------
+[402C]
+SubNumber=0x23
+ParameterName=Group 44Maintenance
+ObjectType=0x009
+
+[402CSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x23
+DefaultValue=0x22
+AccessType=RO
+
+[402CSub1]
+ParameterName=44.1 Ontime1 func [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSub2]
+ParameterName=44.2 Ontime1 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073939969
+PDOMapping=1
+
+[402CSub3]
+ParameterName=44.3 Ontime1 limit [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=36000000
+PDOMapping=1
+
+[402CSub4]
+ParameterName=44.4 Ontime1 alm sel [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=5
+PDOMapping=1
+
+[402CSub5]
+ParameterName=44.5 Ontime2 func [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSub6]
+ParameterName=44.6 Ontime2 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074333186
+PDOMapping=1
+
+[402CSub7]
+ParameterName=44.7 Ontime2 limit [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=15768000
+PDOMapping=1
+
+[402CSub8]
+ParameterName=44.8 Ontime2 alm sel [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSub9]
+ParameterName=44.9 Edge count1 func [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSubA]
+ParameterName=44.10 Edge count1 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1074333186
+PDOMapping=1
+
+[402CSubB]
+ParameterName=44.11 Edge count1 lim [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=5000
+PDOMapping=1
+
+[402CSubC]
+ParameterName=44.12 Edge count1 div [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=1
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSubD]
+ParameterName=44.13 Edg cnt1 alm sel [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=5
+PDOMapping=1
+
+[402CSubE]
+ParameterName=44.14 Edge count2 func [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSubF]
+ParameterName=44.15 Edge count2 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742338
+PDOMapping=1
+
+[402CSub10]
+ParameterName=44.16 Edge count2 lim [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=10000
+PDOMapping=1
+
+[402CSub11]
+ParameterName=44.17 Edge count2 div [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=1
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSub12]
+ParameterName=44.18 Edg cnt2 alm sel [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=2
+PDOMapping=1
+
+[402CSub13]
+ParameterName=44.19 Val count1 func [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSub14]
+ParameterName=44.20 Val count1 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742081
+PDOMapping=1
+
+[402CSub15]
+ParameterName=44.21 Val count1 lim [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=13140000
+PDOMapping=1
+
+[402CSub16]
+ParameterName=44.22 Val count1 div [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=1
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=6000
+PDOMapping=1
+
+[402CSub17]
+ParameterName=44.23 Val cnt1 alm sel [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSub18]
+ParameterName=44.24 Val count2 func [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSub19]
+ParameterName=44.25 Val count2 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742081
+PDOMapping=1
+
+[402CSub1A]
+ParameterName=44.26 Val count2 lim [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=6570000
+PDOMapping=1
+
+[402CSub1B]
+ParameterName=44.27 Val count2 div [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=1
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=6000
+PDOMapping=1
+
+[402CSub1C]
+ParameterName=44.28 Val cnt2 alm sel [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402CSub1D]
+ParameterName=44.29 Fan ontime lim [h]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402CSub1E]
+ParameterName=44.30 Runtime lim [h]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402CSub1F]
+ParameterName=44.31 Runtime alm sel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=5
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSub20]
+ParameterName=44.32 kWh inv lim [kWh]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402CSub21]
+ParameterName=44.33 kWh inv alm sel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=5
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402CSub22]
+ParameterName=44.34 Counter reset [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 45 Energy optimising
+;-------------------------------------------------------
+[402D]
+SubNumber=0x7
+ParameterName=Group 45Energy optimising
+ObjectType=0x009
+
+[402DSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xa
+DefaultValue=0x9
+AccessType=RO
+
+[402DSub1]
+ParameterName=45.1 Energy optim [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402DSub2]
+ParameterName=45.2 Energy tariff1 [gbp]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=65
+PDOMapping=1
+
+[402DSub6]
+ParameterName=45.6 E tariff unit [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[402DSub7]
+ParameterName=45.7 CO2 Conv factor [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RW
+DefaultValue=5
+PDOMapping=1
+
+[402DSub8]
+ParameterName=45.8 Reference power [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[402DSub9]
+ParameterName=45.9 Energy reset [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 47 Voltage ctrl
+;-------------------------------------------------------
+[402F]
+SubNumber=0x5
+ParameterName=Group 47Voltage ctrl
+ObjectType=0x009
+
+[402FSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x5
+DefaultValue=0x4
+AccessType=RO
+
+[402FSub1]
+ParameterName=47.1 Overvolt ctrl [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402FSub2]
+ParameterName=47.2 Undervolt ctrl [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402FSub3]
+ParameterName=47.3 SupplyVoltAutoId [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[402FSub4]
+ParameterName=47.4 Supply voltage [V]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=4000
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 48 Brake chopper
+;-------------------------------------------------------
+[4030]
+SubNumber=0x8
+ParameterName=Group 48Brake chopper
+ObjectType=0x009
+
+[4030Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x8
+DefaultValue=0x7
+AccessType=RO
+
+[4030Sub1]
+ParameterName=48.1 Bc enable [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4030Sub2]
+ParameterName=48.2 Bc run-time ena [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073939969
+PDOMapping=1
+
+[4030Sub3]
+ParameterName=48.3 BrThermTimeConst [s]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4030Sub4]
+ParameterName=48.4 Br power max cnt [kW]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=100000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4030Sub5]
+ParameterName=48.5 R br [Ohm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=10000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4030Sub6]
+ParameterName=48.6 Br temp faultlim [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=150
+AccessType=RW
+DefaultValue=105
+PDOMapping=1
+
+[4030Sub7]
+ParameterName=48.7 Br temp alarmlim [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=150
+AccessType=RW
+DefaultValue=95
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 49 Data storage
+;-------------------------------------------------------
+[4031]
+SubNumber=0x9
+ParameterName=Group 49Data storage
+ObjectType=0x009
+
+[4031Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x9
+DefaultValue=0x8
+AccessType=RO
+
+[4031Sub1]
+ParameterName=49.1 Data storage1 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4031Sub2]
+ParameterName=49.2 Data storage2 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4031Sub3]
+ParameterName=49.3 Data storage3 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4031Sub4]
+ParameterName=49.4 Data storage4 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-32768
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4031Sub5]
+ParameterName=49.5 Data storage5 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4031Sub6]
+ParameterName=49.6 Data storage6 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4031Sub7]
+ParameterName=49.7 Data storage7 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4031Sub8]
+ParameterName=49.8 Data storage8 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-2147483647
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 50 Fieldbus
+;-------------------------------------------------------
+[4032]
+SubNumber=0xf
+ParameterName=Group 50Fieldbus
+ObjectType=0x009
+
+[4032Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x15
+DefaultValue=0x14
+AccessType=RO
+
+[4032Sub1]
+ParameterName=50.1 Fba enable [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4032Sub2]
+ParameterName=50.2 Comm loss func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4032Sub3]
+ParameterName=50.3 Comm loss t out [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=3
+HighLimit=32767
+AccessType=RW
+DefaultValue=3
+PDOMapping=1
+
+[4032Sub4]
+ParameterName=50.4 Fb ref1 modesel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=6
+AccessType=RW
+DefaultValue=2
+PDOMapping=1
+
+[4032Sub5]
+ParameterName=50.5 Fb ref2 modesel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=6
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4032Sub6]
+ParameterName=50.6 Fb act1 tr src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742081
+PDOMapping=1
+
+[4032Sub7]
+ParameterName=50.7 Fb act2 tr src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742086
+PDOMapping=1
+
+[4032Sub8]
+ParameterName=50.8 Fb sw bit12 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4032Sub9]
+ParameterName=50.9 Fb sw bit13 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4032SubA]
+ParameterName=50.10 Fb sw bit14 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4032SubB]
+ParameterName=50.11 Fb sw bit15 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4032SubC]
+ParameterName=50.12 FB comm speed [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4032SubF]
+ParameterName=50.15 Fb cw used [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742358
+PDOMapping=1
+
+[4032Sub14]
+ParameterName=50.20 Fb main sw func [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=3
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 51 FBA settings
+;-------------------------------------------------------
+[4033]
+SubNumber=0x22
+ParameterName=Group 51FBA settings
+ObjectType=0x009
+
+[4033Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x22
+DefaultValue=0x21
+AccessType=RO
+
+[4033Sub1]
+ParameterName=51.1 FBA type [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub2]
+ParameterName=51.2 FBA par2 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub3]
+ParameterName=51.3 FBA par3 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub4]
+ParameterName=51.4 FBA par4 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub5]
+ParameterName=51.5 FBA par5 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub6]
+ParameterName=51.6 FBA par6 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub7]
+ParameterName=51.7 FBA par7 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub8]
+ParameterName=51.8 FBA par8 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub9]
+ParameterName=51.9 FBA par9 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033SubA]
+ParameterName=51.10 FBA par10 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033SubB]
+ParameterName=51.11 FBA par11 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033SubC]
+ParameterName=51.12 FBA par12 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033SubD]
+ParameterName=51.13 FBA par13 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033SubE]
+ParameterName=51.14 FBA par14 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033SubF]
+ParameterName=51.15 FBA par15 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub10]
+ParameterName=51.16 FBA par16 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub11]
+ParameterName=51.17 FBA par17 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub12]
+ParameterName=51.18 FBA par18 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub13]
+ParameterName=51.19 FBA par19 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub14]
+ParameterName=51.20 FBA par20 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub15]
+ParameterName=51.21 FBA par21 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub16]
+ParameterName=51.22 FBA par22 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub17]
+ParameterName=51.23 FBA par23 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub18]
+ParameterName=51.24 FBA par24 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub19]
+ParameterName=51.25 FBA par25 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub1A]
+ParameterName=51.26 FBA par26 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub1B]
+ParameterName=51.27 FBA par refresh [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub1C]
+ParameterName=51.28 Par table ver [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub1D]
+ParameterName=51.29 Drive type code [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub1E]
+ParameterName=51.30 Mapping file ver [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub1F]
+ParameterName=51.31 D2FBA comm sta [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=6
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub20]
+ParameterName=51.32 FBA comm sw ver [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4033Sub21]
+ParameterName=51.33 FBA appl sw ver [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 52 FBA data in
+;-------------------------------------------------------
+[4034]
+SubNumber=0xd
+ParameterName=Group 52FBA data in
+ObjectType=0x009
+
+[4034Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xd
+DefaultValue=0xc
+AccessType=RO
+
+[4034Sub1]
+ParameterName=52.1 FBA data in1 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034Sub2]
+ParameterName=52.2 FBA data in2 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034Sub3]
+ParameterName=52.3 FBA data in3 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034Sub4]
+ParameterName=52.4 FBA data in4 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034Sub5]
+ParameterName=52.5 FBA data in5 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034Sub6]
+ParameterName=52.6 FBA data in6 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034Sub7]
+ParameterName=52.7 FBA data in7 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034Sub8]
+ParameterName=52.8 FBA data in8 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034Sub9]
+ParameterName=52.9 FBA data in9 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034SubA]
+ParameterName=52.10 FBA data in10 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034SubB]
+ParameterName=52.11 FBA data in11 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4034SubC]
+ParameterName=52.12 FBA data in12 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 53 FBA data out
+;-------------------------------------------------------
+[4035]
+SubNumber=0xd
+ParameterName=Group 53FBA data out
+ObjectType=0x009
+
+[4035Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xd
+DefaultValue=0xc
+AccessType=RO
+
+[4035Sub1]
+ParameterName=53.1 FBA data out1 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035Sub2]
+ParameterName=53.2 FBA data out2 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035Sub3]
+ParameterName=53.3 FBA data out3 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035Sub4]
+ParameterName=53.4 FBA data out4 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035Sub5]
+ParameterName=53.5 FBA data out5 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035Sub6]
+ParameterName=53.6 FBA data out6 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035Sub7]
+ParameterName=53.7 FBA data out7 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035Sub8]
+ParameterName=53.8 FBA data out8 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035Sub9]
+ParameterName=53.9 FBA data out9 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035SubA]
+ParameterName=53.10 FBA data out10 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035SubB]
+ParameterName=53.11 FBA data out11 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4035SubC]
+ParameterName=53.12 FBA data out12 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 55 Communication tool
+;-------------------------------------------------------
+[4037]
+SubNumber=0x3
+ParameterName=Group 55Communication tool
+ObjectType=0x009
+
+[4037Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x3
+DefaultValue=0x2
+AccessType=RO
+
+[4037Sub1]
+ParameterName=55.1 MDB Station ID [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=247
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4037Sub2]
+ParameterName=55.2 MDB Baud rate [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=4
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 56 Panel display
+;-------------------------------------------------------
+[4038]
+SubNumber=0xb
+ParameterName=Group 56Panel display
+ObjectType=0x009
+
+[4038Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xd
+DefaultValue=0xc
+AccessType=RO
+
+[4038Sub1]
+ParameterName=56.1 Signal1 param [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RW
+DefaultValue=65535
+PDOMapping=1
+
+[4038Sub2]
+ParameterName=56.2 Signal2 param [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RW
+DefaultValue=65535
+PDOMapping=1
+
+[4038Sub3]
+ParameterName=56.3 Signal3 param [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RW
+DefaultValue=65535
+PDOMapping=1
+
+[4038Sub4]
+ParameterName=56.4 Signal1 mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-1
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4038Sub5]
+ParameterName=56.5 Signal2 mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-1
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4038Sub6]
+ParameterName=56.6 Signal3 mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=-1
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4038Sub7]
+ParameterName=56.7 Panel ref unit [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4038Sub8]
+ParameterName=56.8 Speed filt time [ms]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=100000
+AccessType=RW
+DefaultValue=2500
+PDOMapping=1
+
+[4038Sub9]
+ParameterName=56.9 Torque filt time [ms]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=100000
+AccessType=RW
+DefaultValue=1000
+PDOMapping=1
+
+[4038SubC]
+ParameterName=56.12 Panel ref copy [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 57 D2D communication
+;-------------------------------------------------------
+[4039]
+SubNumber=0xe
+ParameterName=Group 57D2D communication
+ObjectType=0x009
+
+[4039Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x10
+DefaultValue=0xf
+AccessType=RO
+
+[4039Sub1]
+ParameterName=57.1 Link mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4039Sub2]
+ParameterName=57.2 Comm loss func [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4039Sub3]
+ParameterName=57.3 Node address [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=62
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4039Sub4]
+ParameterName=57.4 Follower mask 1 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4039Sub5]
+ParameterName=57.5 Follower mask 2 [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4039Sub6]
+ParameterName=57.6 Ref 1 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742597
+PDOMapping=1
+
+[4039Sub7]
+ParameterName=57.7 Ref 2 src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742605
+PDOMapping=1
+
+[4039Sub8]
+ParameterName=57.8 Follower cw src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742367
+PDOMapping=1
+
+[4039SubB]
+ParameterName=57.11 Ref1 msg type [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4039SubC]
+ParameterName=57.12 Ref1 mc group [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=62
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4039SubD]
+ParameterName=57.13 Next ref1 mc grp [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=62
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4039SubE]
+ParameterName=57.14 Nr ref1 mc grps [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=62
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[4039SubF]
+ParameterName=57.15 D2D com port [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 58 Embedded Modbus
+;-------------------------------------------------------
+[403A]
+SubNumber=0x35
+ParameterName=Group 58Embedded Modbus
+ObjectType=0x009
+
+[403ASub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x3b
+DefaultValue=0x3a
+AccessType=RO
+
+[403ASub1]
+ParameterName=58.1 Protocol ena sel [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub3]
+ParameterName=58.3 Node address [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=247
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[403ASub4]
+ParameterName=58.4 Baud rate [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=6
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[403ASub5]
+ParameterName=58.5 Parity [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub6]
+ParameterName=58.6 Control profile [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[403ASub7]
+ParameterName=58.7 Comm loss t out [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=60000
+AccessType=RW
+DefaultValue=600
+PDOMapping=1
+
+[403ASub8]
+ParameterName=58.8 Comm loss mode [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub9]
+ParameterName=58.9 Comm loss action [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASubA]
+ParameterName=58.10 Refresh settings [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASubB]
+ParameterName=58.11 Reference scale [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=32767
+AccessType=RW
+DefaultValue=100
+PDOMapping=1
+
+[403ASubC]
+ParameterName=58.12 EFB comm speed [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASubF]
+ParameterName=58.15 Comm diagnostics [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub10]
+ParameterName=58.16 Received packets [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub11]
+ParameterName=58.17 Transm packets [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub12]
+ParameterName=58.18 All packets [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub13]
+ParameterName=58.19 UART errors [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub14]
+ParameterName=58.20 CRC errors [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub15]
+ParameterName=58.21 Raw CW LSW [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub16]
+ParameterName=58.22 Raw CW MSW [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub17]
+ParameterName=58.23 Raw SW LSW [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub18]
+ParameterName=58.24 Raw SW MSW [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub19]
+ParameterName=58.25 Raw Ref 1 LSW [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub1A]
+ParameterName=58.26 Raw Ref 1 MSW [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub1B]
+ParameterName=58.27 Raw Ref 2 LSW [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub1C]
+ParameterName=58.28 Raw Ref 2 MSW [-]
+ObjectType=0x7
+DataType=0x0006
+LowLimit=0
+HighLimit=65535
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[403ASub1E]
+ParameterName=58.30 Transmit delay [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub1F]
+ParameterName=58.31 Ret app errors [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[403ASub20]
+ParameterName=58.32 Word order [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[403ASub23]
+ParameterName=58.35 Data I/O 1 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub24]
+ParameterName=58.36 Data I/O 2 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub25]
+ParameterName=58.37 Data I/O 3 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub26]
+ParameterName=58.38 Data I/O 4 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub27]
+ParameterName=58.39 Data I/O 5 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub28]
+ParameterName=58.40 Data I/O 6 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub29]
+ParameterName=58.41 Data I/O 7 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub2A]
+ParameterName=58.42 Data I/O 8 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub2B]
+ParameterName=58.43 Data I/O 9 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub2C]
+ParameterName=58.44 Data I/O 10 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub2D]
+ParameterName=58.45 Data I/O 11 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub2E]
+ParameterName=58.46 Data I/O 12 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub2F]
+ParameterName=58.47 Data I/O 13 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub30]
+ParameterName=58.48 Data I/O 14 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub31]
+ParameterName=58.49 Data I/O 15 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub32]
+ParameterName=58.50 Data I/O 16 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub33]
+ParameterName=58.51 Data I/O 17 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub34]
+ParameterName=58.52 Data I/O 18 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub35]
+ParameterName=58.53 Data I/O 19 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub36]
+ParameterName=58.54 Data I/O 20 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub37]
+ParameterName=58.55 Data I/O 21 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub38]
+ParameterName=58.56 Data I/O 22 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub39]
+ParameterName=58.57 Data I/O 23 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[403ASub3A]
+ParameterName=58.58 Data I/O 24 [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=9999
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 64 Load analyzer
+;-------------------------------------------------------
+[4040]
+SubNumber=0x22
+ParameterName=Group 64Load analyzer
+ObjectType=0x009
+
+[4040Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x22
+DefaultValue=0x21
+AccessType=RO
+
+[4040Sub1]
+ParameterName=64.1 PVL signal [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742102
+PDOMapping=1
+
+[4040Sub2]
+ParameterName=64.2 PVL filt time [s]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=12000
+AccessType=RW
+DefaultValue=200
+PDOMapping=1
+
+[4040Sub3]
+ParameterName=64.3 Reset loggers [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub4]
+ParameterName=64.4 AL signal [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742103
+PDOMapping=1
+
+[4040Sub5]
+ParameterName=64.5 AL signal base [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=3276800
+AccessType=RW
+DefaultValue=10000
+PDOMapping=1
+
+[4040Sub6]
+ParameterName=64.6 PVL peak value1 [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RO
+DefaultValue=3
+PDOMapping=1
+
+[4040Sub7]
+ParameterName=64.7 Date of peak [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=8859
+PDOMapping=1
+
+[4040Sub8]
+ParameterName=64.8 Time of peak [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=61794
+PDOMapping=1
+
+[4040Sub9]
+ParameterName=64.9 Current at peak [A]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-3276800
+HighLimit=3276800
+AccessType=RO
+DefaultValue=50
+PDOMapping=1
+
+[4040SubA]
+ParameterName=64.10 Dc volt at peak [V]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=200000
+AccessType=RO
+DefaultValue=32275
+PDOMapping=1
+
+[4040SubB]
+ParameterName=64.11 Speed at peak [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=-327680
+HighLimit=327680
+AccessType=RO
+DefaultValue=10528
+PDOMapping=1
+
+[4040SubC]
+ParameterName=64.12 Date of reset [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040SubD]
+ParameterName=64.13 Time of reset [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040SubE]
+ParameterName=64.14 AL1  0 to 10% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=100
+PDOMapping=1
+
+[4040SubF]
+ParameterName=64.15 AL1  10 to 20% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=100
+PDOMapping=1
+
+[4040Sub10]
+ParameterName=64.16 AL1  20 to 30% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub11]
+ParameterName=64.17 AL1  30 to 40% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub12]
+ParameterName=64.18 AL1  40 to 50% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub13]
+ParameterName=64.19 AL1  50 to 60% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub14]
+ParameterName=64.20 AL1  60 to 70% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub15]
+ParameterName=64.21 AL1  70 to 80% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub16]
+ParameterName=64.22 AL1  80 to 90% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub17]
+ParameterName=64.23 AL1  over 90% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub18]
+ParameterName=64.24 AL2  0 to 10% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=100
+PDOMapping=1
+
+[4040Sub19]
+ParameterName=64.25 AL2  10 to 20% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub1A]
+ParameterName=64.26 AL2  20 to 30% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub1B]
+ParameterName=64.27 AL2  30 to 40% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub1C]
+ParameterName=64.28 AL2  40 to 50% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub1D]
+ParameterName=64.29 AL2  50 to 60% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub1E]
+ParameterName=64.30 AL2  60 to 70% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub1F]
+ParameterName=64.31 AL2  70 to 80% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub20]
+ParameterName=64.32 AL2  80 to 90% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+[4040Sub21]
+ParameterName=64.33 AL2  over 90% [%]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=100
+AccessType=RO
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 74 Appl programming
+;-------------------------------------------------------
+[404A]
+SubNumber=0xa
+ParameterName=Group 74Appl programming
+ObjectType=0x009
+
+[404ASub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xb
+DefaultValue=0xa
+AccessType=RO
+
+[404ASub1]
+ParameterName=74.1 SpeedRef ramp in [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742595
+PDOMapping=1
+
+[404ASub2]
+ParameterName=74.2 SpeedRef nctrl [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=1073742597
+PDOMapping=1
+
+[404ASub3]
+ParameterName=74.3 Speed fbk nctrl [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=1073742081
+PDOMapping=1
+
+[404ASub4]
+ParameterName=74.4 Speed err nctrl [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=1073742599
+PDOMapping=1
+
+[404ASub5]
+ParameterName=74.5 Acc comp src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=1073742600
+PDOMapping=1
+
+[404ASub6]
+ParameterName=74.6 Tref speed src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=1073742601
+PDOMapping=1
+
+[404ASub7]
+ParameterName=74.7 Tref torq src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RO
+DefaultValue=1073742604
+PDOMapping=1
+
+[404ASub9]
+ParameterName=74.9 D2D cw used [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742366
+PDOMapping=1
+
+[404ASubA]
+ParameterName=74.10 PID fbk src [-]
+ObjectType=0x7
+DataType=0x0007
+LowLimit=0
+HighLimit=4294967295
+AccessType=RW
+DefaultValue=1073742851
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 90 Enc module sel
+;-------------------------------------------------------
+[405A]
+SubNumber=0x7
+ParameterName=Group 90Enc module sel
+ObjectType=0x009
+
+[405ASub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xb
+DefaultValue=0xa
+AccessType=RO
+
+[405ASub1]
+ParameterName=90.1 Encoder 1 sel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405ASub2]
+ParameterName=90.2 Encoder 2 sel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405ASub4]
+ParameterName=90.4 TTL echo sel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405ASub5]
+ParameterName=90.5 Enc cable fault [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=2
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[405ASub6]
+ParameterName=90.6 Invert enc sig [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405ASubA]
+ParameterName=90.10 Enc par refresh [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 91 Absol enc conf
+;-------------------------------------------------------
+[405B]
+SubNumber=0x14
+ParameterName=Group 91Absol enc conf
+ObjectType=0x009
+
+[405BSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x20
+DefaultValue=0x1f
+AccessType=RO
+
+[405BSub1]
+ParameterName=91.1 Sine cosine nr [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSub2]
+ParameterName=91.2 Abs enc interf [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSub3]
+ParameterName=91.3 Rev count bits [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSub4]
+ParameterName=91.4 Pos data bits [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSub5]
+ParameterName=91.5 Refmark ena [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSub6]
+ParameterName=91.6 Abs pos tracking [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSubA]
+ParameterName=91.10 Hiperface parity [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSubB]
+ParameterName=91.11 Hiperf baudrate [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[405BSubC]
+ParameterName=91.12 Hiperf node addr [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=255
+AccessType=RW
+DefaultValue=64
+PDOMapping=1
+
+[405BSub14]
+ParameterName=91.20 SSI clock cycles [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=2
+HighLimit=127
+AccessType=RW
+DefaultValue=2
+PDOMapping=1
+
+[405BSub15]
+ParameterName=91.21 SSI position msb [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=126
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[405BSub16]
+ParameterName=91.22 SSI revol msb [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=126
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[405BSub17]
+ParameterName=91.23 SSI data format [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSub18]
+ParameterName=91.24 SSI baud rate [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=2
+PDOMapping=1
+
+[405BSub19]
+ParameterName=91.25 SSI mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSub1A]
+ParameterName=91.26 SSI transmit cyc [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[405BSub1B]
+ParameterName=91.27 SSI zero phase [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSub1E]
+ParameterName=91.30 Endat mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405BSub1F]
+ParameterName=91.31 Endat max calc [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=3
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 92 Resolver conf
+;-------------------------------------------------------
+[405C]
+SubNumber=0x4
+ParameterName=Group 92Resolver conf
+ObjectType=0x009
+
+[405CSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x4
+DefaultValue=0x3
+AccessType=RO
+
+[405CSub1]
+ParameterName=92.1 Resolv polepairs [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=32
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+[405CSub2]
+ParameterName=92.2 Exc signal ampl [Vrms]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=40
+HighLimit=120
+AccessType=RW
+DefaultValue=40
+PDOMapping=1
+
+[405CSub3]
+ParameterName=92.3 Exc signal freq [kHz]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=1
+HighLimit=20
+AccessType=RW
+DefaultValue=1
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 93 Pulse enc conf
+;-------------------------------------------------------
+[405D]
+SubNumber=0x7
+ParameterName=Group 93Pulse enc conf
+ObjectType=0x009
+
+[405DSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0xe
+DefaultValue=0xd
+AccessType=RO
+
+[405DSub1]
+ParameterName=93.1 Enc1 pulse nr [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405DSub2]
+ParameterName=93.2 Enc1 type [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405DSub3]
+ParameterName=93.3 Enc1 sp CalcMode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=4
+PDOMapping=1
+
+[405DSubB]
+ParameterName=93.11 Enc2 pulse nr [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405DSubC]
+ParameterName=93.12 Enc2 type [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405DSubD]
+ParameterName=93.13 Enc2 sp CalcMode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=5
+AccessType=RW
+DefaultValue=4
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 94 Ext IO conf
+;-------------------------------------------------------
+[405E]
+SubNumber=0x3
+ParameterName=Group 94Ext IO conf
+ObjectType=0x009
+
+[405ESub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x3
+DefaultValue=0x2
+AccessType=RO
+
+[405ESub1]
+ParameterName=94.1 Ext IO1 sel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=4
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405ESub2]
+ParameterName=94.2 Ext IO2 sel [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=4
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 95 Hw configuration
+;-------------------------------------------------------
+[405F]
+SubNumber=0x3
+ParameterName=Group 95Hw configuration
+ObjectType=0x009
+
+[405FSub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x4
+DefaultValue=0x3
+AccessType=RO
+
+[405FSub1]
+ParameterName=95.1 Ctrl boardSupply [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[405FSub3]
+ParameterName=95.3 Temp inu ambient [C]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=55
+AccessType=RW
+DefaultValue=40
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 97 User motor par
+;-------------------------------------------------------
+[4061]
+SubNumber=0x11
+ParameterName=Group 97User motor par
+ObjectType=0x009
+
+[4061Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x15
+DefaultValue=0x14
+AccessType=RO
+
+[4061Sub1]
+ParameterName=97.1 Use given params [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=3
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061Sub2]
+ParameterName=97.2 Rs user [p.u.]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=50000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061Sub3]
+ParameterName=97.3 Rr user [p.u.]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=50000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061Sub4]
+ParameterName=97.4 Lm user [p.u.]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061Sub5]
+ParameterName=97.5 SigmaL user [p.u.]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=100000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061Sub6]
+ParameterName=97.6 Ld user [p.u.]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061Sub7]
+ParameterName=97.7 Lq user [p.u.]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061Sub8]
+ParameterName=97.8 Pm flux user [p.u.]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=200000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061Sub9]
+ParameterName=97.9 Rs user SI [Ohm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=10000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061SubA]
+ParameterName=97.10 Rr user SI [Ohm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=10000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061SubB]
+ParameterName=97.11 Lm user SI [mH]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=10000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061SubC]
+ParameterName=97.12 SigL user SI [mH]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=10000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061SubD]
+ParameterName=97.13 Ld user SI [mH]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=10000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061SubE]
+ParameterName=97.14 Lq user SI [mH]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=10000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061Sub12]
+ParameterName=97.18 Signal injection [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=4
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4061Sub14]
+ParameterName=97.20 PM angle offset [deg]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=360
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+;-------------------------------------------------------
+; Drive Parameter Group 99 Start-up data
+;-------------------------------------------------------
+[4063]
+SubNumber=0xd
+ParameterName=Group 99Start-up data
+ObjectType=0x009
+
+[4063Sub0]
+ParameterName=Number Of Entries
+ObjectType=0x007
+DataType=0x005
+LowLimit=0x002
+HighLimit=0x11
+DefaultValue=0x10
+AccessType=RO
+
+[4063Sub1]
+ParameterName=99.1 Language [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=32767
+AccessType=RW
+DefaultValue=2057
+PDOMapping=1
+
+[4063Sub4]
+ParameterName=99.4 Motor type [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4063Sub5]
+ParameterName=99.5 Motor ctrl mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4063Sub6]
+ParameterName=99.6 Mot nom current [A]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=5
+HighLimit=60
+AccessType=RW
+DefaultValue=5
+PDOMapping=1
+
+[4063Sub7]
+ParameterName=99.7 Mot nom voltage [V]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=800
+HighLimit=9600
+AccessType=RW
+DefaultValue=800
+PDOMapping=1
+
+[4063Sub8]
+ParameterName=99.8 Mot nom freq [Hz]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=50
+HighLimit=5000
+AccessType=RW
+DefaultValue=50
+PDOMapping=1
+
+[4063Sub9]
+ParameterName=99.9 Mot nom speed [rpm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=30000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4063SubA]
+ParameterName=99.10 Mot nom power [kW]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=1000000
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4063SubB]
+ParameterName=99.11 Mot nom cosfii [-]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=100
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4063SubC]
+ParameterName=99.12 Mot nom torque [Nm]
+ObjectType=0x7
+DataType=0x0004
+LowLimit=0
+HighLimit=2147483647
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4063SubD]
+ParameterName=99.13 IDrun mode [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=7
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
+[4063Sub10]
+ParameterName=99.16 Phase inversion [-]
+ObjectType=0x7
+DataType=0x0003
+LowLimit=0
+HighLimit=1
+AccessType=RW
+DefaultValue=0
+PDOMapping=1
+
