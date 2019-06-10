@@ -5,7 +5,7 @@
 # https://github.com/dankamongmen/canscan
 
 from __future__ import print_function
-import canopen.node
+import canscan.node
 import signal
 import argparse
 
@@ -78,8 +78,8 @@ if __name__ == '__main__':
         if len(scanNodes):
             raise SystemExit("--scan doesn't make sense with --passive, exiting")
     print('Bus:', args.bustype, 'NodeID:', hex(CanID), 'Node scan list:', scanNodes)
-    CanNode.NetworkSDOSweep()
     if not args.passive:
+        CanNode.NetworkSDOSweep()
         CanNode.Discover()
     if not args.oneshot:
         print('Waiting for signal/keyboard interrupt...')
