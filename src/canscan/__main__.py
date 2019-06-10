@@ -59,10 +59,13 @@ if __name__ == '__main__':
             raise SystemExit("--oneshot doesn't make sense with --passive, exiting")
         if len(scanNodes):
             raise SystemExit("--scan doesn't make sense with --passive, exiting")
-    print('Bus: ', args.bustype, 'NodeID:', hex(CanID), 'Node scan list:', scanNodes)
+    print('Bus:', args.bustype, 'NodeID:', hex(CanID), 'Node scan list:', scanNodes)
     CanNode.NetworkSDOSweep()
     if not args.passive:
         CanNode.Discover()
     if not args.oneshot:
         print('Waiting for signal/keyboard interrupt...')
-        signal.pause()
+        try:
+            signal.pause()
+        except KeyboardInterrupt:
+            exit(0)
