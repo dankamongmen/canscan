@@ -12,6 +12,22 @@ import argparse
 DEFAULT_NODEID = 0x64
 CANOPEN_MAX_ID = 0x7f
 
+def ExtractRangeList(s):
+    """Extracts a comma-delimited list of hyphen-delimited ranges, or single
+       integers, i.e. '2,0xA,0x40-96'. Returns a populated list."""
+    ranges = list(s.split(","))
+    newRange = []
+    for r in ranges:
+        if r=='':
+            continue
+        subRange = ([int(n, 0) for n in r.split('-')])
+        if (len(subRange) > 1):
+            newRange.extend(range(subRange[0], subRange[1] + 1))
+        else:
+            newRange.extend(subRange)
+    newRange.sort()
+    return newRange
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Probe and listen for CANopen')
     # The device changes depending on the backing python-can driver. For
@@ -20,6 +36,8 @@ if __name__ == '__main__':
     parser.add_argument('device', help='can device identifier (per-bus semantics)')
     parser.add_argument('--id', help='our CANopen ID, 0..0x7f',
                         type=lambda x: int(x, 0), default=DEFAULT_NODEID)
+    parser.add_argument('--ods', help='Object Dictionary indexes to scan',
+                        type=ExtractRangeList, default=[])
     parser.add_argument('--scan', help='comma-delimited list of nodes to scan',
                         type=lambda x: x.split(','), default=[])
     parser.add_argument('--channel', help='channel, if appropriate', type=int)
