@@ -6,11 +6,11 @@ OD_IDENTITY_VENDORID = 0x1
 class Node(object):
     """CANopen node bound to some device"""
 
-    def __init__(self, bustype='virtual', dev=''):
+    def __init__(self, dev='', bustype='virtual', channel=''):
         """An empty dev param means we won't try to actually connect."""
         self.dev = dev
         self.network = canopen.Network()
-        self.network.connect(bustype=bustype, channel=dev)
+        self.network.connect(device=dev, bustype=bustype, channel=channel)
 
     def __del__(self):
         if self.network:
