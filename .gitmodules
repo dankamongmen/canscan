@@ -1,0 +1,3 @@
+[submodule "dbc/opendbc"]
+	path = dbc/opendbc
+	url = https://github.com/commaai/opendbc.git
